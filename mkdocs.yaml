@@ -1,0 +1,59 @@
+site_name: AI Challenge Template
+site_url: https://automotiveaichallenge.github.io/aichallenge-documentation/
+docs_dir: docs
+copyright: "&copy; 2024 TIER IV, Inc."
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.integrate
+  palette:
+    scheme: slate
+    primary: black
+    accent: red
+  # logo:
+  # favicon:
+
+nav:
+  - index: index.md
+  - information.md
+  - competition:
+      - competition/rules.md
+      - competition/preliminaries.md
+      - competition/finals.md
+  - development:
+      - development/architecture.md
+      - development/requirements.md
+      - development/installation.md
+      - development/main-module.md
+      - development/device-drivers.md
+  - specifications:
+      - specifications/interface.md
+      - specifications/hardware.md
+      - specifications/simulator.md
+  - FAQ: faq.md
+  - Community: community.md
+
+plugins:
+  - search:
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: ja
+          default: true
+          name: 日本語
+          build: true
+          nav_translations:
+            index: トップページ
+            competition: 競技内容
+            development: 開発
+            specifications: 仕様
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            index: Top Page
+            competition: Competition
+            development: Development
+            specifications: Specifications
