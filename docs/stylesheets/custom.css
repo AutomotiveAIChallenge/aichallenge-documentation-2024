@@ -1,0 +1,16 @@
+:root > * {
+  --md-primary-fg-color:        #15151E;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #B70000;
+  --md-typeset-a-color: #B70000;
+}
+
+.md-header {
+  border-bottom: 2px solid #B70000;
+}
+
+h1 {
+  padding: 10px 0 10px 20px;
+  border-bottom: 2px solid #B70000;
+  background-color: #15151E;
+}
