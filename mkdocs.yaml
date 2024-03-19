@@ -22,21 +22,28 @@ nav:
       - competition/rules.md
       - competition/preliminaries.md
       - competition/finals.md
+  - course:
+      - course/course.md
+      - course/vehicle.md
+      - course/sensing.md
+  - specifications:
+      - specifications/interface.md
+      - specifications/hardware.md
+      - specifications/simulator.md
   - development:
       - development/architecture.md
       - development/requirements.md
       - development/installation.md
       - development/main-module.md
       - development/device-drivers.md
-  - specifications:
-      - specifications/interface.md
-      - specifications/hardware.md
-      - specifications/simulator.md
   - FAQ: faq.md
   - Community: community.md
 
 extra_css:
   - stylesheets/custom.css
+
+markdown_extensions:
+  - admonition
 
 plugins:
   - search:
@@ -50,6 +57,7 @@ plugins:
           nav_translations:
             index: トップページ
             competition: 競技内容
+            course: 講座
             development: 開発
             specifications: 仕様
         - locale: en
@@ -58,5 +66,6 @@ plugins:
           nav_translations:
             index: Top Page
             competition: Competition
+            course: Course
             development: Development
             specifications: Specifications
