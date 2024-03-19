@@ -17,7 +17,8 @@ vcs import src < autoware.repos
 colcon build --symlink-install
 ```
 
-また、コマンドを実行する際は事前に端末で以下のコマンドが実行されている必要があります。
+ビルドが完了したら、以下のコマンドを実行してビルドされたパッケージを利用できるようにします。
+また、今後講座の中でコマンドを実行する際は、事前にこちらのコマンドを実行しておいてください。
 
 ```bash
 source install/setup.bash

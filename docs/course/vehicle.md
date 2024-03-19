@@ -35,7 +35,8 @@ ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_forwar
 +  command.longitudinal.acceleration = 1.0;
 ```
 
-コードを書き換えたらビルドして実行します。上手く出来ていればシミュレーターの車両が動き、条件を満たして結果が SUCCESS になります。
+コードを書き換えたらビルドして実行します。新しい端末を起動して以下のコマンドを実行してください。
+上手く出来ていればシミュレーターの車両が動き、条件を満たして結果が SUCCESS になります。
 
 ```bash
 colcon build --symlink-install --packages-select autoware_practice_course
@@ -68,4 +69,4 @@ ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_backwa
 ```
 
 - [vehicle/backward.hpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/backward.hpp)
-- [vehicle/backward.cpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/forbackwardward.cpp)
+- [vehicle/backward.cpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/backward.cpp)

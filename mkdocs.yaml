@@ -23,7 +23,7 @@ nav:
       - competition/preliminaries.md
       - competition/finals.md
   - course:
-      - course/course.md
+      - course/index.md
       - course/vehicle.md
       - course/sensing.md
   - specifications:
