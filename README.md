@@ -1,9 +1,10 @@
 # aichallenge-documentation
 
-[![.github/workflows/document.yml](https://github.com/AutomotiveAIChallenge/aichallenge-documentation/actions/workflows/document.yml/badge.svg?branch=main)](https://github.com/AutomotiveAIChallenge/aichallenge-documentation/actions/workflows/document.yml)
+[![.github/workflows/documentation.yaml](https://github.com/AutomotiveAIChallenge/aichallenge-documentation/actions/workflows/documentation.yaml/badge.svg?branch=main)](https://github.com/AutomotiveAIChallenge/aichallenge-documentation/actions/workflows/documentation.yaml)
 
 このリポジトリは、自動車技術会主催の自動運転AIチャレンジで使用するドキュメントサイトのテンプレートです。参加者の皆様は、ご自身の参加される大会の専用ページをご覧ください。
 
+- <https://github.com/AutomotiveAIChallenge/aichallenge-documentation-2024>
 - <https://github.com/AutomotiveAIChallenge/aichallenge2023-racing>
 - <https://github.com/AutomotiveAIChallenge/aichallenge2023-integ>
 - <https://github.com/AutomotiveAIChallenge/aichallenge2022-sim>
