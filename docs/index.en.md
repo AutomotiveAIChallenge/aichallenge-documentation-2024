@@ -1,4 +1,4 @@
-# Japan Automotive AI Challenge 20XX
+# Japan Automotive AI Challenge 2024
 
 ## Concept
 
