@@ -50,6 +50,7 @@ ros2 run autoware_practice_course vehicle_forward
 !!! warning
 
     作成中
+    - steering_tire_angle を変更して車両を左右のどちらかに動かす
 
 ```bash
 ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_turning
@@ -63,6 +64,9 @@ ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_turnin
 !!! warning
 
     作成中
+    - ギアを変更して REVERSE にする
+    - speed と acceleration を変更して車両を後退させる
+    - 後退の場合は speed が負で acceleration は正になる
 
 ```bash
 ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_backward
