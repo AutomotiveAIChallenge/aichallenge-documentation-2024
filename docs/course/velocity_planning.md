@@ -18,7 +18,7 @@
 本来Autowareでは以下のノードダイアグラムのように、GNSS、Lidar、IMUなどの情報をもとにekf_localizerが/localization/kinematic_stateを計算します。
 
 <div align="center">
-  <img src="images/localization_node.png" alt="Alt Text">
+  <img src="../images/localization_node.png" alt="Alt Text">
   <br>
   <em>Autowareのlocalizer周りの<a href="https://app.diagrams.net/?lightbox=1#Uhttps%3A%2F%2Fautowarefoundation.github.io%2Fautoware-documentation%2Fmain%2Fdesign%2Fautoware-architecture%2Fnode-diagram%2Foverall-node-diagram-autoware-universe.drawio.svg#%7B%22pageId%22%3A%22T6t2FfeAp1iw48vGkmOz%22%7D">ノードダイアグラム</a></em>
 </div>
@@ -31,7 +31,7 @@ localizerを用意しました。
 <br>
 
 <div align="center">
-  <img src="images/practice_localization_node.png" alt="Alt Text">
+  <img src="../images/practice_localization_node.png" alt="Alt Text">
   <br>
   <em>autoware-practiceのlocalizer周りのノードダイアグラム</em>
 </div>
