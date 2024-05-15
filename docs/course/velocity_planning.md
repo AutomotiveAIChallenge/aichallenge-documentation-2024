@@ -1,12 +1,7 @@
 # 02. 速度計画
 
-
-ここでは設定されたゴールで車両が停止することを目指します。
-
-```
-＜作成中＞
-＜ピッタリ停止するGIF＞
-```
+安全な自動運転を行うためには常に速度をコントロールする必要があります。
+ここでは速度計画を行って目標地点で車両を停止させることを目指します。
 
 ## 02-01. 車速を取得する
 
@@ -216,11 +211,81 @@ ros2 run autoware_practice_course p_controller --ros-args -p kp:=5.0 -p target_v
 
 ![p_controller_plotjuggler](./images/p_controller_plotjuggler.png)
 
-
 ## 02-03. ゴールで停止するための速度計画を行う
 
+図のような、停止状態から50m地点まで加速し、50m地点を過ぎたら減速し100m地点で停止するような速度計画を行うことを考えます。
 
-    ＜作成中＞
+![alt text](<./images/2-3/velocity_planning_image.jpg>)
+
+速度計画を行うために車両から目標地点までの間に1mおきに中継地点となるウェイポイントを設定します。各ウェイポイントに目標速度を設定することで速度計画を行います。
+
+各ウェイポイントの目標速度を決定するためのtrajectory_plannerノードと、各ウェイポイントを基に制御入力を決定するlongitudinal_controllerノードを作成しました。
+
+![alt text](./images/2-3/node_diagram.png)
+
+dummy_localizerからの位置情報を基にtrajectory_plannerノードが各ウェイポイントの目標速度を決定します。
+各ウェイポイントの目標速度とdummy_localizerからの車両の速度情報からlongitudinal_controllerノードが制御入力を決定します。
+
+各ノードは以下のコマンドを別々のターミナルで実行することで起動することができます。
+
+```bash
+ros2 launch autoware_practice_launch practice.launch.xml
+```
+
+```bash
+ros2 run autoware_practice_course trajectory_planner 
+```
+
+```bash
+ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
+```
+
+車両の位置と速度の関係をPlotJugglerを用いてリアルタイムで確認してみましょう。
+全部で4枚のターミナルウィンドウを使用します。
+まずシミュレータを起動します。
+```bash
+ros2 launch autoware_practice_launch practice.launch.xml
+```
+
+次に別ターミナルでPlotJugglerを起動します。
+
+```bash
+ros2 run plotjuggler plotjuggler
+```
+
+PlotJugglerが起動したらStartボタンを押します。
+
+![alt text](./images/2-3/PlotJuggler1.png)
+
+/localization/kinematic_stateを選択し、OKを押します。
+
+![alt text](./images/2-3/PlotJuggler2.png)
+
+/localization/kinematic_state/pose/pose/position/xと/localization/kinematic_state/twist/twist/linear/xを複数選択して**右クリック**でドラッグ＆ドロップすることで、位置と速度の関係のグラフを見ることができます。
+
+![alt text](./images/2-3/PlotJuggler3.png)
+
+初めは車両の位置と速度がどちらも0なので以下の図のようになります。
+
+![alt text](./images/2-3/PlotJuggler4.png)
+
+長時間記録するためにBufferを100に変更します。
+
+![alt text](./images/2-3/PlotJuggler6.png)
+
+次にtrajectory_plannerノードとlongitudinal_controllerノードをそれぞれ別のターミナルで起動します。
+
+```bash
+ros2 run autoware_practice_course trajectory_planner 
+```
+
+```bash
+ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
+```
+それぞれのノードが起動するとシミュレーター上で車両が動き始め、以下のようなグラフが得られます。
+![alt text](./images/2-3/PlotJuggler5.png)
+
+グラフより、大体50m付近で10m/sに達し100m付近で停止できていることがわかります。
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js">
