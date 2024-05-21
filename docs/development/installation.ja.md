@@ -1,43 +1,9 @@
-# 大会環境構築
-本大会では自動運転ソフトウェアのAutowareとシミュレーターのAWSIMを用います。
+# 環境構築
 
-# Minimum Hardware Requiremant
-本大会で使用していただくPCの動作環境として以下を推奨しております。
-## 推奨環境
-* OS: Ubuntu 22.04
-* CPU: Intel Corei7 (8 cores) or higher
-* GPU: NVIDIA Geforce RTX 3080 (VRAM 12 GB) or higher
-* Memory: 32 GB or more
-* Storage: SSD 30 GB or higher
-
-上記のスペックを満たすPCをご用意できない方は、AutowareとAWSIMを別のPCで動かすことも可能です。
-下記の「PC2台で参加する方向け」のスペックをご参照ください。
-## 2台のPCを使用する方向け
-### Autoware PC
-* OS: Ubuntu 22.04
-* CPU: Intel Corei7 (8 cores) or higher
-* GPU: NVIDIA Geforce GTX 1080 or higher
-* Memory: 16 GB or higher
-* Storage: SSD 10 GB or higher
-* 詳細は[こちら](https://autowarefoundation.github.io/autoware-documentation/main/installation/)
-
-### AWSIM PC
-* OS: Ubuntu 22.04 or Windows 10/11
-* CPU: Intel Corei7 (6 cores and 12 threads) or higher
-* GPU: NVIDIA Geforce RTX 2080 Ti or higher
-* 詳細は[こちら](https://tier4.github.io/AWSIM/)
-
-※Autoware動作PCとAWSIM動作PCは、同じネットワーク内に配置してください。
-配置できていれば、基本的には追加設定をすることなく、PC間のトピック通信は可能です。万が一、トピック通信ができなかった場合はファイアーウォールの解除、もしくはルールの見直しをお願いします。
-
-[こちら](https://autowarefoundation.github.io/autoware-documentation/main/support/troubleshooting/performance-troubleshooting/)も参考になるかもしれません。
-
-<br>
-
-# 環境構築 
 ここでは、AWSIMの環境構築から起動まで行います。
 
 ## NVIDIAドライバのインストール
+
 ```bash
 #リポジトリの追加
 sudo add-apt-repository ppa:graphics-drivers/ppa
@@ -46,52 +12,61 @@ sudo apt update
 #インストール
 sudo ubuntu-drivers autoinstall
 #再起動
-rebot
+reboot
 #再起動の後、インストールできていることを確認
 nvidia-smi
 ```
+
 ![nvidia-smi](./images/installation/nvidia-smi.png)
 
 ## Vulkunのインストール
+
 ```bash
 #パッケージリストの更新
 sudo apt update
 #libvulkan1をインストール
 sudo apt install libvulkan1
-``` 
+```
 
 ## Git LFSのインストール
+
 ```bash
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 git lfs install
 ```
 
----
 ## 大会データのダウンロード
-```
+
+```bash
 cd
 git lfs clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
 ```
+
 ## AWSIMのダウンロード・起動確認
+
 <!-- TO-DO:Google Driveのリンク差し替え -->
-   1. [GoogleDrive](https://drive.google.com/drive/folders/)から最新の`AWSIM.zip`をダウンロードし、`aichallenge-2024/aichallenge/simulator`に解凍してください。
-   2. パーミッションを図のように変更してください。   
-   ![パーミッション変更の様子](./images/installation/permmision.png)  
-   3. ファイルをダブルクリックで起動
-   4. 下記のような画面が表示されることを確認
-      ![awsim](./images/installation/awsim.png)
+
+1. [GoogleDrive](https://drive.google.com/drive/folders/)から最新の`AWSIM_GPU.zip`をダウンロードし、`aichallenge-2024/aichallenge/simulator`に解凍してください。
+2. パーミッションを図のように変更してください。
+   ![パーミッション変更の様子](./images/installation/permmision.png)
+3. ファイルをダブルクリックで起動
+4. 下記のような画面が表示されることを確認
+   ![awsim](./images/installation/awsim.png)
+
 ---
+
 ## Docker環境のインストール
+
 下記のインストールを行います。
 
-  * [Docker](https://docs.docker.com/engine/install/ubuntu/)
-  * [rocker](https://github.com/osrf/rocker)(Dockerコンテナ内でRviz、rqtなどのGUIを使用するために用います。)
-  * [Git LFS](https://packagecloud.io/github/git-lfs/install)
-  * [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)(GPU非搭載の方はスキップ)
-
+- [Docker](https://docs.docker.com/engine/install/ubuntu/)
+- [rocker](https://github.com/osrf/rocker)(Dockerコンテナ内でRviz、rqtなどのGUIを使用するために用います。)
+- [Git LFS](https://packagecloud.io/github/git-lfs/install)
+- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)(GPU非搭載の方はスキップ)
 
 ### Dockerのインストール
+
 ```bash
 # Dockerインストールの下準備
 sudo apt-get update
@@ -115,7 +90,7 @@ sudo docker run hello-world
 
 # Hello from Docker!
 # This message shows that your installation appears to be working correctly.
-# 
+#
 # To generate this message, Docker took the following steps:
 #  1. The Docker client contacted the Docker daemon.
 #  2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
@@ -124,13 +99,13 @@ sudo docker run hello-world
 #     executable that produces the output you are currently reading.
 #  4. The Docker daemon streamed that output to the Docker client, which sent it
 #     to your terminal.
-# 
+#
 # To try something more ambitious, you can run an Ubuntu container with:
 #  $ docker run -it ubuntu bash
-# 
+#
 # Share images, automate workflows, and more with a free Docker ID:
 #  https://hub.docker.com/
-# 
+#
 # For more examples and ideas, visit:
 #  https://docs.docker.com/get-started/
 
@@ -145,6 +120,7 @@ groups $USER
 ```
 
 ### rockerのインストール
+
 ```bash
 # 依存関係が最も少ないため以下コマンドでのインストールを推奨しています。
 pip install rocker
@@ -157,6 +133,7 @@ pip install rocker
 ```
 
 ### (GPU非搭載の方はスキップ) NVIDIA Container Toolkit
+
 ```bash
 # インストールの下準備
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
@@ -196,13 +173,15 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 # |  No running processes found                                                 |
 # +-----------------------------------------------------------------------------+
 ```
+
 ---
 
-## Dockerイメージの準備・起動 
+## Dockerイメージの準備・起動
+
 ### Dockerイメージを入手
 
 ```bash
-docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest 
+docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest
 
 docker images
 ##下記メッセージを確認し、Dockerイメージがダウンロードできていることを確認する。。
@@ -211,20 +190,17 @@ docker images
 ```
 
 ### 大会用Dockerイメージのビルド
-* GPU搭載の方は以下
-```
+
+```bash
 cd aichallenge2024
-bash docker_build.sh dev gpu
+bash docker_build.sh dev
 ```
-* GPU非搭載の方は以下
-```
-cd aichallenge2024
-bash docker_build.sh dev cpu
-```
+
 ### 大会用Dockerコンテナの起動
+
 ターミナルを2つ用意します。
 
-* コンテナを起動します。 
+- コンテナを起動します。
 
 ```bash
 # GPU搭載の方は以下
@@ -235,27 +211,34 @@ bash docker_run.sh dev gpu
 cd aichallenge-2024
 bash docker_run.sh dev cpu
 ```
-* コンテナが起動できているか、別ターミナルで確認します。
+
+- コンテナが起動できているか、別ターミナルで確認します。
+
 ```bash
 docker images
 
 #以下が出ていれば作成ができています。
 #aichallenge-2024-dev                              latest                        df2e83a20349   33 minutes ago   8.9GB
 ```
+
 ### 大会Dockerコンテナを停止する
+
 コンテナが起動しているターミナルで下記コマンドを実行します。
+
 ```bash
 exit
 ```
+
 以上でセットアップは終了となります。
 
+## 大会環境の起動
 
-<br>
-
-# 大会環境の起動
 本節では大会環境を起動します。
-## Autoware
-コンテナを起動します。 
+
+### Autoware
+
+コンテナを起動します。
+
 ```bash
 # GPU搭載の方は以下
 cd aichallenge-2024
@@ -265,24 +248,31 @@ bash docker_run.sh dev gpu
 cd aichallenge-2024
 bash docker_run.sh dev cpu
 ```
-* Autowareのビルド
+
+- Autowareのビルド
 
 コンテナを開いたターミナル(コンテナ内)で以下を実行します。
+
 ```bash
 cd /aichallenge
 bash build_autoware.bash
 ```
-* Autowareの起動
+
+- Autowareの起動
+
 ```bash
 bash run_autoware.sh
 ```
+
 下記の様な画面が表示されたら起動完了です。
-![autoware](../images/installation/autoware.png)
+![autoware](./images/installation/autoware.png)
 
 終了するにはターミナル上でCTRL + Cを入力します。
 
-## AWSIM in Docker
-コンテナを起動します。 
+### AWSIM in Docker
+
+コンテナを起動します。
+
 ```bash
 # GPU搭載の方は以下
 cd aichallenge-2024
@@ -292,39 +282,45 @@ bash docker_run.sh dev gpu
 cd aichallenge-2024
 bash docker_run.sh dev cpu
 ```
+
 コンテナを開いたターミナル(コンテナ内)で以下を実行します。
+
 ```bash
 cd /aichallenge
 bash run_simulator.bash
 ```
+
 下記の様な画面が表示されたら起動完了です。
 ![awsim](./images/installation/awsim.png)
 
 終了するにはターミナル上でCTRL + Cを入力します。
 
-# 変更点の取り込み
+## 変更点の取り込み
+
 大会環境のアップデートがあった際には以下を実行してください。
 
 ### Dockerのupdate
+
 ```bash
-docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest 
+docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest
 
 ```
 
 ### Repositoryのupdate
+
 ```sh
 cd aichallenge2024 # path to aichallenge2024
 git pull origin/main
 ```
+
 <br>
 
-# TroubleShooting
-Q. ```docker_run.sh: 行 35: rocker: コマンドが見つかりません```
+## TroubleShooting
+
+Q. `docker_run.sh: 行 35: rocker: コマンドが見つかりません`
 
 A. [rockerのインストール](#docker環境のインストール)をお願いします。
 
-<br>
-
-Q. ```WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist```
+Q. `WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist`
 
 A. Dockerイメージのビルドをお願いします。
