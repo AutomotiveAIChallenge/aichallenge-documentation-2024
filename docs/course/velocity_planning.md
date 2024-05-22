@@ -223,8 +223,8 @@ ros2 run autoware_practice_course p_controller --ros-args -p kp:=5.0 -p target_v
 
 ![alt text](./images/2-3/node_diagram.png)
 
-dummy_localizerからの位置情報を基にtrajectory_plannerノードが各ウェイポイントの目標速度を決定します。
-各ウェイポイントの目標速度とdummy_localizerからの車両の速度情報からlongitudinal_controllerノードが制御入力を決定します。
+trajectory_plannerノードがスタートからゴールまでの各ウェイポイントの目標速度を決定します。
+longitudinal_controllerノードが車両に最も近いウェイポイントを探索し、ウェイポイントでの目標速度と現在の車両の速度を基に制御入力を決定します。
 
 各ノードは以下のコマンドを別々のターミナルで実行することで起動することができます。
 
