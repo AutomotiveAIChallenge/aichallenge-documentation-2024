@@ -14,7 +14,7 @@
         <link rel="prev" href="../requirements/">
       
       
-        <link rel="next" href="../main-module/">
+        <link rel="next" href="../workspace/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>大会環境構築 - AI Challenge 2024</title>
+        <title>環境構築 - AI Challenge 2024</title>
       
     
     
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              大会環境構築
+              環境構築
             
           </span>
         </div>
@@ -291,7 +291,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../architecture/" class="md-tabs__link">
+        <a href="../requirements/" class="md-tabs__link">
           
   
   開発
@@ -833,27 +833,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    アーキテクチャ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../requirements/" class="md-nav__link">
         
   
@@ -884,16 +863,178 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    環境構築
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    大会環境構築
+    環境構築
   </span>
   
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVIDIAドライバのインストール
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulkun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulkunのインストール
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-lfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git LFSのインストール
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      大会データのダウンロード
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#awsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWSIMのダウンロード・起動確認
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker環境のインストール
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker環境のインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocker" class="md-nav__link">
+    <span class="md-ellipsis">
+      rockerのインストール
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-nvidia-container-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      (GPU非搭載の方はスキップ) NVIDIA Container Toolkit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerイメージの準備・起動
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dockerイメージの準備・起動">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerイメージを入手
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workspace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ワークスペース
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1003,42 +1144,7 @@
                   
 
 
-<h1 id="_1">大会環境構築</h1>
-<p>本大会では自動運転ソフトウェアのAutowareとシミュレーターのAWSIMを用います。</p>
-<h1 id="minimum-hardware-requiremant">Minimum Hardware Requiremant</h1>
-<p>本大会で使用していただくPCの動作環境として以下を推奨しております。</p>
-<h2 id="_2">推奨環境</h2>
-<ul>
-<li>OS: Ubuntu 22.04</li>
-<li>CPU: Intel Corei7 (8 cores) or higher</li>
-<li>GPU: NVIDIA Geforce RTX 3080 (VRAM 12 GB) or higher</li>
-<li>Memory: 32 GB or more</li>
-<li>Storage: SSD 30 GB or higher</li>
-</ul>
-<p>上記のスペックを満たすPCをご用意できない方は、AutowareとAWSIMを別のPCで動かすことも可能です。
-下記の「PC2台で参加する方向け」のスペックをご参照ください。</p>
-<h2 id="2pc">2台のPCを使用する方向け</h2>
-<h3 id="autoware-pc">Autoware PC</h3>
-<ul>
-<li>OS: Ubuntu 22.04</li>
-<li>CPU: Intel Corei7 (8 cores) or higher</li>
-<li>GPU: NVIDIA Geforce GTX 1080 or higher</li>
-<li>Memory: 16 GB or higher</li>
-<li>Storage: SSD 10 GB or higher</li>
-<li>詳細は<a href="https://autowarefoundation.github.io/autoware-documentation/main/installation/">こちら</a></li>
-</ul>
-<h3 id="awsim-pc">AWSIM PC</h3>
-<ul>
-<li>OS: Ubuntu 22.04 or Windows 10/11</li>
-<li>CPU: Intel Corei7 (6 cores and 12 threads) or higher</li>
-<li>GPU: NVIDIA Geforce RTX 2080 Ti or higher</li>
-<li>詳細は<a href="https://tier4.github.io/AWSIM/">こちら</a></li>
-</ul>
-<p>※Autoware動作PCとAWSIM動作PCは、同じネットワーク内に配置してください。
-配置できていれば、基本的には追加設定をすることなく、PC間のトピック通信は可能です。万が一、トピック通信ができなかった場合はファイアーウォールの解除、もしくはルールの見直しをお願いします。</p>
-<p><a href="https://autowarefoundation.github.io/autoware-documentation/main/support/troubleshooting/performance-troubleshooting/">こちら</a>も参考になるかもしれません。</p>
-<p><br></p>
-<h1 id="_3">環境構築</h1>
+<h1 id="_1">環境構築</h1>
 <p>ここでは、AWSIMの環境構築から起動まで行います。</p>
 <h2 id="nvidia">NVIDIAドライバのインストール</h2>
 <pre><code class="language-bash">#リポジトリの追加
@@ -1048,7 +1154,7 @@ sudo apt update
 #インストール
 sudo ubuntu-drivers autoinstall
 #再起動
-rebot
+reboot
 #再起動の後、インストールできていることを確認
 nvidia-smi
 </code></pre>
@@ -1064,20 +1170,20 @@ sudo apt install libvulkan1
 sudo apt-get install git-lfs
 git lfs install
 </code></pre>
-<hr />
-<h2 id="_4">大会データのダウンロード</h2>
-<pre><code>cd
+<h2 id="_2">大会データのダウンロード</h2>
+<pre><code class="language-bash">cd
 git lfs clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
 </code></pre>
 <h2 id="awsim">AWSIMのダウンロード・起動確認</h2>
 <!-- TO-DO:Google Driveのリンク差し替え -->
+
 <ol>
-<li><a href="https://drive.google.com/drive/folders/">GoogleDrive</a>から最新の<code>AWSIM.zip</code>をダウンロードし、<code>aichallenge-2024/aichallenge/simulator</code>に解凍してください。</li>
-<li>パーミッションを図のように変更してください。 <br />
-<img alt="パーミッション変更の様子" src="../images/installation/permmision.png" />  </li>
+<li><a href="https://drive.google.com/drive/folders/">GoogleDrive</a>から最新の<code>AWSIM_GPU.zip</code>をダウンロードし、<code>aichallenge-2024/aichallenge/simulator</code>に解凍してください。</li>
+<li>パーミッションを図のように変更してください。
+   <img alt="パーミッション変更の様子" src="../images/installation/permmision.png" /></li>
 <li>ファイルをダブルクリックで起動</li>
 <li>下記のような画面が表示されることを確認
-      <img alt="awsim" src="../images/installation/awsim.png" /></li>
+   <img alt="awsim" src="../images/installation/awsim.png" /></li>
 </ol>
 <hr />
 <h2 id="docker">Docker環境のインストール</h2>
@@ -1111,7 +1217,7 @@ sudo docker run hello-world
 
 # Hello from Docker!
 # This message shows that your installation appears to be working correctly.
-# 
+#
 # To generate this message, Docker took the following steps:
 #  1. The Docker client contacted the Docker daemon.
 #  2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
@@ -1120,13 +1226,13 @@ sudo docker run hello-world
 #     executable that produces the output you are currently reading.
 #  4. The Docker daemon streamed that output to the Docker client, which sent it
 #     to your terminal.
-# 
+#
 # To try something more ambitious, you can run an Ubuntu container with:
 #  $ docker run -it ubuntu bash
-# 
+#
 # Share images, automate workflows, and more with a free Docker ID:
 #  https://hub.docker.com/
-# 
+#
 # For more examples and ideas, visit:
 #  https://docs.docker.com/get-started/
 
@@ -1191,114 +1297,14 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 <hr />
 <h2 id="docker_2">Dockerイメージの準備・起動</h2>
 <h3 id="docker_3">Dockerイメージを入手</h3>
-<pre><code class="language-bash">docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest 
+<pre><code class="language-bash">docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest
 
 docker images
+
 ##下記メッセージを確認し、Dockerイメージがダウンロードできていることを確認する。。
 # REPOSITORY                                        TAG                       IMAGE ID       CREATED         SIZE
 # ghcr.io/automotiveaichallenge/autoware-universe   humble-latest             30c59f3fb415   13 days ago     8.84GB
 </code></pre>
-<h3 id="docker_4">大会用Dockerイメージのビルド</h3>
-<ul>
-<li>GPU搭載の方は以下</li>
-</ul>
-<pre><code>cd aichallenge2024
-bash docker_build.sh dev gpu
-</code></pre>
-<ul>
-<li>GPU非搭載の方は以下</li>
-</ul>
-<pre><code>cd aichallenge2024
-bash docker_build.sh dev cpu
-</code></pre>
-<h3 id="docker_5">大会用Dockerコンテナの起動</h3>
-<p>ターミナルを2つ用意します。</p>
-<ul>
-<li>コンテナを起動します。 </li>
-</ul>
-<pre><code class="language-bash"># GPU搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev gpu
-
-# GPU非搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev cpu
-</code></pre>
-<ul>
-<li>コンテナが起動できているか、別ターミナルで確認します。</li>
-</ul>
-<pre><code class="language-bash">docker images
-
-#以下が出ていれば作成ができています。
-#aichallenge-2024-dev                              latest                        df2e83a20349   33 minutes ago   8.9GB
-</code></pre>
-<h3 id="docker_6">大会Dockerコンテナを停止する</h3>
-<p>コンテナが起動しているターミナルで下記コマンドを実行します。</p>
-<pre><code class="language-bash">exit
-</code></pre>
-<p>以上でセットアップは終了となります。</p>
-<p><br></p>
-<h1 id="_5">大会環境の起動</h1>
-<p>本節では大会環境を起動します。</p>
-<h2 id="autoware">Autoware</h2>
-<p>コンテナを起動します。 </p>
-<pre><code class="language-bash"># GPU搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev gpu
-
-# GPU非搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev cpu
-</code></pre>
-<ul>
-<li>Autowareのビルド</li>
-</ul>
-<p>コンテナを開いたターミナル(コンテナ内)で以下を実行します。</p>
-<pre><code class="language-bash">cd /aichallenge
-bash build_autoware.bash
-</code></pre>
-<ul>
-<li>Autowareの起動</li>
-</ul>
-<pre><code class="language-bash">bash run_autoware.sh
-</code></pre>
-<p>下記の様な画面が表示されたら起動完了です。
-<img alt="autoware" src="../images/installation/autoware.png" /></p>
-<p>終了するにはターミナル上でCTRL + Cを入力します。</p>
-<h2 id="awsim-in-docker">AWSIM in Docker</h2>
-<p>コンテナを起動します。 </p>
-<pre><code class="language-bash"># GPU搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev gpu
-
-# GPU非搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev cpu
-</code></pre>
-<p>コンテナを開いたターミナル(コンテナ内)で以下を実行します。</p>
-<pre><code class="language-bash">cd /aichallenge
-bash run_simulator.bash
-</code></pre>
-<p>下記の様な画面が表示されたら起動完了です。
-<img alt="awsim" src="../images/installation/awsim.png" /></p>
-<p>終了するにはターミナル上でCTRL + Cを入力します。</p>
-<h1 id="_6">変更点の取り込み</h1>
-<p>大会環境のアップデートがあった際には以下を実行してください。</p>
-<h3 id="dockerupdate">Dockerのupdate</h3>
-<pre><code class="language-bash">docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest 
-
-</code></pre>
-<h3 id="repositoryupdate">Repositoryのupdate</h3>
-<pre><code class="language-sh">cd aichallenge2024 # path to aichallenge2024
-git pull origin/main
-</code></pre>
-<p><br></p>
-<h1 id="troubleshooting">TroubleShooting</h1>
-<p>Q. <code>docker_run.sh: 行 35: rocker: コマンドが見つかりません</code></p>
-<p>A. <a href="#docker環境のインストール">rockerのインストール</a>をお願いします。</p>
-<p><br></p>
-<p>Q. <code>WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist</code></p>
-<p>A. Dockerイメージのビルドをお願いします。</p>
 
 
 

@@ -85,13 +85,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/course/velocity_planning/"/>
     </url>
     <url>
-        <loc>https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/architecture/</loc>
-        <lastmod>2024-05-23</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/architecture/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/architecture/"/>
-    </url>
-    <url>
         <loc>https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/device-drivers/</loc>
         <lastmod>2024-05-23</lastmod>
         <changefreq>daily</changefreq>
@@ -118,6 +111,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ja" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/requirements/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/requirements/"/>
+    </url>
+    <url>
+        <loc>https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/workspace/</loc>
+        <lastmod>2024-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/workspace/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/workspace/"/>
     </url>
     <url>
         <loc>https://automotiveaichallenge.github.io/aichallenge-documentation-2024/specifications/hardware/</loc>
@@ -225,13 +225,6 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/course/velocity_planning/"/>
     </url>
     <url>
-        <loc>https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/architecture/</loc>
-        <lastmod>2024-05-23</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/architecture/"/>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/architecture/"/>
-    </url>
-    <url>
         <loc>https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/device-drivers/</loc>
         <lastmod>2024-05-23</lastmod>
         <changefreq>daily</changefreq>
@@ -258,6 +251,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/requirements/"/>
         <xhtml:link rel="alternate" hreflang="ja" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/requirements/"/>
+    </url>
+    <url>
+        <loc>https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/workspace/</loc>
+        <lastmod>2024-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/development/workspace/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/development/workspace/"/>
     </url>
     <url>
         <loc>https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/specifications/hardware/</loc>
