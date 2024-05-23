@@ -25,20 +25,17 @@ nav:
   - course:
       - course/index.md
       - course/vehicle.md
-      - course/sensing.md
-      - course/localization.md
-      - course/control.md
-      - course/rviz.md
-      - course/planning.md
+      - course/velocity_planning.md
+      - course/path_planning.md
       - course/perception.md
   - specifications:
       - specifications/interface.md
       - specifications/hardware.md
       - specifications/simulator.md
   - development:
-      - development/architecture.md
       - development/requirements.md
       - development/installation.md
+      - development/workspace.md
       - development/main-module.md
       - development/device-drivers.md
   - FAQ: faq.md
