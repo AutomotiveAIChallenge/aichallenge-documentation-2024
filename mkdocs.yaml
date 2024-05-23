@@ -25,11 +25,8 @@ nav:
   - course:
       - course/index.md
       - course/vehicle.md
-      - course/sensing.md
-      - course/localization.md
-      - course/control.md
-      - course/rviz.md
-      - course/planning.md
+      - course/velocity_planning.md
+      - course/path_planning.md
       - course/perception.md
   - specifications:
       - specifications/interface.md
