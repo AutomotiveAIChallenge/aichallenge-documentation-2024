@@ -59,7 +59,7 @@ The Wheel (script) provides a reference to the collider and visual object for th
 - Update the force exerted by the tire forward and sideways depending on the acceleration (including cancellation of skidding).
 - Ensure setting the tire sleep (it is impossible to put Rigidbody to sleep, but putting all wheels to sleep allows to get closer to this effect).
 
-The Wheel Collider Config (script) has been developed to prevent inspector entry for the WheelCollider which ensures that friction is set to 0 and only wheel suspension and collisions are enabled. For more details, please see [this manual](https://docs.unity3d.com/Manual/class-WheelCollider.html).
+The Wheel Collider Config script is designed to prevent inspector input for wheel colliders, set friction to zero, and only enable wheel suspension and collisions. For more details on wheel colliders, please refer to [this manual](https://docs.unity3d.com/Manual/class-WheelCollider.html).
 
 ![wheel-collider-component](./images/wheel-collider-component.png)
 
