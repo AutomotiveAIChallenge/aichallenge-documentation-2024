@@ -4,18 +4,19 @@
 
 | Interface    | Name                                 | Type                                                     |
 | ------------ | ------------------------------------ | -------------------------------------------------------- |
+| Service      | `/control/control_mode_request`      | `autoware_auto_vehicle_msgs/srv/ControlModeCommand`      |
+| Publisher    | `/vehicle/status/control_mode`       | `autoware_auto_vehicle_msgs/msg/ControlModeReport`       |
 | Subscription | `/control/command/control_cmd`       | `autoware_auto_control_msgs/msg/AckermannControlCommand` |
 | Publisher    | `/vehicle/status/velocity_status`    | `autoware_auto_vehicle_msgs/msg/VelocityReport`          |
 | Publisher    | `/vehicle/status/steering_status`    | `autoware_auto_vehicle_msgs/msg/SteeringReport`          |
 | Subscription | `/control/command/gear_cmd`          | `autoware_auto_vehicle_msgs/msg/GearCommand`             |
 | Publisher    | `/vehicle/status/gear_status`        | `autoware_auto_vehicle_msgs/msg/GearReport`              |
 | Publisher    | `/sensing/gnss/pose_with_covariance` | `geometry_msgs/msg/PoseWithCovarianceStamped`            |
-| Publisher    | `/sensing/imu/imu_data`              | `sensor_msgs/msg/Imu`                                    |
+| Publisher    | `/sensing/imu/imu_raw`               | `sensor_msgs/msg/Imu`                                    |
 
 <!--
-| Service      | `/control/control_mode_request`      | `autoware_auto_vehicle_msgs/srv/ControlModeCommand`      |
-| Publisher    | `/vehicle/status/control_mode`       | `autoware_auto_vehicle_msgs/msg/ControlModeReport`       |
-| Publisher    | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
+| Subscription | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationCommandStamped`          |
+| Publisher | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
 -->
 
 ### `/control/command/control_cmd`
@@ -64,20 +65,20 @@
 
 ### `/sensing/gnss/pose_with_covariance`
 
-| Name                  | Description                                  |
-| --------------------- | -------------------------------------------- |
-| header.stamp          | データの取得時刻                             |
-| header.frame_id       | フレームID (`map`)                           |
-| pose.pose.position    | 車両位置 (フレームID `base_link` 原点の位置) |
-| pose.pose.orientation | 未使用                                       |
-| pose.covariance       | 位置精度                                     |
+| Name                  | Description                       |
+| --------------------- | --------------------------------- |
+| header.stamp          | データの取得時刻                  |
+| header.frame_id       | フレームID (`map`)                |
+| pose.pose.position    | 車両位置 (`base_link` 原点の位置) |
+| pose.pose.orientation | 未使用                            |
+| pose.covariance       | 位置精度                          |
 
-### `/sensing/imu/imu_data`
+### `/sensing/imu/imu_raw`
 
-| Name                | Description              |
-| ------------------- | ------------------------ |
-| header.stamp        | データの取得時刻         |
-| header.frame_id     | フレームID (`base_link`) |
-| orientation         | 方位                     |
-| angular_velocity    | 角速度                   |
-| linear_acceleration | 加速度                   |
+| Name                | Description             |
+| ------------------- | ----------------------- |
+| header.stamp        | データの取得時刻        |
+| header.frame_id     | フレームID (`imu_link`) |
+| orientation         | 方位                    |
+| angular_velocity    | 角速度                  |
+| linear_acceleration | 加速度                  |
