@@ -1,110 +1,76 @@
 # ワークスペース
 
-### 大会用Dockerイメージのビルド
+## 大会用Dockerイメージの準備
+
+### Dockerイメージのビルド
+
+以下のコマンドで大会用のDockerイメージをビルドします。
 
 ```bash
 cd aichallenge2024
-bash docker_build.sh dev
+./docker_build.sh dev
+
+# ビルドできたか確認
+docker images
+
+# 以下のような行が含まれていれば成功しています。
+# aichallenge-2024-dev   latest   df2e83a20349   33 minutes ago   8.9GB
 ```
 
-### 大会用Dockerコンテナの起動
-
-ターミナルを2つ用意します。
-
-- コンテナを起動します。
+### Dockerコンテナの起動
 
 ```bash
 # GPU搭載の方は以下
 cd aichallenge-2024
-bash docker_run.sh dev gpu
+./docker_run.sh dev gpu
 
 # GPU非搭載の方は以下
 cd aichallenge-2024
-bash docker_run.sh dev cpu
+./docker_run.sh dev cpu
 ```
 
-- コンテナが起動できているか、別ターミナルで確認します。
+### Dockerコンテナの停止
 
-```bash
-docker images
-
-#以下が出ていれば作成ができています。
-#aichallenge-2024-dev                              latest                        df2e83a20349   33 minutes ago   8.9GB
-```
-
-### 大会Dockerコンテナを停止する
-
-コンテナが起動しているターミナルで下記コマンドを実行します。
+コンテナが起動しているターミナルで下記コマンドを実行します。以上でセットアップは終了となります。
 
 ```bash
 exit
 ```
 
-以上でセットアップは終了となります。
-
 ## 大会環境の起動
 
-本節では大会環境を起動します。
+本節では大会環境を実行方法を解説します。以下のコマンドはすべてコンテナ内から実行するため、まずは「Dockerコンテナの起動」に従い大会用のコンテナを起動してください。
 
 ### Autoware
 
-コンテナを起動します。
-
-```bash
-# GPU搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev gpu
-
-# GPU非搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev cpu
-```
-
-- Autowareのビルド
-
-コンテナを開いたターミナル(コンテナ内)で以下を実行します。
+コンテナを起動したターミナル(コンテナ内)で以下を実行します。
 
 ```bash
 cd /aichallenge
-bash build_autoware.bash
+./build_autoware.bash
 ```
 
-- Autowareの起動
+Autowareのビルド後、以下のコマンドを実行します。
 
 ```bash
-bash run_autoware.sh
+./run_autoware.sh
 ```
 
-下記の様な画面が表示されたら起動完了です。
+下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 ![autoware](./images/installation/autoware.png)
-
-終了するにはターミナル上でCTRL + Cを入力します。
 
 ### AWSIM in Docker
 
-コンテナを起動します。
-
-```bash
-# GPU搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev gpu
-
-# GPU非搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev cpu
-```
-
-コンテナを開いたターミナル(コンテナ内)で以下を実行します。
+コンテナを起動したターミナル(コンテナ内)で以下を実行します。
 
 ```bash
 cd /aichallenge
-bash run_simulator.bash
+./run_simulator.bash
 ```
 
-下記の様な画面が表示されたら起動完了です。
+下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 ![awsim](./images/installation/awsim.png)
 
-終了するにはターミナル上でCTRL + Cを入力します。
 
 ## 変更点の取り込み
 
@@ -124,8 +90,6 @@ cd aichallenge2024 # path to aichallenge2024
 git pull origin/main
 ```
 
-<br>
-
 ## TroubleShooting
 
 Q. `docker_run.sh: 行 35: rocker: コマンドが見つかりません`
@@ -136,11 +100,12 @@ Q. `WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the
 
 A. Dockerイメージのビルドをお願いします。
 
+## ワークスペースの構成
 
-## docker-dev
+### docker-dev
 
-![dev](./docker/dev.drawio.svg)
+![dev](./images/docker/dev.drawio.svg)
 
-## docker-eval
+### docker-eval
 
-![eval](./docker/eval.drawio.svg)
+![eval](./images/docker/eval.drawio.svg)

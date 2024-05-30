@@ -1,19 +1,29 @@
 # 環境構築
 
-ここでは、AWSIMの環境構築から起動まで行います。
+## ワークスペースのダウンロード
+
+任意のディレクトリにて下記コマンドを実行し、ワークスペースをダウンロードします。
+
+```bash
+git clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
+```
 
 ## NVIDIAドライバのインストール
 
 ```bash
-#リポジトリの追加
+# リポジトリの追加
 sudo add-apt-repository ppa:graphics-drivers/ppa
-#パッケージリストの更新
+
+# パッケージリストの更新
 sudo apt update
-#インストール
+
+# インストール
 sudo ubuntu-drivers autoinstall
-#再起動
+
+# 再起動
 reboot
-#再起動の後、インストールできていることを確認
+
+# 再起動の後、インストールできていることを確認
 nvidia-smi
 ```
 
@@ -22,39 +32,30 @@ nvidia-smi
 ## Vulkunのインストール
 
 ```bash
-#パッケージリストの更新
+# パッケージリストの更新
 sudo apt update
-#libvulkan1をインストール
+
+# libvulkan1をインストール
 sudo apt install libvulkan1
-```
-
-## Git LFSのインストール
-
-```bash
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-sudo apt-get install git-lfs
-git lfs install
-```
-
-## 大会データのダウンロード
-
-```bash
-cd
-git lfs clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
 ```
 
 ## AWSIMのダウンロード・起動確認
 
-<!-- TO-DO:Google Driveのリンク差し替え -->
+!!! info
 
-1. [GoogleDrive](https://drive.google.com/drive/folders/)から最新の`AWSIM_GPU.zip`をダウンロードし、`aichallenge-2024/aichallenge/simulator`に解凍してください。
-2. パーミッションを図のように変更してください。
+    AWSIM は現在準備中です。
+
+1. [Google Drive](https://drive.google.com/drive/) から最新の `AWSIM_GPU.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
+
+2. パーミッションを図のように変更します。
+
    ![パーミッション変更の様子](./images/installation/permmision.png)
-3. ファイルをダブルクリックで起動
-4. 下記のような画面が表示されることを確認
-   ![awsim](./images/installation/awsim.png)
 
----
+3. ファイルをダブルクリックで起動します。
+
+4. 下記のような画面が表示されることを確認します。
+
+   ![awsim](./images/installation/awsim.png)
 
 ## Docker環境のインストール
 
@@ -62,7 +63,6 @@ git lfs clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
 
 - [Docker](https://docs.docker.com/engine/install/ubuntu/)
 - [rocker](https://github.com/osrf/rocker)(Dockerコンテナ内でRviz、rqtなどのGUIを使用するために用います。)
-- [Git LFS](https://packagecloud.io/github/git-lfs/install)
 - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)(GPU非搭載の方はスキップ)
 
 ### Dockerのインストール
@@ -86,8 +86,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # インストールできているかをテスト
 sudo docker run hello-world
 
-#以下の様なメッセージが出ればインストール完了です。
-
+# 以下の様なメッセージが出ればインストール完了です。
+#
 # Hello from Docker!
 # This message shows that your installation appears to be working correctly.
 #
@@ -109,14 +109,17 @@ sudo docker run hello-world
 # For more examples and ideas, visit:
 #  https://docs.docker.com/get-started/
 
-#User Groupに自分のアカウントを追加し、sudo権限が無くてもDockerを利用可能にします。
+# User Groupに自分のアカウントを追加し、sudo権限が無くてもDockerを利用可能にします。
 sudo usermod -aG docker $USER
 
-#Groupsにdockerが追加されていることを確認
+# Groupsにdockerが追加されていることを確認
 groups $USER
-# $ USERNAME : USERNAME adm cdrom sudo ... docker
+
+# 以下の様なメッセージが出れば設定完了です。
+# USERNAME : USERNAME adm cdrom sudo ... docker
 
 # ここまで確認できたらLoginし直してください。
+reboot
 ```
 
 ### rockerのインストール
@@ -151,9 +154,9 @@ sudo systemctl restart docker
 #インストールできているかをテスト
 sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu20.04 nvidia-smi
 
-#最後のコマンドで以下のような出力が出れば成功です。
-#（下記はNVIDIAウェブサイトからのコピペです）
-
+#最後のコマンドで以下のように出力されれば成功です。
+#（下記はNVIDIAウェブサイトからの引用です）
+#
 # +-----------------------------------------------------------------------------+
 # | NVIDIA-SMI 450.51.06    Driver Version: 450.51.06    CUDA Version: 11.0     |
 # |-------------------------------+----------------------+----------------------+
@@ -174,18 +177,19 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 # +-----------------------------------------------------------------------------+
 ```
 
----
+## Dockerイメージの準備
 
-## Dockerイメージの準備・起動
-
-### Dockerイメージを入手
+Dockerイメージは10GB程度のサイズがあり、ダウンロードには時間が掛かります。
 
 ```bash
+# Dockerイメージのダウンロード
 docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest
 
+# Dockerイメージの確認
 docker images
 
-##下記メッセージを確認し、Dockerイメージがダウンロードできていることを確認する。。
+# Dockerイメージがダウンロードできていれば以下のような出力が得られます。
+#
 # REPOSITORY                                        TAG                       IMAGE ID       CREATED         SIZE
 # ghcr.io/automotiveaichallenge/autoware-universe   humble-latest             30c59f3fb415   13 days ago     8.84GB
 ```
