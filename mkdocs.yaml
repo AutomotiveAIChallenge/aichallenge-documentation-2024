@@ -26,7 +26,6 @@ nav:
       - course/index.md
       - course/vehicle.md
       - course/velocity_planning.md
-      - course/path_planning.md
       - course/perception.md
   - specifications:
       - specifications/interface.md

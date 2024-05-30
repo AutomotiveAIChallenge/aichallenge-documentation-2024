@@ -162,6 +162,7 @@ twist:
 $$ a = k_{\text{p}}  \cdot (v_{\text{target}} - v_{\text{now}}) $$
 
 以下に速度の比例制御を行うノードのサンプルを用意しました。
+
 - [velocity_planning/p_controller.hpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.hpp)
 - [velocity_planning/p_controller.cpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.cpp)
 
