@@ -14,11 +14,11 @@
         <link rel="prev" href="../vehicle/">
       
       
-        <link rel="next" href="../path_planning/">
+        <link rel="next" href="../perception/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -705,32 +705,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../path_planning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    03. 経路計画
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../perception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    04. 外界認識
+    03. 外界認識
   </span>
   
 
@@ -1200,9 +1179,11 @@ twist:
 <p>次に、車両が目標の速度になるように車両の速度を制御してみましょう。
 現在の速度v_nowと目標の速度v_targetの差にゲインk_pをかけたものを加速度入力aとする比例制御を用いることを考えます。</p>
 <p>$$ a = k_{\text{p}}  \cdot (v_{\text{target}} - v_{\text{now}}) $$</p>
-<p>以下に速度の比例制御を行うノードのサンプルを用意しました。
-- <a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.hpp">velocity_planning/p_controller.hpp</a>
-- <a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.cpp">velocity_planning/p_controller.cpp</a></p>
+<p>以下に速度の比例制御を行うノードのサンプルを用意しました。</p>
+<ul>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.hpp">velocity_planning/p_controller.hpp</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.cpp">velocity_planning/p_controller.cpp</a></li>
+</ul>
 <p>以下のコマンドで比例制御のコントローラのノードを起動することができ、車両が動き始めます。kpに比例ゲイン、target_velocityに速度[m/s]を格納します。</p>
 <pre><code class="language-bash">ros2 run autoware_practice_course p_controller --ros-args -p kp:=0.5 -p target_velocity:=1.0
 </code></pre>

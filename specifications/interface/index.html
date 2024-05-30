@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -633,32 +633,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../course/path_planning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    03. 経路計画
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../course/perception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    04. 外界認識
+    03. 外界認識
   </span>
   
 
@@ -835,9 +814,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sensingimuimu_data" class="md-nav__link">
+  <a href="#sensingimuimu_raw" class="md-nav__link">
     <span class="md-ellipsis">
-      /sensing/imu/imu_data
+      /sensing/imu/imu_raw
     </span>
   </a>
   
@@ -1123,6 +1102,16 @@
 </thead>
 <tbody>
 <tr>
+<td>Service</td>
+<td><code>/control/control_mode_request</code></td>
+<td><code>autoware_auto_vehicle_msgs/srv/ControlModeCommand</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td><code>/vehicle/status/control_mode</code></td>
+<td><code>autoware_auto_vehicle_msgs/msg/ControlModeReport</code></td>
+</tr>
+<tr>
 <td>Subscription</td>
 <td><code>/control/command/control_cmd</code></td>
 <td><code>autoware_auto_control_msgs/msg/AckermannControlCommand</code></td>
@@ -1154,15 +1143,14 @@
 </tr>
 <tr>
 <td>Publisher</td>
-<td><code>/sensing/imu/imu_data</code></td>
+<td><code>/sensing/imu/imu_raw</code></td>
 <td><code>sensor_msgs/msg/Imu</code></td>
 </tr>
 </tbody>
 </table>
 <!--
-| Service      | `/control/control_mode_request`      | `autoware_auto_vehicle_msgs/srv/ControlModeCommand`      |
-| Publisher    | `/vehicle/status/control_mode`       | `autoware_auto_vehicle_msgs/msg/ControlModeReport`       |
-| Publisher    | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
+| Subscription | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationCommandStamped`          |
+| Publisher | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
 -->
 
 <h3 id="controlcommandcontrol_cmd"><code>/control/command/control_cmd</code></h3>
@@ -1315,7 +1303,7 @@
 </tr>
 <tr>
 <td>pose.pose.position</td>
-<td>車両位置 (フレームID <code>base_link</code> 原点の位置)</td>
+<td>車両位置 (<code>base_link</code> 原点の位置)</td>
 </tr>
 <tr>
 <td>pose.pose.orientation</td>
@@ -1327,7 +1315,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="sensingimuimu_data"><code>/sensing/imu/imu_data</code></h3>
+<h3 id="sensingimuimu_raw"><code>/sensing/imu/imu_raw</code></h3>
 <table>
 <thead>
 <tr>
@@ -1342,7 +1330,7 @@
 </tr>
 <tr>
 <td>header.frame_id</td>
-<td>フレームID (<code>base_link</code>)</td>
+<td>フレームID (<code>imu_link</code>)</td>
 </tr>
 <tr>
 <td>orientation</td>
