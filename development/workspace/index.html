@@ -902,27 +902,42 @@
         <li class="md-nav__item">
   <a href="#docker" class="md-nav__link">
     <span class="md-ellipsis">
-      大会用Dockerイメージのビルド
+      大会用Dockerイメージの準備
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="大会用Dockerイメージの準備">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#docker_1" class="md-nav__link">
     <span class="md-ellipsis">
-      大会用Dockerコンテナの起動
+      Dockerイメージのビルド
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#docker_2" class="md-nav__link">
     <span class="md-ellipsis">
-      大会Dockerコンテナを停止する
+      Dockerコンテナの起動
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerコンテナの停止
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1002,6 +1017,16 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ワークスペースの構成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ワークスペースの構成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#docker-dev" class="md-nav__link">
     <span class="md-ellipsis">
       docker-dev
@@ -1009,13 +1034,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#docker-eval" class="md-nav__link">
     <span class="md-ellipsis">
       docker-eval
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1133,80 +1163,50 @@
 
 
 <h1 id="_1">ワークスペース</h1>
-<h3 id="docker">大会用Dockerイメージのビルド</h3>
+<h2 id="docker">大会用Dockerイメージの準備</h2>
+<h3 id="docker_1">Dockerイメージのビルド</h3>
+<p>以下のコマンドで大会用のDockerイメージをビルドします。</p>
 <pre><code class="language-bash">cd aichallenge2024
-bash docker_build.sh dev
+./docker_build.sh dev
+
+# ビルドできたか確認
+docker images
+
+# 以下のような行が含まれていれば成功しています。
+# aichallenge-2024-dev   latest   df2e83a20349   33 minutes ago   8.9GB
 </code></pre>
-<h3 id="docker_1">大会用Dockerコンテナの起動</h3>
-<p>ターミナルを2つ用意します。</p>
-<ul>
-<li>コンテナを起動します。</li>
-</ul>
+<h3 id="docker_2">Dockerコンテナの起動</h3>
 <pre><code class="language-bash"># GPU搭載の方は以下
 cd aichallenge-2024
-bash docker_run.sh dev gpu
+./docker_run.sh dev gpu
 
 # GPU非搭載の方は以下
 cd aichallenge-2024
-bash docker_run.sh dev cpu
+./docker_run.sh dev cpu
 </code></pre>
-<ul>
-<li>コンテナが起動できているか、別ターミナルで確認します。</li>
-</ul>
-<pre><code class="language-bash">docker images
-
-#以下が出ていれば作成ができています。
-#aichallenge-2024-dev                              latest                        df2e83a20349   33 minutes ago   8.9GB
-</code></pre>
-<h3 id="docker_2">大会Dockerコンテナを停止する</h3>
-<p>コンテナが起動しているターミナルで下記コマンドを実行します。</p>
+<h3 id="docker_3">Dockerコンテナの停止</h3>
+<p>コンテナが起動しているターミナルで下記コマンドを実行します。以上でセットアップは終了となります。</p>
 <pre><code class="language-bash">exit
 </code></pre>
-<p>以上でセットアップは終了となります。</p>
 <h2 id="_2">大会環境の起動</h2>
-<p>本節では大会環境を起動します。</p>
+<p>本節では大会環境を実行方法を解説します。以下のコマンドはすべてコンテナ内から実行するため、まずは「Dockerコンテナの起動」に従い大会用のコンテナを起動してください。</p>
 <h3 id="autoware">Autoware</h3>
-<p>コンテナを起動します。</p>
-<pre><code class="language-bash"># GPU搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev gpu
-
-# GPU非搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev cpu
-</code></pre>
-<ul>
-<li>Autowareのビルド</li>
-</ul>
-<p>コンテナを開いたターミナル(コンテナ内)で以下を実行します。</p>
+<p>コンテナを起動したターミナル(コンテナ内)で以下を実行します。</p>
 <pre><code class="language-bash">cd /aichallenge
-bash build_autoware.bash
+./build_autoware.bash
 </code></pre>
-<ul>
-<li>Autowareの起動</li>
-</ul>
-<pre><code class="language-bash">bash run_autoware.sh
+<p>Autowareのビルド後、以下のコマンドを実行します。</p>
+<pre><code class="language-bash">./run_autoware.sh
 </code></pre>
-<p>下記の様な画面が表示されたら起動完了です。
+<p>下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 <img alt="autoware" src="../images/installation/autoware.png" /></p>
-<p>終了するにはターミナル上でCTRL + Cを入力します。</p>
 <h3 id="awsim-in-docker">AWSIM in Docker</h3>
-<p>コンテナを起動します。</p>
-<pre><code class="language-bash"># GPU搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev gpu
-
-# GPU非搭載の方は以下
-cd aichallenge-2024
-bash docker_run.sh dev cpu
-</code></pre>
-<p>コンテナを開いたターミナル(コンテナ内)で以下を実行します。</p>
+<p>コンテナを起動したターミナル(コンテナ内)で以下を実行します。</p>
 <pre><code class="language-bash">cd /aichallenge
-bash run_simulator.bash
+./run_simulator.bash
 </code></pre>
-<p>下記の様な画面が表示されたら起動完了です。
+<p>下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 <img alt="awsim" src="../images/installation/awsim.png" /></p>
-<p>終了するにはターミナル上でCTRL + Cを入力します。</p>
 <h2 id="_3">変更点の取り込み</h2>
 <p>大会環境のアップデートがあった際には以下を実行してください。</p>
 <h3 id="dockerupdate">Dockerのupdate</h3>
@@ -1217,16 +1217,16 @@ bash run_simulator.bash
 <pre><code class="language-sh">cd aichallenge2024 # path to aichallenge2024
 git pull origin/main
 </code></pre>
-<p><br></p>
 <h2 id="troubleshooting">TroubleShooting</h2>
 <p>Q. <code>docker_run.sh: 行 35: rocker: コマンドが見つかりません</code></p>
 <p>A. <a href="#docker環境のインストール">rockerのインストール</a>をお願いします。</p>
 <p>Q. <code>WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist</code></p>
 <p>A. Dockerイメージのビルドをお願いします。</p>
-<h2 id="docker-dev">docker-dev</h2>
-<p><img alt="dev" src="./docker/dev.drawio.svg" /></p>
-<h2 id="docker-eval">docker-eval</h2>
-<p><img alt="eval" src="./docker/eval.drawio.svg" /></p>
+<h2 id="_4">ワークスペースの構成</h2>
+<h3 id="docker-dev">docker-dev</h3>
+<p><img alt="dev" src="../images/docker/dev.drawio.svg" /></p>
+<h3 id="docker-eval">docker-eval</h3>
+<p><img alt="eval" src="../images/docker/eval.drawio.svg" /></p>
 
 
 
