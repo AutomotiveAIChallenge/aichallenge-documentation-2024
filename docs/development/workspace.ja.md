@@ -53,7 +53,7 @@ cd /aichallenge
 Autowareのビルド後、以下のコマンドを実行します。
 
 ```bash
-./run_autoware.sh
+./run_autoware.bash
 ```
 
 下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
