@@ -303,6 +303,93 @@ ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
 
 グラフより、大体50m付近で10m/sに達し100m付近で停止できていることがわかります。
 
-<script type="text/javascript" async
+## 02-04. 横方向制御を行う
+
+図のような、直進・90度旋回・直進・90度旋回・直進となるような経路に追従することを考えます。
+
+<div align="center">
+  <img src="../images/2-4/trajectory_zigzag.png" alt="Alt Text">
+  <br>
+  <em>今回の目標経路</em>
+</div>
+
+この経路に追従するためには旋回で適切にステアリングを操作し横制御を行う必要があります。
+そこで、P制御による縦方向制御とpure puresuitによる横方向制御を含んだtrajectroy_followerノードを作成しました。
+
+- [velocity_planning/trajectory_follower.hpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/trajectory_follower.hpp)
+- [velocity_planning/trajectory_follower.cpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/trajectory_follower.cpp)
+
+<br>
+
+<div align="center">
+  <img src="../images/2-4/node_diagram.png" alt="Alt Text">
+  <br>
+  <em>autoware-practiceのtrajectory_follower周りのノードダイアグラム</em>
+</div>
+
+<br>
+
+pure pursuitは、車両の現在位置と目標経路上の追従点（ルックアヘッドポイント）との距離と方向を基にルックアヘッドポイントに到達するための曲率を計算するアルゴリズムです。以下にpure pursuitの基本的な動作を説明します。
+
+1. **追従点の設定**:
+   目標経路上に車両の現在位置から一定の距離先に追従点を設定します。この距離はルックアヘッド距離と呼ばれます。
+
+2. **方向ベクトルの計算**:
+   車両の現在位置と追従点との間の方向ベクトルを計算します。これにより、車両がどの方向に進むべきかがわかります。
+
+3. **ステアリング角度の計算**:
+   計算された方向ベクトルに基づき曲率を計算し、車両のステアリング角度を求めます。
+$$ \theta = \arctan\left(\frac{2  L  \sin(\alpha)}{d}\right) $$
+$$ \theta: 計算されたステアリング角度 \\ $$
+$$ L: 車両のホイールベースの長さ \\ $$
+$$ \alpha: 現在の車両の向きとルックアヘッドポイントへの方向ベクトルの間の角度差 \\ $$
+$$ d: ルックアヘッド距離 $$
+
+
+<div align="center">
+  <img src="../images/2-4/pure_pursuit.png" alt="Pure Pursuit">
+  <br>
+  <em>pure pursuitの基本動作</em>
+</div>
+
+
+
+pure pursuitの利点は、そのシンプルさと実装の容易さにあります。しかし、高速走行や急カーブの多い経路では、別の制御アルゴリズムとの組み合わせが必要になる場合があります。
+
+P制御とpure pursuit制御によって正しく経路に追従できているかをPlotJugglerで確認してみましょう。
+
+これまでと同様に別々のターミナルで以下のコマンドを実行しシミュレータとPlotJugglerを起動します。
+
+```bash
+ros2 launch autoware_practice_launch practice.launch.xml
+```
+
+```bash
+ros2 run plotjuggler plotjuggler
+```
+
+PlotJuggler上で`/localization/kinematic_state/pose/pose/position/x`と`/localization/kinematic_state/pose/pose/position/y`を複数選択し右クリックでドラッグ＆ドロップします。
+
+![alt text](./images/2-4/PlotJuggler1.png)
+
+rvizと軸の向きを合わせます。ドラッグ＆ドロップした後に表示されるポップアップでSwapを選択して軸を入れ替えてOKを選択します。その後グラフ上で右クリックしてFlip Horizontal Axisを選択して横軸を反転させます。
+
+![alt text](./images/2-4/PlotJuggler2.png)
+
+PlotJugglerの設定ができたら、別々のターミナルで以下のコマンドを実行してtrajectory_loaderノードとtrajectory_followerノードを起動します。
+
+```bash
+ros2 run autoware_practice_course trajectory_loader --ros-args -p path_file:=src/autoware_practice_course/config/trajectory_zigzag.csv
+```
+
+```bash
+ros2 run autoware_practice_course trajectory_follower --ros-args -p kp:=5.0 -p lookahead_distance:=5.0
+```
+
+適切に起動できると設定された経路に追従できていることがPlotJuggler上でわかります。
+
+![alt text](./images/2-4/PlotJuggler3.png)
+
+<script type="text/javascript" asyn
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js">
 </script>
