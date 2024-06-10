@@ -1040,6 +1040,7 @@
 <pre><code class="language-bash">git clone https://github.com/AutomotiveAIChallenge/autoware-practice.git
 cd autoware-practice
 vcs import src &lt; autoware.repos
+rosdep install -y --from-paths src --ignore-src --rosdistro humble
 colcon build --symlink-install
 </code></pre>
 <p>ビルドが完了したら、以下のコマンドを実行してビルドされたパッケージを利用できるようにします。

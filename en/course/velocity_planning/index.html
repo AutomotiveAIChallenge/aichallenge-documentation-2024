@@ -689,6 +689,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#02-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      02-04. 横方向制御を行う
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1044,9 +1053,9 @@
 ここでは速度計画を行って目標地点で車両を停止させることを目指します。</p>
 <h2 id="02-01">02-01. 車速を取得する</h2>
 <p>まず、車両の速度を取得してみましょう。</p>
-<p>車両の速度は/localization/kinematic_stateというトピックでパブリッシュされます。
-/localization/kinematic_stateには自車両の位置、姿勢、速度、角速度とそれらの共分散行列の情報が含まれています。</p>
-<p>本来Autowareでは以下のノードダイアグラムのように、GNSS、Lidar、IMUなどの情報をもとにekf_localizerが/localization/kinematic_stateを計算します。</p>
+<p>車両の速度は<code>/localization/kinematic_state</code>というトピックでパブリッシュされます。
+<code>/localization/kinematic_state</code>には自車両の位置、姿勢、速度、角速度とそれらの共分散行列の情報が含まれています。</p>
+<p>本来Autowareでは以下のノードダイアグラムのように、GNSS、Lidar、IMUなどの情報をもとにekf_localizerが<code>/localization/kinematic_state</code>を計算します。</p>
 <div align="center">
   <img src="../images/localization_node.png" alt="Alt Text">
   <br>
@@ -1054,13 +1063,12 @@
 </div>
 
 <p><br></p>
-<p>しかし初心者にAutowareの説明をするのにこの構成はかなり複雑なので、今回は以下のようにシンプルな
-localizerを用意しました。</p>
+<p>しかし初心者にAutowareの説明をするのにこの構成はかなり複雑なので、今回は以下のようにシンプルなdummy_localizerを用意しました。</p>
 <p><br></p>
 <div align="center">
   <img src="../images/practice_localization_node.png" alt="Alt Text">
   <br>
-  <em>autoware-practiceのlocalizer周りのノードダイアグラム</em>
+  <em>autoware-practiceのdummy_localizer周りのノードダイアグラム</em>
 </div>
 
 <p><br></p>
@@ -1174,7 +1182,7 @@ twist:
   - 0.01
 ---
 </code></pre>
-<p><a href="">/localization/kinematic_state</a>というトピックは <a href="https://docs.ros2.org/foxy/api/geometry_msgs/msg/Pose.html">nav_msgs/msgs/Odometry</a> というROS2のメッセージ型を利用しています。</p>
+<p><code>/localization/kinematic_state</code>というトピックは <a href="https://docs.ros2.org/foxy/api/geometry_msgs/msg/Pose.html">nav_msgs/msgs/Odometry</a> というROS2のメッセージ型を利用しています。</p>
 <h2 id="02-02">02-02. 車両速度を目標速度に収束させる</h2>
 <p>次に、車両が目標の速度になるように車両の速度を制御してみましょう。
 現在の速度v_nowと目標の速度v_targetの差にゲインk_pをかけたものを加速度入力aとする比例制御を用いることを考えます。</p>
@@ -1199,7 +1207,7 @@ twist:
 </code></pre>
 <p>左上のDataをクリックし、先程保存したautoware-practice/velocity.bag/metadata.yamlを選択し右上のOpenをクリックします。</p>
 <p><img alt="plotjuggler_1" src="../../../course/images/plotjuggler_1.png" /></p>
-<p>/localization/kinematic_stateをクリックし右下のOKをクリックします。</p>
+<p><code>/localization/kinematic_stat</code>をクリックし右下のOKをクリックします。</p>
 <p>左下のTimeseries.Listからlocalization &gt; kinematic_state &gt; twist &gt; twist &gt; linear &gt; x を選択し、右側にドラッグ＆ドロップをすると速度の時間推移を表すグラフを表示することができます。</p>
 <p><img alt="plotjuggler_2" src="../../../course/images/plotjuggler_2.png" /></p>
 <p>最後に以下の比例ゲインk_pを0.5から5.0に修正して、車両速度の収束速度を比べてみましょう。</p>
@@ -1212,14 +1220,29 @@ twist:
 <p>図のような、停止状態から50m地点まで加速し、50m地点を過ぎたら減速し100m地点で停止するような速度計画を行うことを考えます。</p>
 <p><img alt="alt text" src="../../../course/images/2-3/velocity_planning_image.jpg" /></p>
 <p>速度計画を行うために車両から目標地点までの間に1mおきに中継地点となるウェイポイントを設定します。各ウェイポイントに目標速度を設定することで速度計画を行います。</p>
-<p>各ウェイポイントの目標速度を決定するためのtrajectory_plannerノードと、各ウェイポイントを基に制御入力を決定するlongitudinal_controllerノードを作成しました。</p>
-<p><img alt="alt text" src="../../../course/images/2-3/node_diagram.png" /></p>
-<p>trajectory_plannerノードがスタートからゴールまでの各ウェイポイントの目標速度を決定します。
+<p>各ウェイポイントの目標速度をcsvファイルから読み取るtrajectory_loaderノードと、各ウェイポイントを基に制御入力を決定するlongitudinal_controllerノードを作成しました。
+今回は以下のtrajectory.csvを読み取ります。csvファイルには各ウェイポイントでの目標速度が記載されています。</p>
+<ul>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/trajectory_loader.hpp">velocity_planning/trajectory_loader.hpp</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/trajectory_loader.cpp">velocity_planning/trajectory_loader.cpp</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/config/trajectory.csv">config/trajectory.csv</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/longitudinal_controller.hpp">velocity_planning/longitudinal_controller.hpp</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/longitudinal_controller.cpp">velocity_planning/longitudinal_controller.cpp</a></li>
+</ul>
+<p><br></p>
+<div align="center">
+  <img src="../images/2-3/node_diagram.png" alt="Alt Text">
+  <br>
+  <em>autoware-practiceのtrajectory_loader周りのノードダイアグラム</em>
+</div>
+
+<p><br></p>
+<p>trajectory_loaderノードがスタートからゴールまでの各ウェイポイントの目標速度をcsvファイルから読み取ります。
 longitudinal_controllerノードが車両に最も近いウェイポイントを探索し、ウェイポイントでの目標速度と現在の車両の速度を基に制御入力を決定します。</p>
 <p>各ノードは以下のコマンドを別々のターミナルで実行することで起動することができます。</p>
 <pre><code class="language-bash">ros2 launch autoware_practice_launch practice.launch.xml
 </code></pre>
-<pre><code class="language-bash">ros2 run autoware_practice_course trajectory_planner 
+<pre><code class="language-bash">ros2 run autoware_practice_course trajectory_loader --ros-args -p path_file:=src/autoware_practice_course/config/trajectory.csv
 </code></pre>
 <pre><code class="language-bash">ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
 </code></pre>
@@ -1235,21 +1258,87 @@ longitudinal_controllerノードが車両に最も近いウェイポイントを
 <p><img alt="alt text" src="../../../course/images/2-3/PlotJuggler1.png" /></p>
 <p>/localization/kinematic_stateを選択し、OKを押します。</p>
 <p><img alt="alt text" src="../../../course/images/2-3/PlotJuggler2.png" /></p>
-<p>/localization/kinematic_state/pose/pose/position/xと/localization/kinematic_state/twist/twist/linear/xを複数選択して<strong>右クリック</strong>でドラッグ＆ドロップすることで、位置と速度の関係のグラフを見ることができます。</p>
+<p><code>/localization/kinematic_state/pose/pose/position/x</code>と<code>/localization/kinematic_state/twist/twist/linear/x</code>を複数選択して<strong>右クリック</strong>でドラッグ＆ドロップすることで、位置と速度の関係のグラフを見ることができます。</p>
 <p><img alt="alt text" src="../../../course/images/2-3/PlotJuggler3.png" /></p>
 <p>初めは車両の位置と速度がどちらも0なので以下の図のようになります。</p>
 <p><img alt="alt text" src="../../../course/images/2-3/PlotJuggler4.png" /></p>
 <p>長時間記録するためにBufferを100に変更します。</p>
 <p><img alt="alt text" src="../../../course/images/2-3/PlotJuggler6.png" /></p>
-<p>次にtrajectory_plannerノードとlongitudinal_controllerノードをそれぞれ別のターミナルで起動します。</p>
-<pre><code class="language-bash">ros2 run autoware_practice_course trajectory_planner 
+<p>次にtrajectory_loaderノードとlongitudinal_controllerノードをそれぞれ別のターミナルで起動します。</p>
+<pre><code class="language-bash">ros2 run autoware_practice_course trajectory_loader --ros-args -p path_file:=src/autoware_practice_course/config/trajectory.csv
 </code></pre>
 <pre><code class="language-bash">ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
 </code></pre>
 <p>それぞれのノードが起動するとシミュレーター上で車両が動き始め、以下のようなグラフが得られます。
 <img alt="alt text" src="../../../course/images/2-3/PlotJuggler5.png" /></p>
 <p>グラフより、大体50m付近で10m/sに達し100m付近で停止できていることがわかります。</p>
-<script type="text/javascript" async
+<h2 id="02-04">02-04. 横方向制御を行う</h2>
+<p>図のような、直進・90度旋回・直進・90度旋回・直進となるような経路に追従することを考えます。</p>
+<div align="center">
+  <img src="../images/2-4/trajectory_zigzag.png" alt="Alt Text">
+  <br>
+  <em>今回の目標経路</em>
+</div>
+
+<p>この経路に追従するためには旋回で適切にステアリングを操作し横制御を行う必要があります。
+そこで、P制御による縦方向制御とpure puresuitによる横方向制御を含んだtrajectroy_followerノードを作成しました。</p>
+<ul>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/trajectory_follower.hpp">velocity_planning/trajectory_follower.hpp</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/trajectory_follower.cpp">velocity_planning/trajectory_follower.cpp</a></li>
+</ul>
+<p><br></p>
+<div align="center">
+  <img src="../images/2-4/node_diagram.png" alt="Alt Text">
+  <br>
+  <em>autoware-practiceのtrajectory_follower周りのノードダイアグラム</em>
+</div>
+
+<p><br></p>
+<p>pure pursuitは、車両の現在位置と目標経路上の追従点（ルックアヘッドポイント）との距離と方向を基にルックアヘッドポイントに到達するための曲率を計算するアルゴリズムです。以下にpure pursuitの基本的な動作を説明します。</p>
+<ol>
+<li>
+<p><strong>追従点の設定</strong>:
+   目標経路上に車両の現在位置から一定の距離先に追従点を設定します。この距離はルックアヘッド距離と呼ばれます。</p>
+</li>
+<li>
+<p><strong>方向ベクトルの計算</strong>:
+   車両の現在位置と追従点との間の方向ベクトルを計算します。これにより、車両がどの方向に進むべきかがわかります。</p>
+</li>
+<li>
+<p><strong>ステアリング角度の計算</strong>:
+   計算された方向ベクトルに基づき曲率を計算し、車両のステアリング角度を求めます。
+$$ \theta = \arctan\left(\frac{2  L  \sin(\alpha)}{d}\right) $$
+$$ \theta: 計算されたステアリング角度 \ $$
+$$ L: 車両のホイールベースの長さ \ $$
+$$ \alpha: 現在の車両の向きとルックアヘッドポイントへの方向ベクトルの間の角度差 \ $$
+$$ d: ルックアヘッド距離 $$</p>
+</li>
+</ol>
+<div align="center">
+  <img src="../images/2-4/pure_pursuit.png" alt="Pure Pursuit">
+  <br>
+  <em>pure pursuitの基本動作</em>
+</div>
+
+<p>pure pursuitの利点は、そのシンプルさと実装の容易さにあります。しかし、高速走行や急カーブの多い経路では、別の制御アルゴリズムとの組み合わせが必要になる場合があります。</p>
+<p>P制御とpure pursuit制御によって正しく経路に追従できているかをPlotJugglerで確認してみましょう。</p>
+<p>これまでと同様に別々のターミナルで以下のコマンドを実行しシミュレータとPlotJugglerを起動します。</p>
+<pre><code class="language-bash">ros2 launch autoware_practice_launch practice.launch.xml
+</code></pre>
+<pre><code class="language-bash">ros2 run plotjuggler plotjuggler
+</code></pre>
+<p>PlotJuggler上で<code>/localization/kinematic_state/pose/pose/position/x</code>と<code>/localization/kinematic_state/pose/pose/position/y</code>を複数選択し右クリックでドラッグ＆ドロップします。</p>
+<p><img alt="alt text" src="../../../course/images/2-4/PlotJuggler1.png" /></p>
+<p>rvizと軸の向きを合わせます。ドラッグ＆ドロップした後に表示されるポップアップでSwapを選択して軸を入れ替えてOKを選択します。その後グラフ上で右クリックしてFlip Horizontal Axisを選択して横軸を反転させます。</p>
+<p><img alt="alt text" src="../../../course/images/2-4/PlotJuggler2.png" /></p>
+<p>PlotJugglerの設定ができたら、別々のターミナルで以下のコマンドを実行してtrajectory_loaderノードとtrajectory_followerノードを起動します。</p>
+<pre><code class="language-bash">ros2 run autoware_practice_course trajectory_loader --ros-args -p path_file:=src/autoware_practice_course/config/trajectory_zigzag.csv
+</code></pre>
+<pre><code class="language-bash">ros2 run autoware_practice_course trajectory_follower --ros-args -p kp:=5.0 -p lookahead_distance:=5.0
+</code></pre>
+<p>適切に起動できると設定された経路に追従できていることがPlotJuggler上でわかります。</p>
+<p><img alt="alt text" src="../../../course/images/2-4/PlotJuggler3.png" /></p>
+<script type="text/javascript" asyn
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js">
 </script>
 

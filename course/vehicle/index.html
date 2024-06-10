@@ -1106,31 +1106,44 @@ ros2 run autoware_practice_course vehicle_forward
 </code></pre>
 <p><img alt="vehicle-forward-success" src="../images/vehicle-forward-success.png" /></p>
 <h2 id="01-02">01-02. 車両の旋回</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>作成中
-- steering_tire_angle を変更して車両を左右のどちらかに動かす</p>
-</div>
+<p>先程と同様に下記のコマンドを実行し、シミュレーターを起動してください。緑色のエリアに車両が入れば課題達成となるため、車両を旋回させるノードを作成していきます。</p>
 <pre><code class="language-bash">ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_turning
 </code></pre>
+<p><img alt="vehicle-turning-judging" src="../images/vehicle-turning-judging.png" /></p>
+<p>先程利用したサンプルのデータを変更して、車両が旋回するようにします。</p>
 <ul>
 <li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/forward.hpp">vehicle/forward.hpp</a></li>
 <li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/forward.cpp">vehicle/forward.cpp</a></li>
 </ul>
+<pre><code class="language-diff">-  command.lateral.steering_tire_angle = 0.0;
++  command.lateral.steering_tire_angle = 2.0;
+</code></pre>
+<p>コードを書き換えたらビルドして実行します。新しい端末を起動して以下のコマンドを実行してください。 上手く出来ていればシミュレーターの車両が動き、条件を満たして結果が SUCCESS になります。</p>
+<pre><code class="language-bash">colcon build --symlink-install --packages-select autoware_practice_course
+ros2 run autoware_practice_course vehicle_forward
+</code></pre>
+<p><img alt="vehicle-turning-success" src="../images/vehicle-turning-success.png" /></p>
 <h2 id="01-03">01-03. 車両の後退</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>作成中
-- ギアを変更して REVERSE にする
-- speed と acceleration を変更して車両を後退させる
-- 後退の場合は speed が負で acceleration は正になる</p>
-</div>
+<p>下記のコマンドを実行し、シミュレーターを起動してください。この緑色のエリアに車両が入れば課題達成となるため、まずは車両を後退させるノードを作成していきます。</p>
 <pre><code class="language-bash">ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_backward
 </code></pre>
+<p><img alt="vehicle-backward-judging" src="../images/vehicle-backward-judging.png" /></p>
+<p>以下に後退するためのコマンドを送信するノードのサンプルを用意しました。直進するためのコードと異なり、ギアを制御するコードが含まれています。サンプルでは停止保持するコマンドを送信し続けるようになっているので、データを変更して車両が後退するようにします。
+ギアがREVERSEのときは、目標加速度を正、目標速度を負にします。</p>
 <ul>
 <li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/backward.hpp">vehicle/backward.hpp</a></li>
 <li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/backward.cpp">vehicle/backward.cpp</a></li>
 </ul>
+<pre><code class="language-diff">-  command.longitudinal.speed = 0.0;
+-  command.longitudinal.acceleration = -2.5;
++  command.longitudinal.speed = -3.0;
++  command.longitudinal.acceleration = 1.0;
+</code></pre>
+<p>コードを書き換えたらビルドして実行します。新しい端末を起動して以下のコマンドを実行してください。 上手く出来ていればシミュレーターの車両が動き、条件を満たして結果が SUCCESS になります。</p>
+<pre><code class="language-bash">colcon build --symlink-install --packages-select autoware_practice_course
+ros2 run autoware_practice_course vehicle_backward
+</code></pre>
+<p><img alt="vehicle-backward-success" src="../images/vehicle-backward-success.png" /></p>
 
 
 
