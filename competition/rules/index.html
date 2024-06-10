@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -173,7 +173,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             検索を初期化
@@ -593,7 +593,7 @@
         <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
-      特殊ルール
+      ピットイン
     </span>
   </a>
   
@@ -1109,7 +1109,7 @@
 <h2 id="_3">環境</h2>
 <p>コースには「スタートエリア」「コントロールライン」「ピットインエリア」が設定されます。車両はスタートエリアから走行を開始し、タイムの計測はコントロールラインに触れたタイミングで行われます。また、走行はチーム毎に行います。コース上を同時に他の車両が走行したり、障害物が設置されることはありません。</p>
 <h2 id="_4">進行</h2>
-<p>各チームには、車両のセットアップを行う準備セッションと、車両を走行させてタイムの計測を行う記録セッションがそれぞれ割り当てられます。ただし、予選大会では車両を使用しないため準備セッションは適用されません。また、プロフェッショナルリーグのチームについても常に車両のメンテナンスが可能であるため準備セッションは適用されません。</p>
+<p>各チームには、車両のセットアップを行う準備セッションと、車両を走行させてタイムの計測を行う記録セッションがそれぞれ割り当てられます。ただし、予選大会では車両を使用しないため準備セッションは適用されません。また、アドバンスクラスのチームについては常に車両のメンテナンスが可能であるため準備セッションは適用されません。</p>
 <table>
 <thead>
 <tr>
@@ -1162,8 +1162,8 @@
 <li>周回数の多いチーム。</li>
 <li>周期数が同じ場合、​最終周までのラップタイムの合計が短いチーム。</li>
 </ul>
-<h2 id="_10">特殊ルール</h2>
-<p>車両にはダメージと呼ばれる仮想的な値が設定されており、この値が増加すると速度に制限が掛かります。この値は車両が走行すると増加する他、後述する特定のエリアに入ってた場合も増加します。ピットインエリアに3秒以上停止することでダメージをゼロにリセットできます。</p>
+<h2 id="_10">ピットイン</h2>
+<p>車両にはコンディションと呼ばれる仮想的な値が設定されており、この値が減少すると速度に制限が掛かります。コンディションは車両が走行すると減少する他、後述する特定のエリアに入ってた場合も減少します。ピットインエリアに3秒間停止することでコンディションを初期値に回復できます。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>以下作成中です。</p>
@@ -1221,7 +1221,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
