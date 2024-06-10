@@ -755,6 +755,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Simulator
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -764,6 +775,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vehicle-go-kart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vehicle (Go-Kart)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vehicle (Go-Kart)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      CoM Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colliders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colliders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wheel-colliders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wheel Colliders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -983,6 +1082,94 @@
 
 
 <h1 id="simulator">Simulator</h1>
+<h2 id="overview">Overview</h2>
+<p>This page describes the specifications of the simulator used in the AI Challenge.</p>
+<p>The simulator is based on the open-source autonomous driving simulator "<a href="https://github.com/tier4/AWSIM">AWSIM</a>" developed for Autoware.</p>
+<h2 id="vehicle-go-kart">Vehicle (Go-Kart)</h2>
+<p>The vehicle conforms to the specifications of the <a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/">EGO Vehicle</a> in AWSIM and is designed with specifications close to an actual go-kart.</p>
+<p><img alt="vehicle-appearance" src="../../../specifications/images/vehicle-appearance.png" /></p>
+<h3 id="parameters">Parameters</h3>
+<p><img alt="vehicle-component" src="../../../specifications/images/vehicle-component.png" /></p>
+<p><img alt="rigidbody-component" src="../../../specifications/images/rigidbody-component.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vehicle Weight</td>
+<td>160 kg</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>200 cm</td>
+</tr>
+<tr>
+<td>Width</td>
+<td>145 cm</td>
+</tr>
+<tr>
+<td>Front Wheel Diameter</td>
+<td>24 cm</td>
+</tr>
+<tr>
+<td>Front Wheel Width</td>
+<td>13 cm</td>
+</tr>
+<tr>
+<td>Front Wheel Tread</td>
+<td>93 cm</td>
+</tr>
+<tr>
+<td>Rear Wheel Diameter</td>
+<td>24 cm</td>
+</tr>
+<tr>
+<td>Rear Wheel Width</td>
+<td>18 cm</td>
+</tr>
+<tr>
+<td>Rear Wheel Tread</td>
+<td>112 cm</td>
+</tr>
+<tr>
+<td>Maximum Steering Angle</td>
+<td>80°</td>
+</tr>
+<tr>
+<td>Maximum Acceleration</td>
+<td>3.2 m/s^2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="com-position">CoM Position</h3>
+<p>CoM (Center of Mass) is the mass center of the vehicle Rigidbody. The CoM position is set at the center of the vehicle and at the height of the wheel axles.</p>
+<p><img alt="side-view-of-com" src="../../../specifications/images/side-view-of-com.png" /></p>
+<p><img alt="top-view-of-com" src="../../../specifications/images/top-view-of-com.png" /></p>
+<h3 id="colliders">Colliders</h3>
+<p>The configuration of the Colliders object is as follows.</p>
+<p><img alt="colliders-object" src="../../../specifications/images/colliders-object.png" /></p>
+<p>Colliders ensure that the vehicle can make contact with other objects. The MeshCollider component takes the mesh of the vehicle object and constructs a collider based on it.</p>
+<p><img alt="mesh-collider-component" src="../../../specifications/images/mesh-collider-component.png" /></p>
+<p><img alt="body-collider" src="../../../specifications/images/body-collider.png" /></p>
+<h3 id="wheel-colliders">Wheel Colliders</h3>
+<p>The vehicle has a total of four wheel colliders, one for each wheel, in addition to the visual objects related to the wheels. Wheel colliders are the only parts that make contact with the road.</p>
+<p>The Wheel (script) provides a reference to the collider and visual object for the particular wheel. This allows the Vehicle (script) to perform certain actions on each of the wheels, such as:</p>
+<ul>
+<li>Update the steering angle in the WheelCollider.</li>
+<li>Update the visual part of the wheel depending on the speed and angle of the turn.</li>
+<li>Update the wheel contact information stored in the WheelHit object.</li>
+<li>Update the force exerted by the tire forward and sideways depending on the acceleration (including cancellation of skidding).</li>
+<li>Ensure setting the tire sleep (it is impossible to put Rigidbody to sleep, but putting all wheels to sleep allows to get closer to this effect).</li>
+</ul>
+<p>The Wheel Collider Config script is designed to prevent inspector input for wheel colliders, set friction to zero, and only enable wheel suspension and collisions. For more details on wheel colliders, please refer to <a href="https://docs.unity3d.com/Manual/class-WheelCollider.html">this manual</a>.</p>
+<p><img alt="wheel-collider-component" src="../../../specifications/images/wheel-collider-component.png" /></p>
+<p><img alt="wheel-collider" src="../../../specifications/images/wheel-collider.png" /></p>
+<h3 id="sensor-configuration">Sensor Configuration</h3>
+<p>TODO</p>
 
 
 

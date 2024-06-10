@@ -755,6 +755,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    シミュレーター
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -764,6 +775,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      車両（ゴーカート）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="車両（ゴーカート）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      パラメータ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com" class="md-nav__link">
+    <span class="md-ellipsis">
+      CoM位置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      コライダー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ホイールコライダー
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      センサ構成
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -983,6 +1082,94 @@
 
 
 <h1 id="_1">シミュレーター</h1>
+<h2 id="_2">概要</h2>
+<p>このページではAIチャレンジで使用されるシミュレーターの仕様について説明します。</p>
+<p>シミュレーターは、Autowareのためのオープンソース自動運転シミュレーター「<a href="https://github.com/tier4/AWSIM">AWSIM</a>」をベースとして作成されています。</p>
+<h2 id="_3">車両（ゴーカート）</h2>
+<p>車両はAWSIMにおける<a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/">EGO Vehicle</a>の仕様に準拠しており、実際のゴーカートに近いスペックで作成されています。</p>
+<p><img alt="vehicle-appearance" src="../images/vehicle-appearance.png" /></p>
+<h3 id="_4">パラメータ</h3>
+<p><img alt="vehicle-component" src="../images/vehicle-component.png" /></p>
+<p><img alt="rigidbody-component" src="../images/rigidbody-component.png" /></p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>車両重量</td>
+<td>160 kg</td>
+</tr>
+<tr>
+<td>全長</td>
+<td>200 cm</td>
+</tr>
+<tr>
+<td>全幅</td>
+<td>145 cm</td>
+</tr>
+<tr>
+<td>前輪タイヤ直径</td>
+<td>24 cm</td>
+</tr>
+<tr>
+<td>前輪タイヤ幅</td>
+<td>13 cm</td>
+</tr>
+<tr>
+<td>前輪ホイールトレッド</td>
+<td>93 cm</td>
+</tr>
+<tr>
+<td>後輪タイヤ直径</td>
+<td>24 cm</td>
+</tr>
+<tr>
+<td>後輪タイヤ幅</td>
+<td>18 cm</td>
+</tr>
+<tr>
+<td>後輪ホイールトレッド</td>
+<td>112 cm</td>
+</tr>
+<tr>
+<td>最大ステアリング転舵角</td>
+<td>80 °</td>
+</tr>
+<tr>
+<td>駆動時最大加速度</td>
+<td>3.2 m/s^2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="com">CoM位置</h3>
+<p>CoM(Center of Mass)は、車両Rigidbodyの質量中心です。CoM位置は、車両の中心かつ車輪軸の高さに設定されています。</p>
+<p><img alt="side-view-of-com" src="../images/side-view-of-com.png" /></p>
+<p><img alt="top-view-of-com" src="../images/top-view-of-com.png" /></p>
+<h3 id="_5">コライダー</h3>
+<p>Collidersオブジェクトの構成は以下の通りです。</p>
+<p><img alt="colliders-object" src="../images/colliders-object.png" /></p>
+<p>コライダーは、車両が他のオブジェクトと接触できるように設定します。MeshColliderコンポーネントは車両オブジェクトのメッシュを取得し、それに基づいてコライダーを構築します。</p>
+<p><img alt="mesh-collider-component" src="../images/mesh-collider-component.png" /></p>
+<p><img alt="body-collider" src="../images/body-collider.png" /></p>
+<h3 id="_6">ホイールコライダー</h3>
+<p>車両は、車輪に関連する視覚オブジェクトとともに、各車輪に1つずつ、合計4つのホイールコライダーを持ちます。ホイールコライダーが、道路と接触する唯一の部分です。</p>
+<p>Wheelスクリプトは特定の車輪のコライダーと視覚オブジェクトへの参照を提供します。これにより、Vehicleスクリプトは各車輪に対して以下のようなアクションを実行できるようになります：</p>
+<ul>
+<li>ホイールコライダーのステアリング角を更新する</li>
+<li>速度とターンの角度に応じて車輪の視覚部分を更新する</li>
+<li>WheelHitオブジェクトに保存された車輪の接触情報を更新する</li>
+<li>加速（スキッドのキャンセルを含む）に応じてタイヤが前方および側方に及ぼす力を更新する</li>
+<li>タイヤのスリープ設定を保証する（Rigidbodyをスリープ状態にすることは不可能ですが、すべての車輪をスリープ状態にすることで、この効果に近づけます）。</li>
+</ul>
+<p>Wheel Collider Configスクリプトは、ホイールコライダーに対するインスペクター入力を防ぎ、摩擦を0に設定し、車輪のサスペンションと衝突のみを有効にするために設定されています。ホイールコライダーの詳細については<a href="https://docs.unity3d.com/Manual/class-WheelCollider.html">こちらのマニュアル</a>をご覧ください。</p>
+<p><img alt="wheel-collider-component" src="../images/wheel-collider-component.png" /></p>
+<p><img alt="wheel-collider" src="../images/wheel-collider.png" /></p>
+<h3 id="_7">センサ構成</h3>
+<p>TODO</p>
 
 
 
