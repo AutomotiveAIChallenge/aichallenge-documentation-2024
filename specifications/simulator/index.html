@@ -817,6 +817,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="パラメータ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vehicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vehicleコンポーネント
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rigidbody" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rigidbodyコンポーネント
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -831,7 +855,7 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      コライダー
+      車両コライダー
     </span>
   </a>
   
@@ -1089,13 +1113,12 @@
 <p>車両はAWSIMにおける<a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/">EGO Vehicle</a>の仕様に準拠しており、実際のゴーカートに近いスペックで作成されています。</p>
 <p><img alt="vehicle-appearance" src="../images/vehicle-appearance.png" /></p>
 <h3 id="_4">パラメータ</h3>
-<p><img alt="vehicle-component" src="../images/vehicle-component.png" /></p>
-<p><img alt="rigidbody-component" src="../images/rigidbody-component.png" /></p>
+<p>車両のパラメータを以下の表にまとめています。</p>
 <table>
 <thead>
 <tr>
-<th>項目</th>
-<th>値</th>
+<th><strong>項目</strong></th>
+<th><strong>値</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1145,29 +1168,127 @@
 </tr>
 </tbody>
 </table>
+<h4 id="vehicle">Vehicleコンポーネント</h4>
+<p>Vehicleコンポーネントの設定内容を以下の表にまとめています。各項目の詳細については<a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#vehicle-script">こちらのマニュアル</a>をご覧ください。</p>
+<table>
+<thead>
+<tr>
+<th><strong>項目</strong></th>
+<th><strong>値</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Inertia</td>
+<td>Off</td>
+</tr>
+<tr>
+<td><strong>Physics Settings (experimental)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Sleep Velocity Threshold</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td>Sleep Time Threshold</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Skidding Cancel Rate</td>
+<td>0.236</td>
+</tr>
+<tr>
+<td><strong>Input Settings</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Max Steer Angle Input</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Max Acceleration Input</td>
+<td>3.2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rigidbody">Rigidbodyコンポーネント</h4>
+<p>Rigidbodyコンポーネントの設定内容を以下の表にまとめています。詳細については<a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#rigidbody">こちらのマニュアル</a>をご覧ください。</p>
+<table>
+<thead>
+<tr>
+<th><strong>項目</strong></th>
+<th><strong>値</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>160</td>
+</tr>
+<tr>
+<td>Drag</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Angular Drag</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 <h3 id="com">CoM位置</h3>
 <p>CoM(Center of Mass)は、車両Rigidbodyの質量中心です。CoM位置は、車両の中心かつ車輪軸の高さに設定されています。</p>
 <p><img alt="side-view-of-com" src="../images/side-view-of-com.png" /></p>
 <p><img alt="top-view-of-com" src="../images/top-view-of-com.png" /></p>
-<h3 id="_5">コライダー</h3>
-<p>Collidersオブジェクトの構成は以下の通りです。</p>
-<p><img alt="colliders-object" src="../images/colliders-object.png" /></p>
-<p>コライダーは、車両が他のオブジェクトと接触できるように設定します。MeshColliderコンポーネントは車両オブジェクトのメッシュを取得し、それに基づいてコライダーを構築します。</p>
-<p><img alt="mesh-collider-component" src="../images/mesh-collider-component.png" /></p>
+<h3 id="_5">車両コライダー</h3>
+<p>車両コライダーは、車両と他オブジェクトやチェックポイントとの接触判定に利用されます。車両コライダーは車両オブジェクトのメッシュをベースとして作成されています。</p>
 <p><img alt="body-collider" src="../images/body-collider.png" /></p>
 <h3 id="_6">ホイールコライダー</h3>
-<p>車両は、車輪に関連する視覚オブジェクトとともに、各車輪に1つずつ、合計4つのホイールコライダーを持ちます。ホイールコライダーが、道路と接触する唯一の部分です。</p>
-<p>Wheelスクリプトは特定の車輪のコライダーと視覚オブジェクトへの参照を提供します。これにより、Vehicleスクリプトは各車輪に対して以下のようなアクションを実行できるようになります：</p>
-<ul>
-<li>ホイールコライダーのステアリング角を更新する</li>
-<li>速度とターンの角度に応じて車輪の視覚部分を更新する</li>
-<li>WheelHitオブジェクトに保存された車輪の接触情報を更新する</li>
-<li>加速（スキッドのキャンセルを含む）に応じてタイヤが前方および側方に及ぼす力を更新する</li>
-<li>タイヤのスリープ設定を保証する（Rigidbodyをスリープ状態にすることは不可能ですが、すべての車輪をスリープ状態にすることで、この効果に近づけます）。</li>
-</ul>
-<p>Wheel Collider Configスクリプトは、ホイールコライダーに対するインスペクター入力を防ぎ、摩擦を0に設定し、車輪のサスペンションと衝突のみを有効にするために設定されています。ホイールコライダーの詳細については<a href="https://docs.unity3d.com/Manual/class-WheelCollider.html">こちらのマニュアル</a>をご覧ください。</p>
-<p><img alt="wheel-collider-component" src="../images/wheel-collider-component.png" /></p>
+<p>車両には各車輪に1つずつ、合計4つのホイールコライダーが設定されており、等価二輪モデルではなく四輪モデルでの車両シミュレーションが行われています。</p>
 <p><img alt="wheel-collider" src="../images/wheel-collider.png" /></p>
+<p>ホイールコライダーは以下のように設定されています。ホイールコライダーの詳細については<a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#wheels-colliders">こちらのマニュアル</a>をご覧ください。</p>
+<table>
+<thead>
+<tr>
+<th><strong>項目</strong></th>
+<th><strong>値</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>0.12</td>
+</tr>
+<tr>
+<td>Wheel Damping Rate</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>Suspension Distance</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td><strong>Suspension Spring</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Spring (N/m)</td>
+<td>35000</td>
+</tr>
+<tr>
+<td>Damper (N*s/m)</td>
+<td>3500</td>
+</tr>
+<tr>
+<td>Target Position</td>
+<td>0.01</td>
+</tr>
+</tbody>
+</table>
 <h3 id="_7">センサ構成</h3>
 <p>TODO</p>
 

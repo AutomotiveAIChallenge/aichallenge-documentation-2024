@@ -817,6 +817,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vehicle-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vehicle Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rigidbody-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rigidbody Component
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -829,9 +853,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#colliders" class="md-nav__link">
+  <a href="#vehicle-collider" class="md-nav__link">
     <span class="md-ellipsis">
-      Colliders
+      Vehicle Collider
     </span>
   </a>
   
@@ -1089,13 +1113,12 @@
 <p>The vehicle conforms to the specifications of the <a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/">EGO Vehicle</a> in AWSIM and is designed with specifications close to an actual go-kart.</p>
 <p><img alt="vehicle-appearance" src="../../../specifications/images/vehicle-appearance.png" /></p>
 <h3 id="parameters">Parameters</h3>
-<p><img alt="vehicle-component" src="../../../specifications/images/vehicle-component.png" /></p>
-<p><img alt="rigidbody-component" src="../../../specifications/images/rigidbody-component.png" /></p>
+<p>The following table summarizes the vehicle parameters.</p>
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Value</th>
+<th><strong>Item</strong></th>
+<th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1145,29 +1168,131 @@
 </tr>
 </tbody>
 </table>
+<h4 id="vehicle-component">Vehicle Component</h4>
+<p>The following table summarizes the settings of the Vehicle component. For detailed information of the setting items, see <a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#vehicle-script">this manual</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vehicle Settings</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Use Inertia</td>
+<td>Off</td>
+</tr>
+<tr>
+<td><strong>Physics Settings (experimental)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Sleep Velocity Threshold</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td>Sleep Time Threshold</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Skidding Cancel Rate</td>
+<td>0.236</td>
+</tr>
+<tr>
+<td><strong>Input Settings</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Max Steer Angle Input</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Max Acceleration Input</td>
+<td>3.2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rigidbody-component">Rigidbody Component</h4>
+<p>The following table summarizes the settings of the Rigidbody component. For more information, see <a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#rigidbody">this manual</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>160</td>
+</tr>
+<tr>
+<td>Drag</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Angular Drag</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 <h3 id="com-position">CoM Position</h3>
 <p>CoM (Center of Mass) is the mass center of the vehicle Rigidbody. The CoM position is set at the center of the vehicle and at the height of the wheel axles.</p>
 <p><img alt="side-view-of-com" src="../../../specifications/images/side-view-of-com.png" /></p>
 <p><img alt="top-view-of-com" src="../../../specifications/images/top-view-of-com.png" /></p>
-<h3 id="colliders">Colliders</h3>
-<p>The configuration of the Colliders object is as follows.</p>
-<p><img alt="colliders-object" src="../../../specifications/images/colliders-object.png" /></p>
-<p>Colliders ensure that the vehicle can make contact with other objects. The MeshCollider component takes the mesh of the vehicle object and constructs a collider based on it.</p>
-<p><img alt="mesh-collider-component" src="../../../specifications/images/mesh-collider-component.png" /></p>
+<h3 id="vehicle-collider">Vehicle Collider</h3>
+<p>Vehicle collider is used to detect collision between the vehicle and other objects or checkpoints. The vehicle collider is created based on the mesh of the vehicle object.</p>
 <p><img alt="body-collider" src="../../../specifications/images/body-collider.png" /></p>
 <h3 id="wheel-colliders">Wheel Colliders</h3>
-<p>The vehicle has a total of four wheel colliders, one for each wheel, in addition to the visual objects related to the wheels. Wheel colliders are the only parts that make contact with the road.</p>
-<p>The Wheel (script) provides a reference to the collider and visual object for the particular wheel. This allows the Vehicle (script) to perform certain actions on each of the wheels, such as:</p>
-<ul>
-<li>Update the steering angle in the WheelCollider.</li>
-<li>Update the visual part of the wheel depending on the speed and angle of the turn.</li>
-<li>Update the wheel contact information stored in the WheelHit object.</li>
-<li>Update the force exerted by the tire forward and sideways depending on the acceleration (including cancellation of skidding).</li>
-<li>Ensure setting the tire sleep (it is impossible to put Rigidbody to sleep, but putting all wheels to sleep allows to get closer to this effect).</li>
-</ul>
-<p>The Wheel Collider Config script is designed to prevent inspector input for wheel colliders, set friction to zero, and only enable wheel suspension and collisions. For more details on wheel colliders, please refer to <a href="https://docs.unity3d.com/Manual/class-WheelCollider.html">this manual</a>.</p>
-<p><img alt="wheel-collider-component" src="../../../specifications/images/wheel-collider-component.png" /></p>
+<p>The vehicle has a total of four wheel colliders - one for each wheel, simulating the vehicle on a four-wheel model, rather than a kinematic bicycle model.</p>
 <p><img alt="wheel-collider" src="../../../specifications/images/wheel-collider.png" /></p>
+<p>The Wheel Collider is set as follows. For more details on wheel colliders, please refer to <a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#wheels-colliders">this manual</a>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>0.12</td>
+</tr>
+<tr>
+<td>Wheel Damping Rate</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>Suspension Distance</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td><strong>Suspension Spring</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Spring (N/m)</td>
+<td>35000</td>
+</tr>
+<tr>
+<td>Damper (N*s/m)</td>
+<td>3500</td>
+</tr>
+<tr>
+<td>Target Position</td>
+<td>0.01</td>
+</tr>
+</tbody>
+</table>
 <h3 id="sensor-configuration">Sensor Configuration</h3>
 <p>TODO</p>
 
