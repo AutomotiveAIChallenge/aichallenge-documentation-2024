@@ -14,6 +14,7 @@
 git clone https://github.com/AutomotiveAIChallenge/autoware-practice.git
 cd autoware-practice
 vcs import src < autoware.repos
+rosdep install -y --from-paths src --ignore-src --rosdistro humble
 colcon build --symlink-install
 ```
 
