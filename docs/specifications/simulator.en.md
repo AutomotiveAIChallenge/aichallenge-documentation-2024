@@ -11,12 +11,9 @@ The vehicle conforms to the specifications of the [EGO Vehicle](https://tier4.gi
 ![vehicle-appearance](./images/vehicle-appearance.png)
 
 ### Parameters
+The following table summarizes the vehicle parameters.
 
-![vehicle-component](./images/vehicle-component.png)
-
-![rigidbody-component](./images/rigidbody-component.png)
-
-| Item                  | Value      |
+| **Item**                  | **Value**      |
 | --------------------- | ---------- |
 | Vehicle Weight        | 160 kg     |
 | Length                | 200 cm     |
@@ -30,6 +27,30 @@ The vehicle conforms to the specifications of the [EGO Vehicle](https://tier4.gi
 | Maximum Steering Angle| 80°        |
 | Maximum Acceleration  | 3.2 m/s^2  |
 
+#### Vehicle Component
+The following table summarizes the settings of the Vehicle component. For detailed information of the setting items, see [this manual](https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#vehicle-script).
+
+| **Item**                  | **Value**      |
+| ------------------------------- | ------------------------- |
+| **Vehicle Settings**            |                           |
+| Use Inertia                     | Off                         |
+| **Physics Settings (experimental)** |                      |
+| Sleep Velocity Threshold        | 0.02                      |
+| Sleep Time Threshold            | 0                         |
+| Skidding Cancel Rate            | 0.236                     |
+| **Input Settings**              |                           |
+| Max Steer Angle Input           | 80                        |
+| Max Acceleration Input          | 3.2                       |
+
+#### Rigidbody Component
+The following table summarizes the settings of the Rigidbody component. For more information, see [this manual](https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#rigidbody).
+
+| **Item**                  | **Value**      |
+|-------------------------|-----------------|
+| Mass                | 160             |
+| Drag                | 0               |
+| Angular Drag        | 0               |
+
 ### CoM Position
 CoM (Center of Mass) is the mass center of the vehicle Rigidbody. The CoM position is set at the center of the vehicle and at the height of the wheel axles.
 
@@ -37,33 +58,28 @@ CoM (Center of Mass) is the mass center of the vehicle Rigidbody. The CoM positi
 
 ![top-view-of-com](./images/top-view-of-com.png)
 
-### Colliders
-The configuration of the Colliders object is as follows.
-
-![colliders-object](./images/colliders-object.png)
-
-Colliders ensure that the vehicle can make contact with other objects. The MeshCollider component takes the mesh of the vehicle object and constructs a collider based on it.
-
-![mesh-collider-component](./images/mesh-collider-component.png)
+### Vehicle Collider
+Vehicle collider is used to detect collision between the vehicle and other objects or checkpoints. The vehicle collider is created based on the mesh of the vehicle object.
 
 ![body-collider](./images/body-collider.png)
 
 ### Wheel Colliders
-The vehicle has a total of four wheel colliders, one for each wheel, in addition to the visual objects related to the wheels. Wheel colliders are the only parts that make contact with the road.
-
-The Wheel (script) provides a reference to the collider and visual object for the particular wheel. This allows the Vehicle (script) to perform certain actions on each of the wheels, such as:
-
-- Update the steering angle in the WheelCollider.
-- Update the visual part of the wheel depending on the speed and angle of the turn.
-- Update the wheel contact information stored in the WheelHit object.
-- Update the force exerted by the tire forward and sideways depending on the acceleration (including cancellation of skidding).
-- Ensure setting the tire sleep (it is impossible to put Rigidbody to sleep, but putting all wheels to sleep allows to get closer to this effect).
-
-The Wheel Collider Config script is designed to prevent inspector input for wheel colliders, set friction to zero, and only enable wheel suspension and collisions. For more details on wheel colliders, please refer to [this manual](https://docs.unity3d.com/Manual/class-WheelCollider.html).
-
-![wheel-collider-component](./images/wheel-collider-component.png)
+The vehicle has a total of four wheel colliders - one for each wheel, simulating the vehicle on a four-wheel model, rather than a kinematic bicycle model.
 
 ![wheel-collider](./images/wheel-collider.png)
+
+The Wheel Collider is set as follows. For more details on wheel colliders, please refer to [this manual](https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/#wheels-colliders).
+
+| **Item**                  | **Value**      |
+| -------------------------- | ------------------------------ |
+| Mass                       | 1                              |
+| Radius                     | 0.12                           |
+| Wheel Damping Rate         | 0.25                           |
+| Suspension Distance        | 0.001                          |
+| **Suspension Spring**      |                                |
+| Spring (N/m)               | 35000                          |
+| Damper (N*s/m)             | 3500                           |
+| Target Position            | 0.01                           |
 
 ### Sensor Configuration
 TODO
