@@ -3,7 +3,7 @@
 ## 環境構築
 #### <u>AWSIM and Autoware間の通信が安定しません。</u>
 local でテストする際、すべての terminal で`ROS_LOCALHOST_ONLY=1`に設定すると通信速度が向上します。
-ROS を localhost-only に設定するために、.bashrc に以下の行を追加してください。
+.bashrc に以下の行を追加してください。
 
 ```bash
 export ROS_LOCALHOST_ONLY=1
@@ -13,13 +13,10 @@ if [ ! -e /tmp/cycloneDDS_configured ]; then
     sudo sysctl -w net.core.rmem_max=2147483647
     sudo ip link set lo multicast on
     touch /tmp/cycloneDDS_configured
-fi
 ```
 
-今回の大会では、PC2 台構成の Windows+Linux、Linux+Linux、PC1 台で Linux のみの構成も考慮しています。  
-その場合は、以下の設定を参照してください。  
-- 評価環境の[こちら]()のファイルで `ROS_LOCALHOST_ONLY=0`  
-- コンテナ側の[こちら]()のファイルで `ROS_LOCALHOST_ONLY=0`  
+なお、今回の大会ではPC2 台構成の Windows+Linux、Linux+Linuxの二台構成も考慮しています。  
+その場合は、 `ROS_LOCALHOST_ONLY=0`としてください。
 
 注意:   
 - OS の起動後、ターミナルの起動時にパスワードが要求され、初回には `sudo ip link set lo multicast on` が必要です。  
@@ -96,22 +93,12 @@ topicの型を調べる際は`ros2 topic info -v fuga_topic`もしくはnodeが�
 
 ---
 
-#### <u>Autowareの起動直後の動作が安定しません。</u>
-[参考URL](https://github.com/AutomotiveAIChallenge/aichallenge2023-sim/issues/31)を参考にAutowareが起動するまでの待機時間を設定してみてください。
-```bash
-<timer period="150.0">
-     <include file="$(find-pkg-share self_driving_controller)/launch/self_driving_controller.launch.xml" />
-</timer>
-```
-
----
-
 #### <u>どのようにしてAutowareを改良して参加すればよいかが分かりません。</u>
 Autowareのノードのパラメータ調整やノード改良・置き換えなどが方法としてあります。  
-Autowareの基本構成などを[こちら](https://automotiveaichallenge.github.io/aichallenge2023-integ/customize/index.html)に少しまとめておりますので、ご活用ください。
+Autowareの基本構成などを本サイトの別タブや[こちら](https://automotiveaichallenge.github.io/aichallenge2023-integ/customize/index.html)に少しまとめておりますので、ご活用ください。
 また、外部の方の記事ですが、[こちら](https://qiita.com/h_bog/items/86fba5b94b2148c4d9da)も参考になるかもしれません。
 
----
+--- 
 
 #### <u>経路生成（Behavior Path/Motion Planner）に関して教えてください。</u>
 behavior plannerは、主にODD3以上のいわゆる一般道での走行を行うのに必要な機能（一時停止線、横断歩道、信号停止）など破ってはいけない交通ルールを加味したplanningを行うものとなっています。
@@ -147,11 +134,6 @@ center pointは車両とトラックと歩行者を検知してくれますが�
 
 ---
 
-#### <u>車を初期位置にリセットするにはどうすればいいでしょうか。</u>
-現状、AWSIMを再起動する方法しかございません。
-
----
-
 #### <u>AWSIMの動作が安定しません。</u>
 GPUの性能不足が原因の一つになります。  
 高性能GPUの利用が難しい場合は、awsimの画面の下部にスライドバーでtime scaleを0.5くらいに設定すると安定して動作する可能性があります。
@@ -159,7 +141,7 @@ GPUの性能不足が原因の一つになります。
 ---
 
 #### <u>mpcのチューニングをしたいのですが，今回AWSIMで使用されているモデルパラメータ（遅れや時定数など）は公開されていないでしょうか．</u>
-現状は計測も公開もされておりません。
+遅れや時定数については計測も公開もされていませんが、基本的な仕様については[こちら](https://automotiveaichallenge.github.io/aichallenge-documentation-2024/specifications/simulator/ )に公開されています。
 
 ---
 
