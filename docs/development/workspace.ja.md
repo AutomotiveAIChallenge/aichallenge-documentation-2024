@@ -19,12 +19,8 @@ docker images
 
 ### Dockerコンテナの起動
 
+以下のコマンドでコンテナを起動します。
 ```bash
-# GPU搭載の方は以下
-cd aichallenge-2024
-./docker_run.sh dev gpu
-
-# GPU非搭載の方は以下
 cd aichallenge-2024
 ./docker_run.sh dev cpu
 ```
@@ -41,7 +37,7 @@ exit
 
 本節では大会環境を実行方法を解説します。以下のコマンドはすべてコンテナ内から実行するため、まずは「Dockerコンテナの起動」に従い大会用のコンテナを起動してください。
 
-### Autoware
+### AutowareのビルドとSimulatorの起動
 
 コンテナを起動したターミナル(コンテナ内)で以下を実行します。
 
@@ -52,45 +48,37 @@ cd /aichallenge
 
 Autowareのビルド後、以下のコマンドを実行します。
 
+※実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM/AWSIM.x86_64`に存在していることを確認してください。
+
 ```bash
-./run_autoware.bash
+./run_evaluation.bash
+
 ```
 
 下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 ![autoware](./images/installation/autoware.png)
 
-### AWSIM in Docker
+### 参考
+#### 変更点の取り込み
 
-コンテナを起動したターミナル(コンテナ内)で以下を実行します。
+大会環境の重大なアップデートがあった際には適宜アナウンスがあります。
+参考までにこちらに記載しています。以下を実行してください。
 
-```bash
-cd /aichallenge
-./run_simulator.bash
-```
-
-下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
-![awsim](./images/installation/awsim.png)
-
-
-## 変更点の取り込み
-
-大会環境のアップデートがあった際には以下を実行してください。
-
-### Dockerのupdate
+**Dockerのupdate**
 
 ```bash
 docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest
 
 ```
 
-### Repositoryのupdate
+**Repositoryのupdate**
 
 ```sh
 cd aichallenge2024 # path to aichallenge2024
 git pull origin/main
 ```
 
-## TroubleShooting
+#### TroubleShooting
 
 Q. `docker_run.sh: 行 35: rocker: コマンドが見つかりません`
 
@@ -100,12 +88,12 @@ Q. `WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the
 
 A. Dockerイメージのビルドをお願いします。
 
-## ワークスペースの構成
+#### ワークスペースの構成
 
-### docker-dev
+**docker-dev**
 
 ![dev](./images/docker/dev.drawio.svg)
 
-### docker-eval
+**docker-eval**
 
 ![eval](./images/docker/eval.drawio.svg)

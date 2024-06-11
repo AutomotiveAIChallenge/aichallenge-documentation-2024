@@ -144,7 +144,7 @@ aichallenge-2024-dev   latest   df2e83a20349   33 minutes ago   8.9GB
 
 ```bash
 cd ~/aichallenge-2024
-./docker_run.sh dev gpu
+./docker_run.sh dev cpu
 ```
 
 特に何も変わっていないように見えますが、上記のコマンドを実行すると環境がDockerコンテナ内部に移行します。今の環境がDockerコンテナ内かどうかは以下のコマンドで何も表示されていないかを確認するのがわかりやすいです。
