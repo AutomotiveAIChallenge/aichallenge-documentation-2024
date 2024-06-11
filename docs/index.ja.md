@@ -4,9 +4,9 @@
 
 !!! info
 
-本大会は、CASE、MaaSと呼ばれる新たな技術領域において、これからの自動車業界を牽引する技術者の発掘育成のための新たな取り組みとして実施しています。
-2021年度までは年１回の大会でしたが、2022年度より「インテグレーション」大会及び「シミュレーション」大会という年2回の開催になりました。
-「インテグレーション」では自動走行モビリティに開発したプログラムを搭載させる走行競技まで行います。両大会合わせて、コンピューターサイエンス、AI、ソフトウェアや情報処理に関わる技術者・研究者・学生等のチャレンジの場、また学習及機会を提供し、有機的な繋がりを実現する場を目指します。
+    本大会は、CASE、MaaSと呼ばれる新たな技術領域において、これからの自動車業界を牽引する技術者の発掘育成のための新たな取り組みとして実施しています。
+
+    本大会では自動走行モビリティに開発したプログラムを搭載させる走行競技まで行います。コンピューターサイエンス、AI、ソフトウェアや情報処理に関わる技術者・研究者・学生等のチャレンジの場、また学習及機会を提供し、有機的な繋がりを実現する場を目指します。
 
 ## 目的
 
@@ -38,7 +38,7 @@
 
 例えば参加者には実車両に適用するため、パラメータ調整にも挑戦してもらいます。また、シミュレーションでは再現できないノイズ処理、遅延対策のアルゴリズム開発も行います。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zoh1mL_U0yRnB2fj" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/GsuCUoNrMDM?si=zoh1mL_U0yRnB2fj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 表彰
 
@@ -48,7 +48,8 @@
 
 ## 走行コース
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pZ2NovtO_IGw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/K-N-2nLXXF8?si=pZ2NovtO_IGwsa_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 ## 使用車両
