@@ -39,6 +39,7 @@ nav:
       - development/device-drivers.md
   - FAQ: faq.md
   - Community: community.md
+  - tutorial.md
 
 extra_css:
   - stylesheets/custom.css
