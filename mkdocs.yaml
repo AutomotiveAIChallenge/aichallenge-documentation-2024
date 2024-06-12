@@ -32,9 +32,10 @@ nav:
       - specifications/hardware.md
       - specifications/simulator.md
   - development:
-      - development/requirements.md
+      #- development/requirements.md
       - development/installation.md
       - development/workspace.md
+      - development/visible-simulation.md
       - development/main-module.md
       - development/device-drivers.md
   - FAQ: faq.md
