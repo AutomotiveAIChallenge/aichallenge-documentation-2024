@@ -1,4 +1,5 @@
-# チュートリアル
+# はじめ方
+
 このページではROS2やAutowareに馴染みのない初学者向けに、AIチャレンジでの一連の流れをチュートリアルとして記載します。
 
 ## 必要なもの
@@ -59,5 +60,3 @@ Q. `docker_run.sh: 行 35: rocker: コマンドが見つかりません`
 A. [rockerのインストール](#docker環境のインストール)をお願いします。
 
 Q. `WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist`
-
-
