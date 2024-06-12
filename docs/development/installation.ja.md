@@ -1,6 +1,7 @@
 # 環境構築
 
-### aptパッケージ等のインストール
+## aptパッケージ等のインストール
+
 まずは諸々最初に必要なパッケージをインストールします。
 
 ```bash
@@ -10,7 +11,8 @@ sudo apt install -y git python3-pip ca-certificates curl gnupg libvulkan1
 sudo ubuntu-drivers autoinstall
 ```
 
-### Dockerのインストール
+## Dockerのインストール
+
 [公式ドキュメント](https://docs.docker.com/engine/install/ubuntu/)通りに以下のコマンドでインストールします。
 
 ```bash
@@ -28,7 +30,8 @@ sudo usermod -aG docker $USER
 ```
 
 以下のコマンドで正常にインストールされているか確認してください。
-```
+
+```bash
 sudo docker run hello-world
 ```
 
@@ -36,7 +39,8 @@ sudo docker run hello-world
 
 ここまで出来たら一度再起動します。
 
-### rockerのインストール
+## rockerのインストール
+
 rockerはDockerコンテナのGUIアプリを簡単に起動できるようにするツールです。
 
 [公式README](https://github.com/osrf/rocker?tab=readme-ov-file#debians-recommended)ではaptからのインストールが推奨されていますが、手順と環境をシンプルにするためにここではpipからインストールします。
@@ -46,12 +50,14 @@ pip install rocker
 ```
 
 デフォルト設定ではrockerの実行ファイルへのパスが通っていないので、以下のコマンドで`.bashrc`に追加しておきます。
-```
+
+```bash
 echo export PATH='$HOME/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 ## autoware環境のDockerイメージのpull
+
 AIチャレンジで使用するautoware環境のDockerイメージを取得します。
 
 Dockerイメージは10GB程度のサイズがあり、ダウンロードには時間が掛かるため有線LANでのダウンロードを推奨します。
@@ -61,20 +67,20 @@ docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest
 ```
 
 以下のコマンドでダウンロードできているか確認します。
+
 ```bash
 docker images
 ```
 
 Dockerイメージがダウンロードできていれば以下のような出力が得られます。
+
+```txt
+REPOSITORY                                        TAG                       IMAGE ID       CREATED         SIZE
+ghcr.io/automotiveaichallenge/autoware-universe   humble-latest             30c59f3fb415   13 days ago     8.84GB
 ```
-# REPOSITORY                                        TAG                       IMAGE ID       CREATED         SIZE
-# ghcr.io/automotiveaichallenge/autoware-universe   humble-latest             30c59f3fb415   13 days ago     8.84GB
-```
 
+## 大会用リポジトリのダウンロード
 
-## AIチャレンジの大会用リポジトリの準備と実行
-
-### 大会用リポジトリのダウンロード
 リポジトリをクローンします。ここではホームディレクトリにクローンしますが、お好きなディレクトリに入れていただいても構いません。
 
 ```bash
@@ -82,8 +88,8 @@ cd ~
 git clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
 ```
 
-### AWSIMのダウンロード
-## AWSIMのダウンロード・起動確認
+## AWSIMのダウンロード
+
 1. [Google Drive(あとでリンク変える)](https://drive.google.com/drive/) から最新の `AWSIM_GPU.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
 
 2. パーミッションを図のように変更します。
