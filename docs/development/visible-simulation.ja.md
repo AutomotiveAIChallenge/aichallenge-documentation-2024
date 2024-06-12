@@ -10,13 +10,13 @@
 - Memory: 16 GB or more
 - Storage: SSD 60 GB or higher
 
-## 描画有りのシミュレーション環構築手順（WIP）
+## 描画有りのシミュレーション環構築手順
 
 基本的に描画無しのAWSIMを配布しておりますが、描画有りを希望される方の環境構築方法も記載しております。GPUを使用する環境構築では詰まって進まなくなる事例が多々ありましたので、おすすめはいたしません。要求性能のページのスペックのPCが用意できない方や初めてのご参加の方はあくまでも参考程度としてください。
 
 - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)(GPU非搭載の方はスキップ)
 
-### NVIDIAドライバのインストール
+## NVIDIAドライバのインストール
 
 ```bash
 # リポジトリの追加
@@ -37,7 +37,7 @@ nvidia-smi
 
 ![nvidia-smi](./images/installation/nvidia-smi.png)
 
-#### NVIDIA Container Toolkit
+## NVIDIA Container Toolkit
 
 ```bash
 # インストールの下準備
@@ -91,19 +91,19 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 
    ![パーミッション変更の様子](./images/installation/permmision.png)
 
-
 実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM_GPU/AWSIM.x86_64`に存在していることを確認してください。
 
-# Dockerコンテナの起動
+## Dockerコンテナの起動
 
 描画有りのシミュレーション推奨環境を満たしており、
 NVIDIA関連のinstallが済んでいる方は上記のコマンドではなく、以下のコマンドでコンテナを起動してください。
+
 ```bash
 cd aichallenge-2024
 ./docker_run.sh dev gpu
 ```
 
-### AutowareのビルドとSimulatorの起動
+## AutowareのビルドとSimulatorの起動
 
 コンテナを起動したターミナル(コンテナ内)で以下を実行します。
 
@@ -113,6 +113,7 @@ cd /aichallenge
 ```
 
 Autowareのビルド後、run_simulator.bashを変更します
+
 ```bash
 #!/bin/bash
 
@@ -132,4 +133,4 @@ sudo ip link set multicast on lo
 
 以下のような画面が現れたら成功です。
 
-![](./images/AWSIM%26Autoware.png)
+![AWSIM-Autoware](./images/AWSIM%26Autoware.png)
