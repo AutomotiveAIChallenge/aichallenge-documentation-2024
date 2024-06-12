@@ -67,7 +67,7 @@ Autowareのビルド後、以下のコマンドを実行します。
 ```
 
 下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
-![autoware](./development/images/installation/autoware.png)
+![autoware](./images/installation/autoware.png)
 
 
 A. Dockerイメージのビルドをお願いします。

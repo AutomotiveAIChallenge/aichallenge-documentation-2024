@@ -20,10 +20,10 @@ For this competition, we are considering configurations with two PCs: Windows+Li
 In that case, set `ROS_LOCALHOST_ONLY=0`.
 
 Note:
-- After the OS starts, you will be prompted for a password when opening a terminal, and the initial `sudo ip link set lo multicast on` is required.  
-- If you forget to change the .bashrc as described above, it will always be applied, so be sure to check for changes with `echo $ROS_LOCALHOST_ONLY`.  
-- Communication between containers cannot occur if `ROS_LOCALHOST_ONLY=1` and `ROS_LOCALHOST_ONLY=0` are mixed.  
-- Note that `ROS_LOCALHOST_ONLY` is specified in the executable file.  
+- After the OS starts, you will be prompted for a password when opening a terminal, and the initial `sudo ip link set lo multicast on` is required.
+- If you forget to change the .bashrc as described above, it will always be applied, so be sure to check for changes with `echo $ROS_LOCALHOST_ONLY`.
+- Communication between containers cannot occur if `ROS_LOCALHOST_ONLY=1` and `ROS_LOCALHOST_ONLY=0` are mixed.
+- Note that `ROS_LOCALHOST_ONLY` is specified in the executable file.
 
 ---
 

@@ -54,14 +54,6 @@
 
 ## 使用車両
 
-<br>
-
-<div align="center">
-  <img src="./images/RacingKart.jpeg" alt="Alt Text">
-  <br>
-  <em>TOM'S RacingKart</em>
-</div>
-
-<br>
+![TOM'S RacingKart](./images/RacingKart.jpeg)
 
 ## 挑戦課題

@@ -88,6 +88,6 @@ git clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
 
 2. パーミッションを図のように変更します。
 
-   ![パーミッション変更の様子](./development/images/installation/permmision.png)
+   ![パーミッション変更の様子](./images/installation/permmision.png)
 
 実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM/AWSIM.x86_64`に存在していることを確認してください。
