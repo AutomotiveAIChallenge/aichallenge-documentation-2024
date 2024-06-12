@@ -30,7 +30,7 @@ Ubuntuのインストール方法については[こちらの記事](https://qii
 
 [ワークスペースの使い方説明ページ](development/workspace.ja.md)
 
-## AIチャレンジでの開発の進め方(WIP)
+## AIチャレンジでの開発の進め方
 AIチャレンジで開発する上でベースとなるソースコードは[大会用リポジトリ](https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit)内に提供されています。参加者の皆様にはこちらのコードをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは[入門講座](./course/index.ja.md)を一通りやっていただくことをお勧めします。
 
 ## 参考
