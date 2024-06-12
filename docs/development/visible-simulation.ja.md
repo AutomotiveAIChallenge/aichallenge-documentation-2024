@@ -81,17 +81,15 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 
 ## AWSIMのダウンロード・起動確認
 
-!!! info
-
-    AWSIM は現在準備中です。
-
-1. [Google Drive](https://drive.google.com/drive/) から最新の `AWSIM_GPU.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
+1. [Google Drive](https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y) から最新の `AWSIM_GPU_**.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
 
 2. パーミッションを図のように変更します。
 
    ![パーミッション変更の様子](./images/installation/permmision.png)
 
-実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM_GPU/AWSIM.x86_64`に存在していることを確認してください。
+!!! info
+
+    実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM_GPU_**/AWSIM.x86_64`に存在していることを確認してください。
 
 ## Dockerコンテナの起動
 
@@ -122,8 +120,6 @@ source /aichallenge/workspace/install/setup.bash
 sudo ip link set multicast on lo
 /aichallenge/simulator/AWSIM_GPU/AWSIM.x86_64
 ```
-
-※実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM_GPU/AWSIM.x86_64`に存在していることを確認してください。
 
 以下のコマンドを実行します。
 

@@ -90,7 +90,7 @@ git clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
 
 ## AWSIMのダウンロード
 
-1. [Google Drive(あとでリンク変える)](https://drive.google.com/drive/) から最新の `AWSIM_GPU.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
+1. [Google Drive](https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y) から最新の `AWSIM.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
 
 2. パーミッションを図のように変更します。
 
