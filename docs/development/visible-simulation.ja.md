@@ -123,7 +123,7 @@ sudo ip link set multicast on lo
 
 run_evaluetion.bashに対しても次の変更を加えます。AISIM_GPU_**には先程展開したディレクトリを指定してください。
 
-```
+```bash
 #AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM
 AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM_GPU_**
 ```
