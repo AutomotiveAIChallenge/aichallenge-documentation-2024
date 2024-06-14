@@ -1,16 +1,5 @@
 # ワークスペース
 
-## 推奨環境
-
-本大会で使用していただくPCの動作環境として以下を推奨しております。
-
-- OS: Ubuntu 22.04
-- CPU: Intel Core i5（4コア）以上（推奨）
-- メモリ:
-  - 8GB以上（最低）
-  - 16GB以上（推奨）
-- SSD: 60GB以上
-
 ## 大会用リポジトリのビルド・実行
 
 大会用リポジトリでは、実際の動作環境はすべてDocker内で完結して提供されています。リポジトリの利用は以下の流れで行います。
@@ -72,13 +61,56 @@ Autowareのビルド後、以下のコマンドを実行します。
 ```bash
 ./run_evaluation.bash
 ```
-
 下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 ![autoware](./images/installation/autoware.png)
 
-A. Dockerイメージのビルドをお願いします。
+## [任意] Debug用にTerminalを3つ用意して開発したい場合
 
-### ワークスペースの構成
+
+`Alt+Ctrl+T`で１つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
+
+```bash
+cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+```
+
+```bash
+cd /aichallenge
+bash run_simulator.bash
+```
+
+
+`Alt+Ctrl+T`で2つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
+
+```bash
+cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+```
+
+```bash
+cd /aichallenge
+bash run_autoware.bash
+```
+
+`Alt+Ctrl+T`で3つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
+
+```bash
+cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+```
+
+```bash
+cd /aichallenge
+ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{data: true}' >/dev/null
+```
+
+
+下記の様な画面が表示されたら起動完了です。終了するには各ターミナル上でCTRL + Cを入力します。
+![autoware](./images/installation/autoware.png)
+
+### [参考]ワークスペースの構成
+
+参考までにこちらにワークスペースの構成を記載しておきます。
 
 docker-dev
 

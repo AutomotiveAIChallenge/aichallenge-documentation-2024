@@ -23,19 +23,23 @@ Windows環境しかお持ちでない方は、Ubuntu22.04のインストール�
 
 ## AIチャレンジの環境構築
 
-`Alt+Ctrl+T`でターミナルを立ち上げてから、以下に従ってコマンドを実行します。
+`Alt+Ctrl+T`でターミナルを立ち上げてから、以下に従ってコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
 
 [環境構築の説明ページ](./development/installation.md)
 
 ## 大会用リポジトリのビルド・実行
 
-環境構築が終わってから再度`Alt+Ctrl+T`でターミナルを立ち上げてから、以下に従ってコマンドを実行します。
+環境構築が終わってから再度`Alt+Ctrl+T`でターミナルを立ち上げてから、以下に従ってコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
 
 [ワークスペースの使い方説明ページ](development/workspace.md)
 
 ## AIチャレンジでの開発の進め方
 
-AIチャレンジで開発する上でベースとなるソースコードは[大会用リポジトリ](https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit)内に提供されています。参加者の皆様にはこちらのコードをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは[入門講座](./course/index.md)を一通りやっていただくことをお勧めします。
+ビルド・実行が終わってからメインモジュールの解説ページを読みながら実際に開発してみましょう。
+
+[メインモジュールについての解説ページ](development/workspace.md)
+
+※AIチャレンジで開発する上でベースとなるソースコードは[大会用リポジトリ](https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit)内に提供されています。参加者の皆様にはこちらのコードをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは[入門講座](./course/index.md)を一通りやっていただくことをお勧めします。
 
 ## 参考
 
@@ -65,3 +69,5 @@ Q. `docker_run.sh: 行 35: rocker: コマンドが見つかりません`
 A. [rockerのインストール](./development/installation.md)をお願いします。
 
 Q. `WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist`
+
+A. Dockerイメージのビルドをお願いします。
