@@ -895,6 +895,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      推奨環境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#apt" class="md-nav__link">
     <span class="md-ellipsis">
       aptパッケージ等のインストール
@@ -931,7 +940,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       大会用リポジトリのダウンロード
     </span>
@@ -1041,6 +1050,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    推奨環境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1104,6 +1134,16 @@
 
 
 <h1 id="_1">環境構築</h1>
+<h2 id="_2">推奨環境</h2>
+<p>本大会で使用していただくPCの動作環境として以下を推奨しております。</p>
+<ul>
+<li>OS: Ubuntu 22.04</li>
+<li>CPU: Intel Core i5（4コア）以上（推奨）</li>
+<li>メモリ:</li>
+<li>8GB以上（最低）</li>
+<li>16GB以上（推奨）</li>
+<li>SSD: 60GB以上</li>
+</ul>
 <h2 id="apt">aptパッケージ等のインストール</h2>
 <p>まずは諸々最初に必要なパッケージをインストールします。</p>
 <pre><code class="language-bash">sudo apt update
@@ -1151,7 +1191,7 @@ source ~/.bashrc
 <pre><code class="language-txt">REPOSITORY                                        TAG                       IMAGE ID       CREATED         SIZE
 ghcr.io/automotiveaichallenge/autoware-universe   humble-latest             30c59f3fb415   13 days ago     8.84GB
 </code></pre>
-<h2 id="_2">大会用リポジトリのダウンロード</h2>
+<h2 id="_3">大会用リポジトリのダウンロード</h2>
 <p>リポジトリをクローンします。ここではホームディレクトリにクローンしますが、お好きなディレクトリに入れていただいても構いません。</p>
 <pre><code class="language-bash">cd ~
 git clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git

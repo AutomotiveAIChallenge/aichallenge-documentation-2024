@@ -918,15 +918,6 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      推奨環境
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
       大会用リポジトリのビルド・実行
     </span>
   </a>
@@ -958,13 +949,22 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dockerコンテナ上でのAutowareとSimulatorの実行">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugterminal3" class="md-nav__link">
+    <span class="md-ellipsis">
+      [任意] Debug用にTerminalを3つ用意して開発したい場合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[任意] Debug用にTerminalを3つ用意して開発したい場合">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      ワークスペースの構成
+      [参考]ワークスペースの構成
     </span>
   </a>
   
@@ -1047,6 +1047,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    推奨環境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1110,17 +1131,7 @@
 
 
 <h1 id="_1">ワークスペース</h1>
-<h2 id="_2">推奨環境</h2>
-<p>本大会で使用していただくPCの動作環境として以下を推奨しております。</p>
-<ul>
-<li>OS: Ubuntu 22.04</li>
-<li>CPU: Intel Core i5（4コア）以上（推奨）</li>
-<li>メモリ:</li>
-<li>8GB以上（最低）</li>
-<li>16GB以上（推奨）</li>
-<li>SSD: 60GB以上</li>
-</ul>
-<h2 id="_3">大会用リポジトリのビルド・実行</h2>
+<h2 id="_2">大会用リポジトリのビルド・実行</h2>
 <p>大会用リポジトリでは、実際の動作環境はすべてDocker内で完結して提供されています。リポジトリの利用は以下の流れで行います。</p>
 <ol>
 <li>大会環境のDockerイメージのビルド</li>
@@ -1157,8 +1168,32 @@
 </code></pre>
 <p>下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 <img alt="autoware" src="../images/installation/autoware.png" /></p>
-<p>A. Dockerイメージのビルドをお願いします。</p>
-<h3 id="_4">ワークスペースの構成</h3>
+<h2 id="debugterminal3">[任意] Debug用にTerminalを3つ用意して開発したい場合</h2>
+<p><code>Alt+Ctrl+T</code>で１つ目のターミナルを立ち上げてから、以下のコマンド<code>Ctrl+Shift+P</code>で貼り付けた後に<code>Enter</code>で実行します。</p>
+<pre><code class="language-bash">cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+</code></pre>
+<pre><code class="language-bash">cd /aichallenge
+bash run_simulator.bash
+</code></pre>
+<p><code>Alt+Ctrl+T</code>で2つ目のターミナルを立ち上げてから、以下のコマンド<code>Ctrl+Shift+P</code>で貼り付けた後に<code>Enter</code>で実行します。</p>
+<pre><code class="language-bash">cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+</code></pre>
+<pre><code class="language-bash">cd /aichallenge
+bash run_autoware.bash
+</code></pre>
+<p><code>Alt+Ctrl+T</code>で3つ目のターミナルを立ち上げてから、以下のコマンド<code>Ctrl+Shift+P</code>で貼り付けた後に<code>Enter</code>で実行します。</p>
+<pre><code class="language-bash">cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+</code></pre>
+<pre><code class="language-bash">cd /aichallenge
+ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{data: true}' &gt;/dev/null
+</code></pre>
+<p>下記の様な画面が表示されたら起動完了です。終了するには各ターミナル上でCTRL + Cを入力します。
+<img alt="autoware" src="../images/installation/autoware.png" /></p>
+<h3 id="_3">[参考]ワークスペースの構成</h3>
+<p>参考までにこちらにワークスペースの構成を記載しておきます。</p>
 <p>docker-dev</p>
 <p><img alt="dev" src="../images/docker/dev.drawio.svg" /></p>
 <p>docker-eval</p>

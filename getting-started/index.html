@@ -1060,6 +1060,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    推奨環境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1141,13 +1162,15 @@
 <p>Ubuntuのインストール方法については<a href="https://qiita.com/kiwsdiv/items/1fa6cf451225492b33d8">こちらの記事</a>が参考になります。</p>
 </div>
 <h2 id="ai">AIチャレンジの環境構築</h2>
-<p><code>Alt+Ctrl+T</code>でターミナルを立ち上げてから、以下に従ってコマンドを実行します。</p>
+<p><code>Alt+Ctrl+T</code>でターミナルを立ち上げてから、以下に従ってコマンド<code>Ctrl+Shift+P</code>で貼り付けた後に<code>Enter</code>で実行します。</p>
 <p><a href="../development/installation/">環境構築の説明ページ</a></p>
 <h2 id="_3">大会用リポジトリのビルド・実行</h2>
-<p>環境構築が終わってから再度<code>Alt+Ctrl+T</code>でターミナルを立ち上げてから、以下に従ってコマンドを実行します。</p>
+<p>環境構築が終わってから再度<code>Alt+Ctrl+T</code>でターミナルを立ち上げてから、以下に従ってコマンド<code>Ctrl+Shift+P</code>で貼り付けた後に<code>Enter</code>で実行します。</p>
 <p><a href="../development/workspace/">ワークスペースの使い方説明ページ</a></p>
 <h2 id="ai_1">AIチャレンジでの開発の進め方</h2>
-<p>AIチャレンジで開発する上でベースとなるソースコードは<a href="https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit">大会用リポジトリ</a>内に提供されています。参加者の皆様にはこちらのコードをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは<a href="../course/">入門講座</a>を一通りやっていただくことをお勧めします。</p>
+<p>ビルド・実行が終わってからメインモジュールの解説ページを読みながら実際に開発してみましょう。</p>
+<p><a href="../development/workspace/">メインモジュールについての解説ページ</a></p>
+<p>※AIチャレンジで開発する上でベースとなるソースコードは<a href="https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit">大会用リポジトリ</a>内に提供されています。参加者の皆様にはこちらのコードをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは<a href="../course/">入門講座</a>を一通りやっていただくことをお勧めします。</p>
 <h2 id="_4">参考</h2>
 <h3 id="_5">変更点の取り込み</h3>
 <p>大会環境の重大なアップデートがあった際には適宜アナウンスがあります。
@@ -1164,6 +1187,7 @@ git pull origin/main
 <p>Q. <code>docker_run.sh: 行 35: rocker: コマンドが見つかりません</code></p>
 <p>A. <a href="../development/installation/">rockerのインストール</a>をお願いします。</p>
 <p>Q. <code>WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist</code></p>
+<p>A. Dockerイメージのビルドをお願いします。</p>
 
 
 
