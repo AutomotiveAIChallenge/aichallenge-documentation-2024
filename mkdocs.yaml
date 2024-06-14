@@ -38,6 +38,7 @@ nav:
       - development/visible-simulation.md
       - development/main-module.md
       - development/device-drivers.md
+      - development/requirements.md
   - FAQ: faq.md
   - Community: community.md
 
