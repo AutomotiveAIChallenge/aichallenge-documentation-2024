@@ -1237,6 +1237,10 @@ source /aichallenge/workspace/install/setup.bash
 sudo ip link set multicast on lo
 /aichallenge/simulator/AWSIM_GPU/AWSIM.x86_64
 </code></pre>
+<p>run_evaluetion.bashに対しても次の変更を加えます。AISIM_GPU_**には先程展開したディレクトリを指定してください。</p>
+<pre><code class="language-bash">#AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM
+AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM_GPU_**
+</code></pre>
 <p>以下のコマンドを実行します。</p>
 <pre><code class="language-bash">./run_evaluation.bash
 </code></pre>
