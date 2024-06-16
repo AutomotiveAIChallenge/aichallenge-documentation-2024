@@ -8,6 +8,21 @@
 
 ## 環境構築
 
+まず､ Autoware の動作に必要な ROS 2 をインストールします｡
+[ROS 2 Documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) の手順にしたがってインストールしてください｡
+
+つづけて､いくつかの開発支援ツールセットもインストールします｡
+
+```bash
+# Install rosdep
+sudo apt install python3-rosdep
+# Install vcstool
+sudo apt install python3-vcstool
+# Install colcon
+sudo apt install python3-colcon-common-extensions
+```
+
+
 任意のディレクトリにて入門講座のリポジトリをクローンし、ビルドを行ってください。
 
 ```bash

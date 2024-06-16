@@ -181,7 +181,7 @@ ros2 bag record -o velocity.bag /localization/kinematic_state
 
 PlotJugglerは以下のコマンドで、インストールすることができます。
 ```bash
-sudo apt install ros-humble plotjuggler-ros
+sudo apt install ros-humble-plotjuggler-ros
 ```
 
 そして以下のコマンドでPlotJugglerを起動します。
