@@ -1094,6 +1094,16 @@
 講座は演習形式となっており、課題を達成するためのコードをゼロから開発しながら Autoware の仕組みを学べるようになっています。
 各講座のページにはメニューから移動してください。</p>
 <h2 id="_2">環境構築</h2>
+<p>まず､ Autoware の動作に必要な ROS 2 をインストールします｡
+<a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Documentation</a> の手順にしたがってインストールしてください｡</p>
+<p>つづけて､いくつかの開発支援ツールセットもインストールします｡</p>
+<pre><code class="language-bash"># Install rosdep
+sudo apt install python3-rosdep
+# Install vcstool
+sudo apt install python3-vcstool
+# Install colcon
+sudo apt install python3-colcon-common-extensions
+</code></pre>
 <p>任意のディレクトリにて入門講座のリポジトリをクローンし、ビルドを行ってください。</p>
 <pre><code class="language-bash">git clone https://github.com/AutomotiveAIChallenge/autoware-practice.git
 cd autoware-practice
