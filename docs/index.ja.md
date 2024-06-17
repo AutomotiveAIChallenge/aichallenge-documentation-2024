@@ -49,6 +49,6 @@
 
 ## 使用車両
 
-![TOM'S RacingKart](./images/RacingKart.jpeg)
+![TOM'S Racing Kart](./assets/racing-kart.jpeg)
 
 ## 挑戦課題

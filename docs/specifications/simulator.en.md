@@ -6,9 +6,9 @@ This page describes the specifications of the simulator used in the AI Challenge
 
 The simulator is based on the open-source autonomous driving simulator "[AWSIM](https://github.com/tier4/AWSIM)" developed for Autoware.
 
-## Vehicle (Go-Kart)
+## Vehicle (Racing Kart)
 
-The vehicle conforms to the specifications of the [EGO Vehicle](https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/) in AWSIM and is designed with specifications close to an actual go-kart.
+The vehicle conforms to the specifications of the [EGO Vehicle](https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/) in AWSIM and is designed with specifications close to an actual racing kart.
 
 ![vehicle-appearance](./images/vehicle-appearance.png)
 
