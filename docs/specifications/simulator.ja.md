@@ -6,9 +6,9 @@
 
 シミュレーターは、Autowareのためのオープンソース自動運転シミュレーター「[AWSIM](https://github.com/tier4/AWSIM)」をベースとして作成されています。
 
-## 車両（ゴーカート）
+## 車両（レーシングカート）
 
-車両はAWSIMにおける[EGO Vehicle](https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/)の仕様に準拠しており、実際のゴーカートに近いスペックで作成されています。
+車両はAWSIMにおける[EGO Vehicle](https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/)の仕様に準拠しており、実際のレーシングカートに近いスペックで作成されています。
 
 ![vehicle-appearance](./images/vehicle-appearance.png)
 
