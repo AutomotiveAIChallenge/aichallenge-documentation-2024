@@ -158,7 +158,7 @@ twist:
 次に、車両が目標の速度になるように車両の速度を制御してみましょう。
 現在の速度v_nowと目標の速度v_targetの差にゲインk_pをかけたものを加速度入力aとする比例制御を用いることを考えます。
 
-$$ a = k*{\text{p}} \cdot (v*{\text{target}} - v\_{\text{now}}) $$
+$$ a = k_{\text{p}} \cdot (v_{\text{target}} - v_{\text{now}}) $$
 
 以下に速度の比例制御を行うノードのサンプルを用意しました。
 
@@ -203,7 +203,7 @@ ros2 run plotjuggler plotjuggler
 
 最後に以下の比例ゲインk_pを0.5から5.0に修正して、車両速度の収束速度を比べてみましょう。
 
-$$ a = k*{\text{p}} \cdot (v*{\text{target}} - v\_{\text{now}}) $$
+$$ a = k_{\text{p}} \cdot (v_{\text{target}} - v_{\text{now}}) $$
 
 ```bash
 ros2 run autoware_practice_course p_controller --ros-args -p kp:=5.0 -p target_velocity:=1.0

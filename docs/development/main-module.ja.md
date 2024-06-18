@@ -15,9 +15,9 @@
 本大会では、自動運転ソフトウェアAutowareをベースとした実装を用意しております．
 本ページでは、その背景と説明に加えて、どのように本実装を活用できるかの紹介を行います．
 
-前回のシミュレーション大会では、デフォルトのAutowareから機能を絞り、ノード数を減らした[縮小構成のAutowareを起動できるLaunchファイルを提供]()しました．その際の、背景や用意した意図については、[前大会のドキュメント](https://automotiveaichallenge.github.io/aichallenge2023-racing/customize/index.html)をご覧ください．
+前回のシミュレーション大会では、デフォルトのAutowareから機能を絞り、ノード数を減らした縮小構成のAutowareを起動できるLaunchファイルを提供しました．その際の、背景や用意した意図については、[前大会のドキュメント](https://automotiveaichallenge.github.io/aichallenge2023-racing/customize/index.html)をご覧ください．
 
-今回のシミュレーション大会では、前大会と同様にAutowareの部分的な活用や自由自在な取り込みを可能にするため、[AWSIMとの利用を想定した縮小構成のAutowareを用意しました](https://github.com/AutomotiveAIChallenge/aichallenge-2024/blob/main/aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/launch/reference.launch.xml)しました．
+今回のシミュレーション大会では、前大会と同様にAutowareの部分的な活用や自由自在な取り込みを可能にするため、[AWSIMとの利用を想定した縮小構成のAutoware](https://github.com/AutomotiveAIChallenge/aichallenge-2024/blob/main/aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/launch/reference.launch.xml)を用意しました．
 
 ## 縮小構成のAutowareを用意した背景
 
@@ -90,13 +90,13 @@ Autoware-Microを活用することにより、本大会での課題となる：
 とりあえず新たに自作パッケージを作成してみたい方は既存のパッケージをコピーしたり、[autoware practice](https://github.com/AutomotiveAIChallenge/autoware-practice)をコピーする形で以下のように進めると良いと思います。
 
 1. 元のパッケージをコピーして、下記を変更
-   - パッケージ名
-   - フォルダ名
-   - コード
-   - package.xml
-   - CMakeLists.txt
+    - パッケージ名
+    - フォルダ名
+    - コード
+    - package.xml
+    - CMakeLists.txt
 2. aichallenge_submitの中に配置
 3. autoware_micro_awsim_launchから呼び出されるlaunchファイルを変更
-   - 参考例：pose_initializer_custom（ autoware_universe_launch/tier4_localization_launch/launch/util/util.launch.xmlから呼び出しております）
+    - 参考例：pose_initializer_custom（ autoware_universe_launch/tier4_localization_launch/launch/util/util.launch.xmlから呼び出しております）
 
 ※コピー元のパッケージのライセンスを違反しないよう各自確認お願いいたします。
