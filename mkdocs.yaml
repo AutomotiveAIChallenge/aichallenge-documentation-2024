@@ -1,5 +1,6 @@
 site_name: AI Challenge 2024
 site_url: https://automotiveaichallenge.github.io/aichallenge-documentation-2024/
+repo_url: https://github.com/AutomotiveAIChallenge/aichallenge-documentation-2024
 docs_dir: docs
 copyright: "&copy; 2024 TIER IV, Inc."
 theme:
