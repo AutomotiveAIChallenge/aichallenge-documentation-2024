@@ -2,7 +2,7 @@
 
 ## Overall Flow
 
-![flowchart](./assets/flowchart.drawio.svg)
+![flowchart](./images/flowchart.drawio.en.svg)
 
 ## Schedule
 

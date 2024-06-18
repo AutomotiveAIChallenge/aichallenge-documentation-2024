@@ -1,25 +1,12 @@
-# 環境構築
+# 仮想環境のインストール
 
-## 推奨環境
+## 依存パッケージのインストール
 
-本大会で使用していただくPCの動作環境として以下を推奨しております。
-
-- OS: Ubuntu 22.04
-- CPU: Intel Core i5（4コア）以上（推奨）
-- メモリ:
-  - 8GB以上（最低）
-  - 16GB以上（推奨）
-- SSD: 60GB以上
-
-## aptパッケージ等のインストール
-
-まずは諸々最初に必要なパッケージをインストールします。
+まずは必要なライブラリをインストールします。
 
 ```bash
 sudo apt update
-sudo apt -y upgrade
-sudo apt install -y git python3-pip ca-certificates curl gnupg libvulkan1
-sudo ubuntu-drivers autoinstall
+sudo apt install -y python3-pip ca-certificates curl gnupg
 ```
 
 ## Dockerのインストール
@@ -67,7 +54,7 @@ echo export PATH='$HOME/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## autoware環境のDockerイメージのpull
+## Autoware環境のDockerイメージ取得
 
 AIチャレンジで使用するautoware環境のDockerイメージを取得します。
 
@@ -89,22 +76,3 @@ Dockerイメージがダウンロードできていれば以下のような出�
 REPOSITORY                                        TAG                       IMAGE ID       CREATED         SIZE
 ghcr.io/automotiveaichallenge/autoware-universe   humble-latest             30c59f3fb415   13 days ago     8.84GB
 ```
-
-## 大会用リポジトリのダウンロード
-
-リポジトリをクローンします。ここではホームディレクトリにクローンしますが、お好きなディレクトリに入れていただいても構いません。
-
-```bash
-cd ~
-git clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
-```
-
-## AWSIMのダウンロード
-
-1. [Google Drive](https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y) から最新の `AWSIM.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
-
-2. パーミッションを図のように変更します。
-
-   ![パーミッション変更の様子](./images/installation/permmision.png)
-
-実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM/AWSIM.x86_64`に存在していることを確認してください。

@@ -13,7 +13,7 @@
 本来Autowareでは以下のノードダイアグラムのように、GNSS、Lidar、IMUなどの情報をもとにekf_localizerが`/localization/kinematic_state`を計算します。
 
 <div align="center">
-  <img src="../images/localization_node.png" alt="Alt Text">
+  <img src="./images/localization_node.png" alt="Alt Text">
   <br>
   <em>Autowareのlocalizer周りの<a href="https://app.diagrams.net/?lightbox=1#Uhttps%3A%2F%2Fautowarefoundation.github.io%2Fautoware-documentation%2Fmain%2Fdesign%2Fautoware-architecture%2Fnode-diagram%2Foverall-node-diagram-autoware-universe.drawio.svg#%7B%22pageId%22%3A%22T6t2FfeAp1iw48vGkmOz%22%7D">ノードダイアグラム</a></em>
 </div>
@@ -25,7 +25,7 @@
 <br>
 
 <div align="center">
-  <img src="../images/practice_localization_node.png" alt="Alt Text">
+  <img src="./images/practice_localization_node.png" alt="Alt Text">
   <br>
   <em>autoware-practiceのdummy_localizer周りのノードダイアグラム</em>
 </div>
@@ -233,7 +233,7 @@ ros2 run autoware_practice_course p_controller --ros-args -p kp:=5.0 -p target_v
 <br>
 
 <div align="center">
-  <img src="../images/2-3/node_diagram.png" alt="Alt Text">
+  <img src="./images/2-3/node_diagram.png" alt="Alt Text">
   <br>
   <em>autoware-practiceのtrajectory_loader周りのノードダイアグラム</em>
 </div>
@@ -311,7 +311,7 @@ ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
 図のような、直進・90度旋回・直進・90度旋回・直進となるような経路に追従することを考えます。
 
 <div align="center">
-  <img src="../images/2-4/trajectory_zigzag.png" alt="Alt Text">
+  <img src="./images/2-4/trajectory_zigzag.png" alt="Alt Text">
   <br>
   <em>今回の目標経路</em>
 </div>
@@ -325,7 +325,7 @@ ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
 <br>
 
 <div align="center">
-  <img src="../images/2-4/node_diagram.png" alt="Alt Text">
+  <img src="./images/2-4/node_diagram.png" alt="Alt Text">
   <br>
   <em>autoware-practiceのtrajectory_follower周りのノードダイアグラム</em>
 </div>
@@ -350,7 +350,7 @@ $$ \alpha: 現在の車両の向きとルックアヘッドポイントへの方
 $$ d: ルックアヘッド距離 $$
 
 <div align="center">
-  <img src="../images/2-4/pure_pursuit.png" alt="Pure Pursuit">
+  <img src="./images/2-4/pure_pursuit.png" alt="Pure Pursuit">
   <br>
   <em>pure pursuitの基本動作</em>
 </div>
