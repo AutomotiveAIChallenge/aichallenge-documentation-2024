@@ -24,3 +24,9 @@ repos:
     rev: v1.30.0
     hooks:
       - id: yamllint
+
+  # - repo: https://github.com/tcort/markdown-link-check
+  #  rev: v3.12.2
+  #  hooks:
+  #    - id: markdown-link-check
+  #      args: [--quiet, --config=.markdown-link-check.json]

@@ -12,8 +12,8 @@ theme:
     scheme: slate
     primary: custom
     accent: red
-  # logo:
-  # favicon:
+    # logo:
+    # favicon:
 
 nav:
   - index: index.md
