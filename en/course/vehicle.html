@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/course/index.html">
+        <link rel="canonical" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/course/vehicle.html">
       
       
-        <link rel="prev" href="../specifications/simulator.html">
+        <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="vehicle.html">
+        <link rel="next" href="velocity_planning.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Autoware Introduction Course - AI Challenge 2024</title>
+        <title>01. 車両インターフェース - AI Challenge 2024</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#autoware-introduction-course" class="md-skip">
+        <a href="#01" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Autoware Introduction Course
+              01. 車両インターフェース
             
           </span>
         </div>
@@ -131,13 +131,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../course/index.html" hreflang="ja" class="md-select__link">
+            <a href="../../course/vehicle.html" hreflang="ja" class="md-select__link">
               日本語
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="index.html" hreflang="en" class="md-select__link">
+            <a href="vehicle.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -975,6 +975,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Autoware Introduction Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -987,29 +1008,18 @@
         
       
       
-      <a href="index.html" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   <span class="md-ellipsis">
-    Autoware Introduction Course
+    01. 車両インターフェース
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="vehicle.html" class="md-nav__link">
+      <a href="vehicle.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1018,6 +1028,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      01-01. 車両の直進
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#01-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      01-02. 車両の旋回
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#01-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      01-03. 車両の後退
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1151,11 +1208,111 @@
   
 
 
-<h1 id="autoware-introduction-course">Autoware Introduction Course</h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page is under construction. Japanese pages may be available.</p>
-</div>
+<h1 id="01">01. 車両インターフェース</h1>
+<h2 id="01-01">01-01. 車両の直進</h2>
+<p>下記のコマンドを実行し、シミュレーターを起動してください。起動が完了すると、図のように Rviz に車両と緑色のエリアが表示されます。
+この緑色のエリアに車両が入れば課題達成となるため、まずは車両を直進させるノードを作成していきます。</p>
+<pre><code class="language-bash">ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_forward
+</code></pre>
+<p><img alt="vehicle-forward-judging" src="../../course/images/vehicle-forward-judging.png" /></p>
+<p>車両を動かすためのインターフェースとして <code>/control/command/control_cmd</code> が定義されています。
+これは AckermannControlCommand というメッセージで、各フィールドは以下のような意味を持っています。</p>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stamp</td>
+<td>time</td>
+<td>コマンドの送信時刻</td>
+</tr>
+<tr>
+<td>longitudinal.speed</td>
+<td>float</td>
+<td>車両の目標速度</td>
+</tr>
+<tr>
+<td>longitudinal.acceleration</td>
+<td>float</td>
+<td>車両の目標加速度</td>
+</tr>
+<tr>
+<td>longitudinal.jerk</td>
+<td>float</td>
+<td>車両の目標加加速度 (ジャーク)</td>
+</tr>
+<tr>
+<td>lateral.steering_tire_angle</td>
+<td>float</td>
+<td>ステアリングの目標角度</td>
+</tr>
+<tr>
+<td>lateral.steering_tire_rotation_rate</td>
+<td>float</td>
+<td>ステアリングの回転速度</td>
+</tr>
+</tbody>
+</table>
+<p>以下にコマンドを送信するノードのサンプルを用意しました。サンプルでは停止保持するコマンドを送信し続けるようになっているので、データを変更して車両が発進するようにします。</p>
+<ul>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/forward.hpp">vehicle/forward.hpp</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/forward.cpp">vehicle/forward.cpp</a></li>
+</ul>
+<pre><code class="language-diff">-  command.longitudinal.speed = 0.0;
+-  command.longitudinal.acceleration = -2.5;
++  command.longitudinal.speed = 3.0;
++  command.longitudinal.acceleration = 1.0;
+</code></pre>
+<p>コードを書き換えたらビルドして実行します。新しい端末を起動して以下のコマンドを実行してください。
+上手く出来ていればシミュレーターの車両が動き、条件を満たして結果が SUCCESS になります。</p>
+<pre><code class="language-bash">colcon build --symlink-install --packages-select autoware_practice_course
+ros2 run autoware_practice_course vehicle_forward
+</code></pre>
+<p><img alt="vehicle-forward-success" src="../../course/images/vehicle-forward-success.png" /></p>
+<h2 id="01-02">01-02. 車両の旋回</h2>
+<p>先程と同様に下記のコマンドを実行し、シミュレーターを起動してください。緑色のエリアに車両が入れば課題達成となるため、車両を旋回させるノードを作成していきます。</p>
+<pre><code class="language-bash">ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_turning
+</code></pre>
+<p><img alt="vehicle-turning-judging" src="../../course/images/vehicle-turning-judging.png" /></p>
+<p>先程利用したサンプルのデータを変更して、車両が旋回するようにします。</p>
+<ul>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/forward.hpp">vehicle/forward.hpp</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/forward.cpp">vehicle/forward.cpp</a></li>
+</ul>
+<pre><code class="language-diff">-  command.lateral.steering_tire_angle = 0.0;
++  command.lateral.steering_tire_angle = 2.0;
+</code></pre>
+<p>コードを書き換えたらビルドして実行します。新しい端末を起動して以下のコマンドを実行してください。 上手く出来ていればシミュレーターの車両が動き、条件を満たして結果が SUCCESS になります。</p>
+<pre><code class="language-bash">colcon build --symlink-install --packages-select autoware_practice_course
+ros2 run autoware_practice_course vehicle_forward
+</code></pre>
+<p><img alt="vehicle-turning-success" src="../../course/images/vehicle-turning-success.png" /></p>
+<h2 id="01-03">01-03. 車両の後退</h2>
+<p>下記のコマンドを実行し、シミュレーターを起動してください。この緑色のエリアに車両が入れば課題達成となるため、まずは車両を後退させるノードを作成していきます。</p>
+<pre><code class="language-bash">ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_backward
+</code></pre>
+<p><img alt="vehicle-backward-judging" src="../../course/images/vehicle-backward-judging.png" /></p>
+<p>以下に後退するためのコマンドを送信するノードのサンプルを用意しました。直進するためのコードと異なり、ギアを制御するコードが含まれています。サンプルでは停止保持するコマンドを送信し続けるようになっているので、データを変更して車両が後退するようにします。
+ギアがREVERSEのときは、目標加速度を正、目標速度を負にします。</p>
+<ul>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/backward.hpp">vehicle/backward.hpp</a></li>
+<li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/vehicle/backward.cpp">vehicle/backward.cpp</a></li>
+</ul>
+<pre><code class="language-diff">-  command.longitudinal.speed = 0.0;
+-  command.longitudinal.acceleration = -2.5;
++  command.longitudinal.speed = -3.0;
++  command.longitudinal.acceleration = 1.0;
+</code></pre>
+<p>コードを書き換えたらビルドして実行します。新しい端末を起動して以下のコマンドを実行してください。 上手く出来ていればシミュレーターの車両が動き、条件を満たして結果が SUCCESS になります。</p>
+<pre><code class="language-bash">colcon build --symlink-install --packages-select autoware_practice_course
+ros2 run autoware_practice_course vehicle_backward
+</code></pre>
+<p><img alt="vehicle-backward-success" src="../../course/images/vehicle-backward-success.png" /></p>
 
 
 
