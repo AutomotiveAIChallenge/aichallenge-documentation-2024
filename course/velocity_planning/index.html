@@ -1137,7 +1137,7 @@
 <pre><code class="language-bash">ros2 topic echo /localization/kinematic_state
 </code></pre>
 <p>車両の初期速度は0なので、以下のように<code>twist: linear: x: 0.0</code>と表示されます。</p>
-<pre><code>header:
+<pre><code class="language-txt">header:
   stamp:
     sec: 1713775224
     nanosec: 319370472
@@ -1244,7 +1244,7 @@ twist:
 <h2 id="02-02">02-02. 車両速度を目標速度に収束させる</h2>
 <p>次に、車両が目標の速度になるように車両の速度を制御してみましょう。
 現在の速度v_nowと目標の速度v_targetの差にゲインk_pをかけたものを加速度入力aとする比例制御を用いることを考えます。</p>
-<p>$$ a = k_{\text{p}}  \cdot (v_{\text{target}} - v_{\text{now}}) $$</p>
+<p>$$ a = k_{\text{p}} \cdot (v_{\text{target}} - v_{\text{now}}) $$</p>
 <p>以下に速度の比例制御を行うノードのサンプルを用意しました。</p>
 <ul>
 <li><a href="https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.hpp">velocity_planning/p_controller.hpp</a></li>
@@ -1364,14 +1364,14 @@ longitudinal_controllerノードが車両に最も近いウェイポイントを
 </li>
 <li>
 <p><strong>ステアリング角度の計算</strong>:
-   計算された方向ベクトルに基づき曲率を計算し、車両のステアリング角度を求めます。
-$$ \theta = \arctan\left(\frac{2  L  \sin(\alpha)}{d}\right) $$
+   計算された方向ベクトルに基づき曲率を計算し、車両のステアリング角度を求めます。</p>
+</li>
+</ol>
+<p>$$ \theta = \arctan\left(\frac{2 L \sin(\alpha)}{d}\right) $$
 $$ \theta: 計算されたステアリング角度 \ $$
 $$ L: 車両のホイールベースの長さ \ $$
 $$ \alpha: 現在の車両の向きとルックアヘッドポイントへの方向ベクトルの間の角度差 \ $$
 $$ d: ルックアヘッド距離 $$</p>
-</li>
-</ol>
 <div align="center">
   <img src="../images/2-4/pure_pursuit.png" alt="Pure Pursuit">
   <br>

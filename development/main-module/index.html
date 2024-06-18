@@ -1148,8 +1148,8 @@
 <h2 id="autoware">Autowareのカスタマイズ</h2>
 <p>本大会では、自動運転ソフトウェアAutowareをベースとした実装を用意しております．
 本ページでは、その背景と説明に加えて、どのように本実装を活用できるかの紹介を行います．</p>
-<p>前回のシミュレーション大会では、デフォルトのAutowareから機能を絞り、ノード数を減らした<a href="">縮小構成のAutowareを起動できるLaunchファイルを提供</a>しました．その際の、背景や用意した意図については、<a href="https://automotiveaichallenge.github.io/aichallenge2023-racing/customize/index.html">前大会のドキュメント</a>をご覧ください．</p>
-<p>今回のシミュレーション大会では、前大会と同様にAutowareの部分的な活用や自由自在な取り込みを可能にするため、<a href="https://github.com/AutomotiveAIChallenge/aichallenge-2024/blob/main/aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/launch/reference.launch.xml">AWSIMとの利用を想定した縮小構成のAutowareを用意しました</a>しました．</p>
+<p>前回のシミュレーション大会では、デフォルトのAutowareから機能を絞り、ノード数を減らした縮小構成のAutowareを起動できるLaunchファイルを提供しました．その際の、背景や用意した意図については、<a href="https://automotiveaichallenge.github.io/aichallenge2023-racing/customize/index.html">前大会のドキュメント</a>をご覧ください．</p>
+<p>今回のシミュレーション大会では、前大会と同様にAutowareの部分的な活用や自由自在な取り込みを可能にするため、<a href="https://github.com/AutomotiveAIChallenge/aichallenge-2024/blob/main/aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/launch/reference.launch.xml">AWSIMとの利用を想定した縮小構成のAutoware</a>を用意しました．</p>
 <h2 id="autoware_1">縮小構成のAutowareを用意した背景</h2>
 <h3 id="autoware_2">Autowareを利用する時の課題</h3>
 <p>デフォルトのAutowareでは様々な走行環境に対応するため、たくさんのノードから構成されています．</p>
@@ -1207,7 +1207,7 @@
 </ul>
 </li>
 <li>aichallenge_submitの中に配置</li>
-<li>autoware_micro_awsim_launchから呼び出されるlaunchファイルを変更  <ul>
+<li>autoware_micro_awsim_launchから呼び出されるlaunchファイルを変更<ul>
 <li>参考例：pose_initializer_custom（ autoware_universe_launch/tier4_localization_launch/launch/util/util.launch.xmlから呼び出しております）</li>
 </ul>
 </li>
