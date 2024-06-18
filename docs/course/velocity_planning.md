@@ -39,11 +39,14 @@ ros2 launch autoware_practice_launch practice.launch.xml
 ```
 
 別のターミナルで以下のコマンドでトピックから車両の速度を取得してみましょう。
+
 ```bash
 ros2 topic echo /localization/kinematic_state
 ```
+
 車両の初期速度は0なので、以下のように`twist: linear: x: 0.0`と表示されます。
-```
+
+```txt
 header:
   stamp:
     sec: 1713775224
@@ -150,23 +153,20 @@ twist:
 
 `/localization/kinematic_state`というトピックは [nav_msgs/msgs/Odometry](https://docs.ros2.org/foxy/api/geometry_msgs/msg/Pose.html) というROS2のメッセージ型を利用しています。
 
-
 ## 02-02. 車両速度を目標速度に収束させる
 
 次に、車両が目標の速度になるように車両の速度を制御してみましょう。
 現在の速度v_nowと目標の速度v_targetの差にゲインk_pをかけたものを加速度入力aとする比例制御を用いることを考えます。
 
-
-
-$$ a = k_{\text{p}}  \cdot (v_{\text{target}} - v_{\text{now}}) $$
+$$ a = k_{\text{p}} \cdot (v_{\text{target}} - v_{\text{now}}) $$
 
 以下に速度の比例制御を行うノードのサンプルを用意しました。
 
 - [velocity_planning/p_controller.hpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.hpp)
 - [velocity_planning/p_controller.cpp](https://github.com/AutomotiveAIChallenge/autoware-practice/blob/main/src/autoware_practice_course/src/velocity_planning/p_controller.cpp)
 
-
 以下のコマンドで比例制御のコントローラのノードを起動することができ、車両が動き始めます。kpに比例ゲイン、target_velocityに速度[m/s]を格納します。
+
 ```bash
 ros2 run autoware_practice_course p_controller --ros-args -p kp:=0.5 -p target_velocity:=1.0
 ```
@@ -180,11 +180,13 @@ ros2 bag record -o velocity.bag /localization/kinematic_state
 ```
 
 PlotJugglerは以下のコマンドで、インストールすることができます。
+
 ```bash
 sudo apt install ros-humble-plotjuggler-ros
 ```
 
 そして以下のコマンドでPlotJugglerを起動します。
+
 ```bash
 ros2 run plotjuggler plotjuggler
 ```
@@ -215,7 +217,7 @@ ros2 run autoware_practice_course p_controller --ros-args -p kp:=5.0 -p target_v
 
 図のような、停止状態から50m地点まで加速し、50m地点を過ぎたら減速し100m地点で停止するような速度計画を行うことを考えます。
 
-![alt text](<./images/2-3/velocity_planning_image.jpg>)
+![alt text](./images/2-3/velocity_planning_image.jpg)
 
 速度計画を行うために車両から目標地点までの間に1mおきに中継地点となるウェイポイントを設定します。各ウェイポイントに目標速度を設定することで速度計画を行います。
 
@@ -238,7 +240,6 @@ ros2 run autoware_practice_course p_controller --ros-args -p kp:=5.0 -p target_v
 
 <br>
 
-
 trajectory_loaderノードがスタートからゴールまでの各ウェイポイントの目標速度をcsvファイルから読み取ります。
 longitudinal_controllerノードが車両に最も近いウェイポイントを探索し、ウェイポイントでの目標速度と現在の車両の速度を基に制御入力を決定します。
 
@@ -259,6 +260,7 @@ ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
 車両の位置と速度の関係をPlotJugglerを用いてリアルタイムで確認してみましょう。
 全部で4枚のターミナルウィンドウを使用します。
 まずシミュレータを起動します。
+
 ```bash
 ros2 launch autoware_practice_launch practice.launch.xml
 ```
@@ -298,6 +300,7 @@ ros2 run autoware_practice_course trajectory_loader --ros-args -p path_file:=src
 ```bash
 ros2 run autoware_practice_course longitudinal_controller --ros-args -p kp:=5.0
 ```
+
 それぞれのノードが起動するとシミュレーター上で車両が動き始め、以下のようなグラフが得られます。
 ![alt text](./images/2-3/PlotJuggler5.png)
 
@@ -339,20 +342,18 @@ pure pursuitは、車両の現在位置と目標経路上の追従点（ルッ�
 
 3. **ステアリング角度の計算**:
    計算された方向ベクトルに基づき曲率を計算し、車両のステアリング角度を求めます。
-$$ \theta = \arctan\left(\frac{2  L  \sin(\alpha)}{d}\right) $$
+
+$$ \theta = \arctan\left(\frac{2 L \sin(\alpha)}{d}\right) $$
 $$ \theta: 計算されたステアリング角度 \\ $$
 $$ L: 車両のホイールベースの長さ \\ $$
 $$ \alpha: 現在の車両の向きとルックアヘッドポイントへの方向ベクトルの間の角度差 \\ $$
 $$ d: ルックアヘッド距離 $$
-
 
 <div align="center">
   <img src="../images/2-4/pure_pursuit.png" alt="Pure Pursuit">
   <br>
   <em>pure pursuitの基本動作</em>
 </div>
-
-
 
 pure pursuitの利点は、そのシンプルさと実装の容易さにあります。しかし、高速走行や急カーブの多い経路では、別の制御アルゴリズムとの組み合わせが必要になる場合があります。
 
