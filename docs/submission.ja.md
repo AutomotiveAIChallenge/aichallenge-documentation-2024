@@ -70,7 +70,7 @@ bash run_container_cpu.sh
 
  <img src="../images/online/siteImage.png" width="100%">  
 
-[オンライン環境](https://aichallenge.synesthesias.jp)にアクセスし、「ファイルを選択」から`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
+[オンライン環境](https://aichallenge-board.jsae.or.jp/)にアクセスし、「ファイルを選択」から`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
 
 - 正常に終了した場合、採点完了と表示され、`result.json`がダウンロードでき、距離とタイムがランキングに表示されます。
 - シナリオ実行後、launchに失敗した等でスコアが出力されていない場合は「結果無し」と表示されます。この場合、サーバーサイドでの内部エラーの可能性があるため、再アップロードをお願いします。問題が続く場合はお問い合わせください。
