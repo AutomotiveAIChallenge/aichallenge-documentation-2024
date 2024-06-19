@@ -6,3 +6,17 @@
 
 - [日本語ページ](https://automotiveaichallenge.github.io/aichallenge-documentation-2024/)
 - [English Page](https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/)
+
+## Deploy
+
+ドキュメントの生成環境をインストールするには以下のコマンドを実行します。
+
+```bash
+pip install -r requirements.txt
+```
+
+ドキュメントをローカル環境で確認したい場合は以下を実行します。
+
+```bash
+mkdocs serve
+```
