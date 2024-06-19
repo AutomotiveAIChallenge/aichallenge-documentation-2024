@@ -1,20 +1,6 @@
-# [任意]描画有りのシミュレーション
+# 描画ありAWSIMのダウンロード (参考)
 
-## 描画有りのシミュレーション環境（環境構築上級者向け）
-
-デフォルトで描画無しのAWSIMを配布しておりますが、描画有りを希望される方の環境構築方法も記載しております。GPUを使用する環境構築では詰まって進まなくなる事例が多々ありましたので、初めてのご参加の方はあくまでも参考程度でとしてください。
-
-- OS: Ubuntu 22.04
-- CPU: Intel Corei7 (8 cores) or higher
-- GPU: NVIDIA Geforce VRAM 8 GB
-- Memory: 16 GB or more
-- Storage: SSD 60 GB or higher
-
-## 描画有りのシミュレーション環構築手順
-
-基本的に描画無しのAWSIMを配布しておりますが、描画有りを希望される方の環境構築方法も記載しております。GPUを使用する環境構築では詰まって進まなくなる事例が多々ありましたので、おすすめはいたしません。要求性能のページのスペックのPCが用意できない方や初めてのご参加の方はあくまでも参考程度としてください。
-
-- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)(GPU非搭載の方はスキップ)
+デフォルトで描画なしのAWSIMを配布しておりますが、描画ありを希望される方の環境構築方法も記載しております。GPUを使用する環境構築では詰まって進まなくなる事例が多々ありましたので、[推奨環境](./requirements.ja.md)を満たすのスペックのPCが用意できない方や初めてのご参加の方はあくまでも参考程度としてください。
 
 ## NVIDIAドライバのインストール
 
@@ -35,9 +21,11 @@ reboot
 nvidia-smi
 ```
 
-![nvidia-smi](./images/installation/nvidia-smi.png)
+![nvidia-smi](./images/nvidia-smi.png)
 
 ## NVIDIA Container Toolkit
+
+[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)を参考にインストールを行います。
 
 ```bash
 # インストールの下準備
@@ -79,29 +67,31 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 # +-----------------------------------------------------------------------------+
 ```
 
-## AWSIMのダウンロード・起動確認
+## Vulkunのインストール
+
+```bash
+sudo apt update
+sudo apt install -y libvulkan1
+```
+
+## AWSIMのダウンロード
 
 1. [Google Drive](https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y) から最新の `AWSIM_GPU_**.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
 
-2. パーミッションを図のように変更します。
-
-   ![パーミッション変更の様子](./images/installation/permmision.png)
-
-!!! info
-
     実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM_GPU_**/AWSIM.x86_64`に存在していることを確認してください。
 
-## Dockerコンテナの起動
+2. パーミッションを図のように変更します。
 
-描画有りのシミュレーション推奨環境を満たしており、
-NVIDIA関連のinstallが済んでいる方は上記のコマンドではなく、以下のコマンドでコンテナを起動してください。
+    ![パーミッション変更の様子](./images/awsim-permmision.png)
+
+## AWSIMの起動確認
+
+描画ありのAWSIMを使用する場合は、以下のコマンドでコンテナを起動してください。
 
 ```bash
 cd aichallenge-2024
 ./docker_run.sh dev gpu
 ```
-
-## AutowareのビルドとSimulatorの起動
 
 コンテナを起動したターミナル(コンテナ内)で以下を実行します。
 
@@ -110,7 +100,7 @@ cd /aichallenge
 ./build_autoware.bash
 ```
 
-Autowareのビルド後、run_simulator.bashを変更します
+Autowareのビルド後、run_simulator.bashを変更します。`AISIM_GPU_**`には先程展開したディレクトリを指定してください。
 
 ```bash
 #!/bin/bash
@@ -118,13 +108,13 @@ Autowareのビルド後、run_simulator.bashを変更します
 # shellcheck disable=SC1091
 source /aichallenge/workspace/install/setup.bash
 sudo ip link set multicast on lo
-/aichallenge/simulator/AWSIM_GPU/AWSIM.x86_64
+/aichallenge/simulator/AWSIM_GPU_**/AWSIM.x86_64
 ```
 
-run_evaluetion.bashに対しても次の変更を加えます。AISIM_GPU_**には先程展開したディレクトリを指定してください。
+run_evaluetion.bashに対しても同様に次の変更を加えます。
 
 ```bash
-#AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM
+# AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM
 AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM_GPU_**
 ```
 
@@ -136,4 +126,4 @@ AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM_GPU_**
 
 以下のような画面が現れたら成功です。
 
-![AWSIM-Autoware](./images/AWSIM%26Autoware.png)
+![AWSIM-Autoware](./images/awsim-and-autoware.png)

@@ -22,7 +22,6 @@ sudo apt install python3-vcstool
 sudo apt install python3-colcon-common-extensions
 ```
 
-
 任意のディレクトリにて入門講座のリポジトリをクローンし、ビルドを行ってください。
 
 ```bash

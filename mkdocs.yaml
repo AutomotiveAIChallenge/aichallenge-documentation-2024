@@ -1,7 +1,10 @@
 site_name: AI Challenge 2024
 site_url: https://automotiveaichallenge.github.io/aichallenge-documentation-2024/
+repo_url: https://github.com/AutomotiveAIChallenge/aichallenge-documentation-2024
 docs_dir: docs
 copyright: "&copy; 2024 TIER IV, Inc."
+use_directory_urls: false
+
 theme:
   name: material
   features:
@@ -12,33 +15,35 @@ theme:
     scheme: slate
     primary: custom
     accent: red
-  # logo:
-  # favicon:
+    # logo:
+    # favicon:
 
 nav:
   - index: index.md
   - getting-started.md
-  - information.md
-  - competition:
-      - competition/rules.md
-      - competition/preliminaries.md
-      - competition/finals.md
-  - course:
-      - course/index.md
-      - course/vehicle.md
-      - course/velocity_planning.md
-      - course/perception.md
+  - information:
+      - information/schedule.md
+      - information/rules.md
+  - submission.md
+  - setup:
+      - setup/requirements.md
+      - setup/workspace-setup.md
+      - setup/docker.md
+      - setup/headless-simulation.md
+      - setup/visible-simulation.md
+  - development:
+      - development/workspace-usage.md
+      - development/main-module.md
   - specifications:
       - specifications/interface.md
       - specifications/hardware.md
       - specifications/simulator.md
-  - development:
-      - development/installation.md
-      - development/workspace.md
-      - development/visible-simulation.md
-      - development/main-module.md
-      - development/device-drivers.md
-      - development/requirements.md
+  - course:
+      - course/index.md
+      - course/vehicle.md
+      - course/velocity_planning.md
+      - course/path_planning.md
+      - course/perception.md
   - FAQ: faq.md
   - Community: community.md
 
@@ -59,16 +64,18 @@ plugins:
           build: true
           nav_translations:
             index: トップページ
-            competition: 競技内容
-            course: 講座
+            information: 大会情報
+            setup: 導入
             development: 開発
             specifications: 仕様
+            course: 講座
         - locale: en
           name: English
           build: true
           nav_translations:
             index: Top Page
-            competition: Competition
-            course: Course
+            information: Information
+            setup: Setup
             development: Development
             specifications: Specifications
+            course: Course

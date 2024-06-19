@@ -81,8 +81,8 @@ ros2 run autoware_practice_course vehicle_forward
 ```bash
 ros2 launch autoware_practice_launch practice.launch.xml problem:=vehicle_backward
 ```
-![vehicle-backward-judging](./images/vehicle-backward-judging.png)
 
+![vehicle-backward-judging](./images/vehicle-backward-judging.png)
 
 以下に後退するためのコマンドを送信するノードのサンプルを用意しました。直進するためのコードと異なり、ギアを制御するコードが含まれています。サンプルでは停止保持するコマンドを送信し続けるようになっているので、データを変更して車両が後退するようにします。
 ギアがREVERSEのときは、目標加速度を正、目標速度を負にします。
@@ -105,4 +105,3 @@ ros2 run autoware_practice_course vehicle_backward
 ```
 
 ![vehicle-backward-success](./images/vehicle-backward-success.png)
-

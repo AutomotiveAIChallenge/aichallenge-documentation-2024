@@ -61,11 +61,11 @@ Autowareのビルド後、以下のコマンドを実行します。
 ```bash
 ./run_evaluation.bash
 ```
+
 下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
-![autoware](./images/installation/autoware.png)
+![autoware](./images/autoware.png)
 
-## [任意] Debug用にTerminalを3つ用意して開発したい場合
-
+## Debug用にTerminalを3つ用意して開発したい場合 (参考)
 
 `Alt+Ctrl+T`で１つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
 
@@ -78,7 +78,6 @@ cd ~/aichallenge-2024
 cd /aichallenge
 bash run_simulator.bash
 ```
-
 
 `Alt+Ctrl+T`で2つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
 
@@ -104,11 +103,10 @@ cd /aichallenge
 ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{data: true}' >/dev/null
 ```
 
-
 下記の様な画面が表示されたら起動完了です。終了するには各ターミナル上でCTRL + Cを入力します。
-![autoware](./images/installation/autoware.png)
+![autoware](./images/autoware.png)
 
-### [参考]ワークスペースの構成
+### ワークスペースの構成 (参考)
 
 参考までにこちらにワークスペースの構成を記載しておきます。
 
