@@ -166,7 +166,7 @@ GPUの性能不足が原因の一つになります。
 
 #### <u>mpcのチューニングをしたいのですが，今回AWSIMで使用されているモデルパラメータ（遅れや時定数など）は公開されていないでしょうか．</u>
 
-遅れや時定数については計測も公開もされていませんが、基本的な仕様については[こちら](https://automotiveaichallenge.github.io/aichallenge-documentation-2024/specifications/simulator)に公開されています。
+遅れや時定数については計測も公開もされていませんが、基本的な仕様については[こちら](specifications/simulator.html)に公開されています。
 
 ---
 
