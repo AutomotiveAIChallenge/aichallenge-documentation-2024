@@ -4,11 +4,11 @@
 
 <br>
 
-<!-- > [!REGISTER]
+> [!REGISTER]
 > こちらから参加登録!
-> [https://www.jsae.or.jp/jaaic/en/index.php](https://www.jsae.or.jp/jaaic/en/index.php)
+> [https://www.jsae.or.jp/jaaic/2024ver/summary/](https://www.jsae.or.jp/jaaic/2024ver/summary/)
 
-<br> -->
+<br>
 
 本大会では、シミュレーターと自動採点機能を備えたオンライン環境を使用して採点が行われます。以下の手順に従って、作成したパッケージ群をオンライン環境にアップロードしてください。アップロード後、シミュレーションが自動で開始され、結果が表示されます。
 
