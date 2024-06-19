@@ -8,7 +8,7 @@
   "replacementPatterns": [
     {
       "pattern": "^/",
-      "replacement": "file:///home/runner/work/aichallenge-documentation-2024/aichallenge-documentation-2024/"
+      "replacement": "file:///home/runner/work/aichallenge-documentation-2024/"
     }
   ]
 }
