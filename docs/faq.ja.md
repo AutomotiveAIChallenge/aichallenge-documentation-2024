@@ -143,7 +143,7 @@ center pointは車両とトラックと歩行者を検知してくれますが�
 2. data associationでclusteringによる障害物検知結果が消される
 
 そのため、perceptionの構成はautoware miniが理想的ですが、このあたりを理解してノードの足し引き、取捨選択をして実装することははなかなか難しいため、center pointが問題なく動くようにすることは重要になってくるかもしれません。
-[参考](https://autowarefoundation.github.io/autoware.universe/main/perception/lidar_centerpoint)
+[参考](https://autowarefoundation.github.io/autoware.universe/main/perception/lidar_centerpoint/)
 
 ---
 
@@ -166,7 +166,7 @@ GPUの性能不足が原因の一つになります。
 
 #### <u>mpcのチューニングをしたいのですが，今回AWSIMで使用されているモデルパラメータ（遅れや時定数など）は公開されていないでしょうか．</u>
 
-遅れや時定数については計測も公開もされていませんが、基本的な仕様については[こちら](https://automotiveaichallenge.github.io/aichallenge-documentation-2024/specifications/simulator/)に公開されています。
+遅れや時定数については計測も公開もされていませんが、基本的な仕様については[こちら](https://automotiveaichallenge.github.io/aichallenge-documentation-2024/specifications/simulator)に公開されています。
 
 ---
 
