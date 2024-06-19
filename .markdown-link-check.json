@@ -1,3 +1,14 @@
 {
-  "aliveStatusCodes": [200, 206]
+  "aliveStatusCodes": [200, 206],
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/",
+      "replacement": "file:///home/runner/work/aichallenge-documentation-2024/aichallenge-documentation-2024/"
+    }
+  ]
 }
