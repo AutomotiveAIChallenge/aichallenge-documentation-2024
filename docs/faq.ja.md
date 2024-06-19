@@ -143,7 +143,7 @@ center pointは車両とトラックと歩行者を検知してくれますが�
 2. data associationでclusteringによる障害物検知結果が消される
 
 そのため、perceptionの構成はautoware miniが理想的ですが、このあたりを理解してノードの足し引き、取捨選択をして実装することははなかなか難しいため、center pointが問題なく動くようにすることは重要になってくるかもしれません。
-[参考](https://autowarefoundation.github.io/autoware.universe/main/perception/lidar_centerpoint/)
+[参考](https://autowarefoundation.github.io/autoware.universe/main/perception/lidar_centerpoint)
 
 ---
 
