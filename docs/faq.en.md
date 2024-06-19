@@ -159,7 +159,7 @@ If using a high-performance GPU is difficult, setting the time scale to around 0
 
 #### <u>I want to tune the mpc, but are the model parameters (lag and time constants) used in AWSIM disclosed?</u>
 
-The lag and time constants are not measured or disclosed, but the basic specifications are available [here](./specifications/simulator.html).
+The lag and time constants are not measured or disclosed, but the basic specifications are available [here](./specifications/simulator.en.html).
 
 ---
 
