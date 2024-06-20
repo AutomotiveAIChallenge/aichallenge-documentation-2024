@@ -3,6 +3,7 @@
 このページではAIチャレンジでの一連の流れを記載します。
 
 ## オンライン採点環境へのアクセスと提出
+
 本大会では、オンライン環境に提出ファイル（ソースコードの圧縮ファイル）をアップロードすることで自動採点が行われ、順位が決定されます。オンライン採点環境には[こちら](https://aichallenge-board.jsae.or.jp)からアクセスしてください。
 ユーザー登録がまだ済んでいない方はSlackでの案内に従って登録お願いします。
 
@@ -35,7 +36,6 @@
 - [Dockerのインストール](./setup/docker.ja.md)
 - [AWSIMのダウンロード](./setup/headless-simulation.ja.md)
 
-
 ## 大会用リポジトリのビルド・実行
 
 環境構築が終わってから再度`Alt+Ctrl+T`でターミナルを立ち上げてから、以下に従ってコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
@@ -52,8 +52,8 @@
 
 ※リポジトリ内のコードを使わず独自に開発する方など、各種仕様について知りたい方は[インターフェース仕様](./specifications/interface.ja.md)、[シミュレータ仕様](./specifications/simulator.ja.md)のページを参照してください。
 
-
 ## ソースコードの提出
+
 完成したコードの提出は[オンライン採点環境](https://aichallenge-board.jsae.or.jp)から行います。提出は以下の手順で行ってください。
 
 1. ソースコードの圧縮
@@ -84,6 +84,7 @@ git pull origin/main
 ```
 
 ### 描画ありAWSIMの導入
+
 AWSIMのシミュレーション画面を確認したい方は、[こちら](./setup/visible-simulation.ja.md)の手順に従って描画ありAWSIMの導入を行ってください。
 
 ### TroubleShooting
