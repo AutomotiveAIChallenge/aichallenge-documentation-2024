@@ -1,10 +1,22 @@
 # はじめ方
 
-このページではROS2やAutowareに馴染みのない初学者向けに、AIチャレンジでの一連の流れをチュートリアルとして記載します。
+このページではAIチャレンジでの一連の流れを記載します。
+
+## オンライン採点環境へのアクセスと提出
+
+本大会では、オンライン環境に提出ファイル（ソースコードの圧縮ファイル）をアップロードすることで自動採点が行われ、順位が決定されます。オンライン採点環境には[こちら](https://aichallenge-board.jsae.or.jp)からアクセスしてください。
+ユーザー登録がまだ済んでいない方はSlackでの案内に従って登録お願いします。
+
+アクセスが出来たら、一度ソースコードの提出をしてみましょう。
+[GoogleDrive](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN)からサンプルコードの圧縮ファイルをダウンロードして、オンライン採点環境の「UPLOAD」ボタンからそのままアップロードすることで提出ができます。
+
+![submit](./images/submit.png)
+
+以下の手順では環境構築から開発、ファイルの提出までの流れを説明します。
 
 ## 必要なもの
 
-## Ubuntu PC
+### Ubuntu PC
 
 [推奨環境](./setup/requirements.ja.md)を満たすPCが必要ですが、推奨と書かれているものについては満たしていなくても動作することは可能です。ただし、推奨よりも低いスペックで動作させる場合ROS2側での実行速度が安定せずシミュレーションの実行の度に挙動が大きく変わってしまう可能性があります。
 
@@ -36,7 +48,19 @@
 
 [メインモジュールについての解説ページ](./development/main-module.ja.md)
 
-※AIチャレンジで開発する上でベースとなるソースコードは[大会用リポジトリ](https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit)内に提供されています。参加者の皆様にはこちらのコードをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは[入門講座](./course/index.ja.md)を一通りやっていただくことをお勧めします。
+※AIチャレンジで開発する上でベースとなるソースコードは[大会用リポジトリ](https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit)内に提供されています。参加者の皆様にはこちらのコードやパラメータをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは[入門講座](./course/index.ja.md)を一通りやっていただくことをお勧めします。
+
+※リポジトリ内のコードを使わず独自に開発する方など、各種仕様について知りたい方は[インターフェース仕様](./specifications/interface.ja.md)、[シミュレータ仕様](./specifications/simulator.ja.md)のページを参照してください。
+
+## ソースコードの提出
+
+完成したコードの提出は[オンライン採点環境](https://aichallenge-board.jsae.or.jp)から行います。提出は以下の手順で行ってください。
+
+1. ソースコードの圧縮
+2. ローカル評価環境での動作確認
+3. オンライン採点環境への提出
+
+各手順の方法については[提出ページ](./submission.ja.md)を参照してください。
 
 ## 参考
 
@@ -58,6 +82,10 @@ Repositoryのupdate
 cd aichallenge2024 # path to aichallenge2024
 git pull origin/main
 ```
+
+### 描画ありAWSIMの導入
+
+AWSIMのシミュレーション画面を確認したい方は、[こちら](./setup/visible-simulation.ja.md)の手順に従って描画ありAWSIMの導入を行ってください。
 
 ### TroubleShooting
 
