@@ -511,18 +511,33 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      必要なもの
+      オンライン採点環境へのアクセスと提出
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      必要なもの
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="必要なもの">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#ubuntu-pc" class="md-nav__link">
     <span class="md-ellipsis">
       Ubuntu PC
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -536,7 +551,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       大会用リポジトリのビルド・実行
     </span>
@@ -554,7 +569,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ソースコードの提出
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       参考
     </span>
@@ -564,9 +588,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       変更点の取り込み
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      描画ありAWSIMの導入
     </span>
   </a>
   
@@ -1234,9 +1267,16 @@
 
 
 <h1 id="_1">はじめ方</h1>
-<p>このページではROS2やAutowareに馴染みのない初学者向けに、AIチャレンジでの一連の流れをチュートリアルとして記載します。</p>
-<h2 id="_2">必要なもの</h2>
-<h2 id="ubuntu-pc">Ubuntu PC</h2>
+<p>このページではAIチャレンジでの一連の流れを記載します。</p>
+<h2 id="_2">オンライン採点環境へのアクセスと提出</h2>
+<p>本大会では、オンライン環境に提出ファイル（ソースコードの圧縮ファイル）をアップロードすることで自動採点が行われ、順位が決定されます。オンライン採点環境には<a href="https://aichallenge-board.jsae.or.jp">こちら</a>からアクセスしてください。
+ユーザー登録がまだ済んでいない方はSlackでの案内に従って登録お願いします。</p>
+<p>アクセスが出来たら、一度ソースコードの提出をしてみましょう。
+<a href="https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN">GoogleDrive</a>からサンプルコードの圧縮ファイルをダウンロードして、オンライン採点環境の「UPLOAD」ボタンからそのままアップロードすることで提出ができます。</p>
+<p><img alt="submit" src="images/submit.png" /></p>
+<p>以下の手順では環境構築から開発、ファイルの提出までの流れを説明します。</p>
+<h2 id="_3">必要なもの</h2>
+<h3 id="ubuntu-pc">Ubuntu PC</h3>
 <p><a href="setup/requirements.html">推奨環境</a>を満たすPCが必要ですが、推奨と書かれているものについては満たしていなくても動作することは可能です。ただし、推奨よりも低いスペックで動作させる場合ROS2側での実行速度が安定せずシミュレーションの実行の度に挙動が大きく変わってしまう可能性があります。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1253,15 +1293,24 @@
 <li><a href="setup/docker.html">Dockerのインストール</a></li>
 <li><a href="setup/headless-simulation.html">AWSIMのダウンロード</a></li>
 </ul>
-<h2 id="_3">大会用リポジトリのビルド・実行</h2>
+<h2 id="_4">大会用リポジトリのビルド・実行</h2>
 <p>環境構築が終わってから再度<code>Alt+Ctrl+T</code>でターミナルを立ち上げてから、以下に従ってコマンド<code>Ctrl+Shift+P</code>で貼り付けた後に<code>Enter</code>で実行します。</p>
 <p><a href="development/workspace-usage.html">ワークスペースの使い方説明ページ</a></p>
 <h2 id="ai_1">AIチャレンジでの開発の進め方</h2>
 <p>ビルド・実行が終わってからメインモジュールの解説ページを読みながら実際に開発してみましょう。</p>
 <p><a href="development/main-module.html">メインモジュールについての解説ページ</a></p>
-<p>※AIチャレンジで開発する上でベースとなるソースコードは<a href="https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit">大会用リポジトリ</a>内に提供されています。参加者の皆様にはこちらのコードをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは<a href="course/index.html">入門講座</a>を一通りやっていただくことをお勧めします。</p>
-<h2 id="_4">参考</h2>
-<h3 id="_5">変更点の取り込み</h3>
+<p>※AIチャレンジで開発する上でベースとなるソースコードは<a href="https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit">大会用リポジトリ</a>内に提供されています。参加者の皆様にはこちらのコードやパラメータをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは<a href="course/index.html">入門講座</a>を一通りやっていただくことをお勧めします。</p>
+<p>※リポジトリ内のコードを使わず独自に開発する方など、各種仕様について知りたい方は<a href="specifications/interface.html">インターフェース仕様</a>、<a href="specifications/simulator.html">シミュレータ仕様</a>のページを参照してください。</p>
+<h2 id="_5">ソースコードの提出</h2>
+<p>完成したコードの提出は<a href="https://aichallenge-board.jsae.or.jp">オンライン採点環境</a>から行います。提出は以下の手順で行ってください。</p>
+<ol>
+<li>ソースコードの圧縮</li>
+<li>ローカル評価環境での動作確認</li>
+<li>オンライン採点環境への提出</li>
+</ol>
+<p>各手順の方法については<a href="submission.html">提出ページ</a>を参照してください。</p>
+<h2 id="_6">参考</h2>
+<h3 id="_7">変更点の取り込み</h3>
 <p>大会環境の重大なアップデートがあった際には適宜アナウンスがあります。
 参考までにこちらに記載しています。以下を実行してください。</p>
 <p>Dockerのupdate</p>
@@ -1272,6 +1321,8 @@
 <pre><code class="language-sh">cd aichallenge2024 # path to aichallenge2024
 git pull origin/main
 </code></pre>
+<h3 id="awsim">描画ありAWSIMの導入</h3>
+<p>AWSIMのシミュレーション画面を確認したい方は、<a href="setup/visible-simulation.html">こちら</a>の手順に従って描画ありAWSIMの導入を行ってください。</p>
 <h3 id="troubleshooting">TroubleShooting</h3>
 <p>Q. <code>docker_run.sh: 行 35: rocker: コマンドが見つかりません</code></p>
 <p>A. <a href="setup/docker.html">rockerのインストール</a>をお願いします。</p>
