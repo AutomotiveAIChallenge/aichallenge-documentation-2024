@@ -9,6 +9,8 @@
 アクセスが出来たら、一度ソースコードの提出をしてみましょう。
 [GoogleDrive](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN)からサンプルコードの圧縮ファイルをダウンロードして、オンライン採点環境の「UPLOAD」ボタンからそのままアップロードすることで提出ができます。
 
+![submit](./images/submit.png)
+
 以下の手順では環境構築から開発、ファイルの提出までの流れを説明します。
 
 ## 必要なもの
@@ -19,7 +21,7 @@
 
 !!! warning
 
-    Ubuntu22.04の環境しかお持ちでない方は、Ubuntu22.04のインストールをお願いいたします。既にOSが入っているディスクにUbuntu環境を入れることもできますが、不慣れな場合既存の環境を破壊してしまう可能性があるため、新しく外付けまたは内蔵SSDを購入したうえでそちらへのインストールをすることを強くお勧めします。
+    Windows環境しかお持ちでない方は、Ubuntu22.04のインストールをお願いいたします。Windows環境と同じディスクにUbuntu環境を入れることもできますが、不慣れな場合Windows環境を破壊してしまう可能性があるため、新しく外付けまたは内蔵SSDを購入したうえでそちらへのインストールをすることを強くお勧めします。
 
 !!! info
 
@@ -32,7 +34,7 @@
 - [ワークスペースのクローン](./setup/workspace-setup.ja.md)
 - [Dockerのインストール](./setup/docker.ja.md)
 - [AWSIMのダウンロード](./setup/headless-simulation.ja.md)
-  - この手順では描画無しバージョンのAWSIMがダウンロードされます。シミュレーション画面を確認したい方は[こちら](./setup/visible-simulation.ja.md)の手順に従ってください。
+
 
 ## 大会用リポジトリのビルド・実行
 
@@ -47,6 +49,9 @@
 [メインモジュールについての解説ページ](./development/main-module.ja.md)
 
 ※AIチャレンジで開発する上でベースとなるソースコードは[大会用リポジトリ](https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit)内に提供されています。参加者の皆様にはこちらのコードやパラメータをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは[入門講座](./course/index.ja.md)を一通りやっていただくことをお勧めします。
+
+※リポジトリ内のコードを使わず独自に開発する方など、各種仕様について知りたい方は[インターフェース仕様](./specifications/interface.ja.md)、[シミュレータ仕様](./specifications/simulator.ja.md)のページを参照してください。
+
 
 ## ソースコードの提出
 完成したコードの提出は[オンライン採点環境](https://aichallenge-board.jsae.or.jp)から行います。提出は以下の手順で行ってください。
@@ -77,6 +82,9 @@ Repositoryのupdate
 cd aichallenge2024 # path to aichallenge2024
 git pull origin/main
 ```
+
+### 描画ありAWSIMの導入
+AWSIMのシミュレーション画面を確認したい方は、[こちら](./setup/visible-simulation.ja.md)の手順に従って描画ありAWSIMの導入を行ってください。
 
 ### TroubleShooting
 
