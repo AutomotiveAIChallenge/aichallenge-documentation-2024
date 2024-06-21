@@ -6,7 +6,7 @@
 
 本大会では、オンライン環境に提出ファイル（ソースコードの圧縮ファイル）をアップロードすることで自動採点が行われ、順位が決定されます。オンライン採点環境にはこちら（準備中）からアクセスしてください。
 
-自動運転AIチャレンジへの参加申込みは[こちら](https://docs.google.com/forms/d/e/1FAIpQLSc0xFCrNS_J5Bl2g2RIZ694B5p9vOhlav9hrwgumtBrQuQ0RQ/viewform)からお願いします。
+自動運転AIチャレンジへの参加申込みがまだ済んでいない方は[こちら](https://docs.google.com/forms/d/e/1FAIpQLSc0xFCrNS_J5Bl2g2RIZ694B5p9vOhlav9hrwgumtBrQuQ0RQ/viewform)から登録お願いします。
 
 申込みを完了し、ユーザー登録がまだ済んでいない方はSlackでの案内に従って登録お願いします。
 
