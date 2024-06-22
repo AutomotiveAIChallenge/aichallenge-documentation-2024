@@ -58,7 +58,7 @@ bash run_container.sh cpu eval
 
 1.4 `result.json`の確認  
 
-評価完了後、`output`フォルダに以下のファイルが格納されます。
+評価完了後、`output/latest`フォルダに以下のファイルが格納されます。
 
 - `result.json`
 - `rosbag.db3`
