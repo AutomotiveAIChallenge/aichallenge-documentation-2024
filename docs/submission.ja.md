@@ -24,8 +24,7 @@
 
 ```bash
 
-cd docker/evaluation
-bash advance_preparations.sh
+bash create_submit_file.bash
 
 ```
 
