@@ -53,7 +53,7 @@ bash run_container.sh gpu eval
 
 ```bash
 
-bash run_container_cpu.sh
+bash run_container.sh cpu eval
 
 ```
 
