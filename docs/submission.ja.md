@@ -60,10 +60,11 @@ bash run_container.sh cpu eval
 
 評価完了後、`output/latest`フォルダに以下のファイルが格納されます。
 
-- `result.json`
-- `rosbag.db3`
-- `rviz_capture.mp4`
 - `autoware.log`
+- `rosbag2_autoware`
+- `capture`
+- `result-summary.json`
+- `result-details.json`
 
 2. オンライン環境にアップロード
 
