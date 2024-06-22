@@ -24,7 +24,7 @@
 
 ```bash
 
-bash create_submit_file.bash
+./create_submit_file.bash 
 
 ```
 
@@ -32,7 +32,7 @@ bash create_submit_file.bash
 
 ```bash
 
-bash build_docker.sh eval
+./docker_build.sh eval  
 
 ```
 
@@ -44,7 +44,7 @@ bash build_docker.sh eval
 
 ```bash
 
-bash run_container.sh gpu eval
+./docker_run.sh eval gpu  
 
 ```
 
@@ -52,7 +52,7 @@ bash run_container.sh gpu eval
 
 ```bash
 
-bash run_container.sh cpu eval
+./docker_run.sh eval cpu  
 
 ```
 
