@@ -99,5 +99,5 @@ docker run -it aichallenge-2024-eval:latest /bin/bash
 
 確認するディレクトリ:
 
-- `/aichallenge/aichallenge_ws/*`
+- `/aichallenge/workspace/*`
 - `/autoware/install/*`
