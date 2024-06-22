@@ -45,7 +45,7 @@ bash build_docker.sh eval
 
 ```bash
 
-bash run_container.sh
+bash run_container.sh gpu eval
 
 ```
 
