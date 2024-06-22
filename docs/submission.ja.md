@@ -33,7 +33,7 @@ bash advance_preparations.sh
 
 ```bash
 
-bash build_docker.sh
+bash build_docker.sh eval
 
 ```
 
