@@ -25,6 +25,7 @@ nav:
       - information/schedule.md
       - information/rules.md
   - submission.md
+  - rule.md
   - setup:
       - setup/requirements.md
       - setup/workspace-setup.md
