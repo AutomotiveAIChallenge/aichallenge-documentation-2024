@@ -2,14 +2,6 @@
 
 ## オンライン環境
 
-<br>
-
-> [!REGISTER]
-> こちらから参加登録!
-> [https://www.jsae.or.jp/jaaic/2024ver/summary/](https://www.jsae.or.jp/jaaic/2024ver/summary/)
-
-<br>
-
 本大会では、シミュレーターと自動採点機能を備えたオンライン環境を使用して採点が行われます。以下の手順に従って、作成したパッケージ群をオンライン環境にアップロードしてください。アップロード後、シミュレーションが自動で開始され、結果が表示されます。
 
 ### オンライン環境へのアップロード手順
@@ -24,7 +16,7 @@
 
 ```bash
 
-./create_submit_file.bash 
+./create_submit_file.bash
 
 ```
 
@@ -70,7 +62,7 @@
 
  <img src="./images/siteImage.png" width="100%">  
 
-[オンライン環境](https://aichallenge-board.jsae.or.jp/)にアクセスし、緑色の「UPLOAD」ボタンから`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
+[オンライン環境]<!--(https://aichallenge-board.jsae.or.jp/)-->にアクセスし、緑色の「UPLOAD」ボタンから`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
 
 - 正常に終了した場合、採点完了と表示され、`result.json`がダウンロードでき、各ラップタイムが表示されます。
 - シナリオ実行後、launchに失敗した等でスコアが出力されていない場合は「結果無し」と表示されます。この場合、サーバーサイドでの内部エラーの可能性があるため、再アップロードをお願いします。問題が続く場合はお問い合わせください。
