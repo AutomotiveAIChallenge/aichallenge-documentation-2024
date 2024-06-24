@@ -26,7 +26,9 @@ nav:
   - information:
       - information/schedule.md
       - information/rules.md
-  - submission.md
+  - preliminaries:
+      - preliminaries/submission.md
+      - preliminaries/check-results.md
   - setup:
       - setup/requirements.md
       - setup/workspace-setup.md
@@ -66,6 +68,7 @@ plugins:
           nav_translations:
             index: トップページ
             information: 大会情報
+            preliminaries: 予選
             setup: 導入
             development: 開発
             specifications: 仕様
@@ -76,6 +79,7 @@ plugins:
           nav_translations:
             index: Top Page
             information: Information
+            preliminaries: Preliminaries
             setup: Setup
             development: Development
             specifications: Specifications

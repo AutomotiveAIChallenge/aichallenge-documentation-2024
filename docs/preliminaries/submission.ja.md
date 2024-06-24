@@ -10,38 +10,22 @@
 
     1.1. 事前準備
 
-        `aichallenge_submit`を圧縮し、結果出力用のフォルダを生成します。
-
-        ```bash
-        ./create_submit_file.bash
-        ```
+    - `aichallenge_submit`を圧縮し、結果出力用のフォルダを生成します。
+    - `./create_submit_file.bash`
 
     1.2. Dockerイメージのビルド
 
-        ```bash
-        ./docker_build.sh eval
-        ```
+    - `./docker_build.sh eval`
 
     1.3. Dockerコンテナの起動
 
-        起動後、自動でAutowareが立ち上がり、自動運転が開始されます。
+    - 起動後、自動でAutowareが立ち上がり、自動運転が開始されます。
+    - GPU版AWSIMを使用している場合: `./docker_run.sh eval gpu`
+    - CPU版AWSIMを使用している場合: `./docker_run.sh eval cpu`
 
-        - GPU版AWSIMを使用している場合:
+    1.4. `result.json`の確認
 
-            ```bash
-            ./docker_run.sh eval gpu  
-            ```
-
-        - CPU版AWSIMを使用している場合:
-
-            ```bash
-            ./docker_run.sh eval cpu  
-            ```
-
-    1.4. `result.json`の確認  
-
-        評価完了後、`output/latest`フォルダに以下のファイルが格納されます。
-
+    - 評価完了後、`output/latest`フォルダに以下のファイルが格納されます。
         - `autoware.log`
         - `rosbag2_autoware`
         - `capture`
@@ -50,7 +34,7 @@
 
 2. オンライン環境にアップロード
 
-    <img src="./images/siteImage.png" width="100%">  
+    <img src="./images/siteImage.png" width="100%">
 
     [オンライン環境]<!--(https://aichallenge-board.jsae.or.jp/)-->にアクセスし、緑色の「UPLOAD」ボタンから`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
 
@@ -65,21 +49,19 @@
 
     オンライン環境で評価が終わると、`result.json`がダウンロード可能になります。ダウンロードして結果を確認してください。
 
-4. 結果なしの場合  
+4. 結果なしの場合
 
     4.1. packageの依存関係に問題がないか確認
 
-        使用言語に応じて、`package.xml`、`setup.py`、または`CMakeLists.txt`に依存関係の漏れがないか確認してください。
+    - 使用言語に応じて、`package.xml`、`setup.py`、または`CMakeLists.txt`に依存関係の漏れがないか確認してください。
 
     4.2. dockerの確認
 
-        以下のコマンドでDocker内を確認し、必要なディレクトリに正しくインストール・ビルドされているか確認してください。
+    - 以下のコマンドでDocker内を確認し、必要なディレクトリに正しくインストール・ビルドされているか確認してください。
 
-        ```bash
-        docker run -it aichallenge-2024-eval:latest /bin/bash
-        ```
+        - `docker run -it aichallenge-2024-eval:latest /bin/bash`
 
-        確認するディレクトリ:
+    - 確認するディレクトリ:
 
         - `/aichallenge/workspace/*`
         - `/autoware/install/*`
