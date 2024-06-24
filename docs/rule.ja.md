@@ -42,7 +42,7 @@
 
 #### 結果のログ形式
 
-&emsp; 結果は`~/awsim-logs/result-summary.json` に以下のフォーマットで出力されます。
+結果は`./output/result-summary.json` に以下のフォーマットで出力されます。
 
 ```json
 {
