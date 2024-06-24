@@ -13,7 +13,7 @@
 アクセスが出来たら、一度ソースコードの提出をしてみましょう。
 [GoogleDrive](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN)からサンプルコードの圧縮ファイルをダウンロードして、オンライン採点環境の「UPLOAD」ボタンからそのままアップロードすることで提出ができます。
 
-![submit](./images/submit.png)
+![submit](./preliminaries/images/submit.png)
 
 以下の手順では環境構築から開発、ファイルの提出までの流れを説明します。
 
@@ -63,7 +63,7 @@
 2. ローカル評価環境での動作確認
 3. オンライン採点環境への提出
 
-各手順の方法については[提出ページ](./submission.ja.md)を参照してください。
+各手順の方法については[提出ページ](./preliminaries/submission.ja.md)を参照してください。
 
 ## 参考
 

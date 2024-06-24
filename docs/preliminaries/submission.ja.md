@@ -29,16 +29,16 @@
         - GPU版AWSIMを使用している場合:
 
             ```bash
-            ./docker_run.sh eval gpu  
+            ./docker_run.sh eval gpu
             ```
 
         - CPU版AWSIMを使用している場合:
 
             ```bash
-            ./docker_run.sh eval cpu  
+            ./docker_run.sh eval cpu
             ```
 
-    1.4. `result.json`の確認  
+    1.4. `result.json`の確認
 
         評価完了後、`output/latest`フォルダに以下のファイルが格納されます。
 
@@ -50,7 +50,7 @@
 
 2. オンライン環境にアップロード
 
-    <img src="./images/siteImage.png" width="100%">  
+    <img src="./images/siteImage.png" width="100%">
 
     [オンライン環境]<!--(https://aichallenge-board.jsae.or.jp/)-->にアクセスし、緑色の「UPLOAD」ボタンから`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
 
@@ -65,7 +65,7 @@
 
     オンライン環境で評価が終わると、`result.json`がダウンロード可能になります。ダウンロードして結果を確認してください。
 
-4. 結果なしの場合  
+4. 結果なしの場合
 
     4.1. packageの依存関係に問題がないか確認
 
