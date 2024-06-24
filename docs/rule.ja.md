@@ -50,7 +50,7 @@
 }
 ```
 
-また、debug用のファイルとして`~/awsim-logs/result-details.json`も以下の形式で出力されます。
+また、debug用のファイルとして`./output/result-details.json`も以下の形式で出力されます。
 
 ```json
 {
