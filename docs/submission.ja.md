@@ -10,7 +10,7 @@
 
 `aichallenge_submit`のみをアップロードするオンライン環境での動作確認を行ってください。
 
-1.1 事前準備
+1.1. 事前準備
 
 `aichallenge_submit`を圧縮し、結果出力用のフォルダを生成します。
 
@@ -20,11 +20,11 @@
 
 ```
 
-1.2 Dockerイメージのビルド
+1.2. Dockerイメージのビルド
 
 ```bash
 
-./docker_build.sh eval  
+./docker_build.sh eval
 
 ```
 
@@ -48,7 +48,7 @@
 
 ```
 
-1.4 `result.json`の確認  
+1.4. `result.json`の確認  
 
 評価完了後、`output/latest`フォルダに以下のファイルが格納されます。
 
@@ -77,16 +77,18 @@
 
 4. 結果なしの場合  
 
-4.1 packageの依存関係に問題がないか確認
+4.1. packageの依存関係に問題がないか確認
 
 使用言語に応じて、`package.xml`、`setup.py`、または`CMakeLists.txt`に依存関係の漏れがないか確認してください。
 
-4.2 dockerの確認
+4.2. dockerの確認
 
 以下のコマンドでDocker内を確認し、必要なディレクトリに正しくインストール・ビルドされているか確認してください。
 
 ```bash
+
 docker run -it aichallenge-2024-eval:latest /bin/bash
+
 ```
 
 確認するディレクトリ:
