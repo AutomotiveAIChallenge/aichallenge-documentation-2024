@@ -38,7 +38,7 @@
 
 ### How to check results
 
-&emsp; 結果のスコアは`result-summary.json`に送られます。
+結果のスコアは`result-summary.json`に送られます。
 
 #### 結果のログ形式
 
