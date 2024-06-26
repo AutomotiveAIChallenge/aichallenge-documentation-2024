@@ -6,12 +6,16 @@
 
 本大会では、オンライン環境に提出ファイル（ソースコードの圧縮ファイル）をアップロードすることで自動採点が行われ、順位が決定されます。オンライン採点環境にはこちら（準備中）からアクセスしてください。
 
-自動運転AIチャレンジへの参加申込みがまだ済んでいない方は[こちら](https://docs.google.com/forms/d/e/1FAIpQLSc0xFCrNS_J5Bl2g2RIZ694B5p9vOhlav9hrwgumtBrQuQ0RQ/viewform)から登録お願いします。
+次の3ステップでまずはオンライン採点環境を使ってみましょう！
 
-申込みを完了し、ユーザー登録がまだ済んでいない方はSlackでの案内に従って登録お願いします。
+1. 自動運転AIチャレンジへの参加申込みがまだ済んでいない方は[こちら](https://docs.google.com/forms/d/e/1FAIpQLSc0xFCrNS_J5Bl2g2RIZ694B5p9vOhlav9hrwgumtBrQuQ0RQ/viewform)から登録お願いします。
 
-アクセスが出来たら、一度ソースコードの提出をしてみましょう。
-[GoogleDrive](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN)からサンプルコードの圧縮ファイルをダウンロードして、オンライン採点環境の「UPLOAD」ボタンからそのままアップロードすることで提出ができます。
+2. 申込みを完了し、ユーザー登録がまだ済んでいない方はSlackでの案内に従って登録お願いします。ログイン情報が登録メールアドレスに送られてきます．
+
+3. アクセスが出来たら、一度ソースコードの提出をしてみましょう。
+下の赤ボタンからサンプルコードの圧縮ファイルをダウンロードして、オンライン採点環境の「UPLOAD」ボタンからそのままアップロードすることで提出ができます。
+
+[サンプルコードの圧縮ファイルのダウンロード](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN){ .md-button .md-button--primary .banner-button }
 
 ![submit](./preliminaries/images/submit.png)
 
