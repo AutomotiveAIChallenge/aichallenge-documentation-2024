@@ -1300,12 +1300,12 @@ echo \
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo usermod -aG docker $USER
+newgrp docker
 </code></pre>
 <p>以下のコマンドで正常にインストールされているか確認してください。</p>
 <pre><code class="language-bash">sudo docker run hello-world
 </code></pre>
 <p><code>Hello from Docker!</code>と表示されれば正常にインストール出来ています。</p>
-<p>ここまで出来たら一度再起動します。</p>
 <h2 id="rocker">rockerのインストール</h2>
 <p>rockerはDockerコンテナのGUIアプリを簡単に起動できるようにするツールです。</p>
 <p><a href="https://github.com/osrf/rocker?tab=readme-ov-file#debians-recommended">公式README</a>ではaptからのインストールが推奨されていますが、手順と環境をシンプルにするためにここではpipからインストールします。</p>
