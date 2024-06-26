@@ -25,6 +25,7 @@ echo \
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo usermod -aG docker $USER
+newgrp docker
 ```
 
 以下のコマンドで正常にインストールされているか確認してください。
@@ -34,8 +35,6 @@ sudo docker run hello-world
 ```
 
 `Hello from Docker!`と表示されれば正常にインストール出来ています。
-
-ここまで出来たら一度再起動します。
 
 ## rockerのインストール
 
