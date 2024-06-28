@@ -34,7 +34,7 @@
 
 2. オンライン環境にアップロード
 
-    [オンライン環境](https://aichallenge-board.jsae.or.jp/live)にアクセスし、右上「LOG IN」ボタンからログインします。
+    [オンライン環境](https://aichallenge-board.jsae.or.jp/live)にアクセスし、右上[「LOG IN」](https://aichallenge-board.jsae.or.jp/auth/login)ボタンからログインします。
     <img src="./images/siteImage1.png" width="100%">
 
     ログインが完了したら緑色の「UPLOAD」ボタンから`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
