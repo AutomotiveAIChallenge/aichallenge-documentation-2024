@@ -34,9 +34,11 @@
 
 2. オンライン環境にアップロード
 
-    <img src="./images/siteImage.png" width="100%">
+    [オンライン環境](https://aichallenge-board.jsae.or.jp/live)にアクセスし、右上"LOG IN"ボタンからログインします。
+    ![alt text](image.png)
 
-    [オンライン環境](https://aichallenge-board.jsae.or.jp/live)にアクセスし、緑色の「UPLOAD」ボタンから`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
+    ログインが完了したら緑色の「UPLOAD」ボタンから`aichallenge_submit.tar.gz`をアップロードしてください。アップロード後、ソースコードのビルドとシミュレーションが順に実施されます。
+    <img src="./images/siteImage.png" width="100%">
 
     - 正常に終了した場合、採点完了と表示され、`result.json`がダウンロードでき、各ラップタイムが表示されます。
     - シナリオ実行後、launchに失敗した等でスコアが出力されていない場合は「結果無し」と表示されます。この場合、サーバーサイドでの内部エラーの可能性があるため、再アップロードをお願いします。問題が続く場合はお問い合わせください。
