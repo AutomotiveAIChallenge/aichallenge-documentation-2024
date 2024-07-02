@@ -1071,6 +1071,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#aichallengeobjects" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/objects
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1402,6 +1411,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#aichallengeobjects" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/objects
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1481,6 +1499,11 @@
 <td><code>/sensing/imu/imu_raw</code></td>
 <td><code>sensor_msgs/msg/Imu</code></td>
 </tr>
+<tr>
+<td>Publisher</td>
+<td><code>/aichallenge/objects</code></td>
+<td><code>sstd_msgs.msg.Float64MultiArray</code></td>
+</tr>
 </tbody>
 </table>
 <!--
@@ -1507,11 +1530,11 @@
 </tr>
 <tr>
 <td>lateral.steering_tire_angle</td>
-<td>T.B.D.</td>
+<td>目標操舵角</td>
 </tr>
 <tr>
 <td>lateral.steering_tire_rotation_rate</td>
-<td>T.B.D.</td>
+<td>未使用</td>
 </tr>
 <tr>
 <td>longitudinal.stamp</td>
@@ -1519,11 +1542,11 @@
 </tr>
 <tr>
 <td>longitudinal.speed</td>
-<td>T.B.D.</td>
+<td>未使用</td>
 </tr>
 <tr>
 <td>longitudinal.acceleration</td>
-<td>T.B.D.</td>
+<td>目標加速度</td>
 </tr>
 <tr>
 <td>longitudinal.jerk</td>
@@ -1550,15 +1573,15 @@
 </tr>
 <tr>
 <td>longitudinal_velocity</td>
-<td>速度</td>
+<td>縦速度</td>
 </tr>
 <tr>
 <td>lateral_velocity</td>
-<td>T.B.D.</td>
+<td>横速度</td>
 </tr>
 <tr>
 <td>heading_rate</td>
-<td>T.B.D</td>
+<td>角速度</td>
 </tr>
 </tbody>
 </table>
@@ -1577,7 +1600,7 @@
 </tr>
 <tr>
 <td>steering_tire_angle</td>
-<td>タイヤ角度</td>
+<td>操舵角</td>
 </tr>
 </tbody>
 </table>
@@ -1678,6 +1701,33 @@
 <tr>
 <td>linear_acceleration</td>
 <td>加速度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aichallengeobjects"><code>/aichallenge/objects</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data[N * 4 + 0]</td>
+<td>N番目の仮想障害物のX座標</td>
+</tr>
+<tr>
+<td>data[N * 4 + 1]</td>
+<td>N番目の仮想障害物のY座標</td>
+</tr>
+<tr>
+<td>data[N * 4 + 2]</td>
+<td>N番目の仮想障害物のZ座標</td>
+</tr>
+<tr>
+<td>data[N * 4 + 3]</td>
+<td>N番目の仮想障害物の半径</td>
 </tr>
 </tbody>
 </table>
