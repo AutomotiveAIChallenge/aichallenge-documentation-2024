@@ -13,6 +13,7 @@
 | Publisher    | `/vehicle/status/gear_status`        | `autoware_auto_vehicle_msgs/msg/GearReport`              |
 | Publisher    | `/sensing/gnss/pose_with_covariance` | `geometry_msgs/msg/PoseWithCovarianceStamped`            |
 | Publisher    | `/sensing/imu/imu_raw`               | `sensor_msgs/msg/Imu`                                    |
+| Publisher    | `/aichallenge/objects`               | `sstd_msgs.msg.Float64MultiArray`                        |
 
 <!--
 | Subscription | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationCommandStamped`          |
@@ -25,11 +26,11 @@
 | ----------------------------------- | -------------------- |
 | stamp                               | メッセージの送信時刻 |
 | lateral.stamp                       | 未使用               |
-| lateral.steering_tire_angle         | T.B.D.               |
-| lateral.steering_tire_rotation_rate | T.B.D.               |
+| lateral.steering_tire_angle         | 目標操舵角           |
+| lateral.steering_tire_rotation_rate | 未使用               |
 | longitudinal.stamp                  | 未使用               |
-| longitudinal.speed                  | T.B.D.               |
-| longitudinal.acceleration           | T.B.D.               |
+| longitudinal.speed                  | 未使用               |
+| longitudinal.acceleration           | 目標加速度           |
 | longitudinal.jerk                   | 未使用               |
 
 ### `/vehicle/status/velocity_status`
@@ -38,16 +39,16 @@
 | --------------------- | ------------------------ |
 | header.stamp          | データの取得時刻         |
 | header.frame_id       | フレームID (`base_link`) |
-| longitudinal_velocity | 速度                     |
-| lateral_velocity      | T.B.D.                   |
-| heading_rate          | T.B.D                    |
+| longitudinal_velocity | 縦速度                   |
+| lateral_velocity      | 横速度                   |
+| heading_rate          | 角速度                   |
 
 ### `/vehicle/status/steering_status`
 
 | Name                | Description      |
 | ------------------- | ---------------- |
 | stamp               | データの取得時刻 |
-| steering_tire_angle | タイヤ角度       |
+| steering_tire_angle | 操舵角           |
 
 ### `/control/command/gear_cmd`
 
@@ -82,3 +83,12 @@
 | orientation         | 方位                    |
 | angular_velocity    | 角速度                  |
 | linear_acceleration | 加速度                  |
+
+### `/aichallenge/objects`
+
+| Name            | Description              |
+| --------------- | ------------------------ |
+| data[N * 4 + 0] | N番目の仮想障害物のX座標 |
+| data[N * 4 + 1] | N番目の仮想障害物のY座標 |
+| data[N * 4 + 2] | N番目の仮想障害物のZ座標 |
+| data[N * 4 + 3] | N番目の仮想障害物の半径  |
