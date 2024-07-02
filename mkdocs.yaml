@@ -45,7 +45,7 @@ nav:
       - course/index.md
       - course/vehicle.md
       - course/velocity_planning.md
-      - course/perception.md
+      - course/avoidance.md
   - FAQ: faq.md
   - Community: community.md
 
