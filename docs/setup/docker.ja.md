@@ -75,7 +75,9 @@ Dockerイメージがダウンロードできていれば以下のような出�
 REPOSITORY                                        TAG                       IMAGE ID       CREATED         SIZE
 ghcr.io/automotiveaichallenge/autoware-universe   humble-latest             30c59f3fb415   13 days ago     8.84GB
 ```
+
 ## Next Step
+
 2種類のAWSIMを提供しています。
 
 初めての方は描画なしAWSIMへ、GPU搭載のPCをお持ちの方でよりリッチな開発環境をご用意されたい方は描画ありAWSIMのドキュメントにお進み下さい。

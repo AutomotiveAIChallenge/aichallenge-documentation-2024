@@ -80,7 +80,6 @@ sudo apt install -y libvulkan1
 
     実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM_GPU_**/AWSIM.x86_64`に存在していることを確認してください。
 
-
 ## AWSIMの起動確認
 
 描画ありのAWSIMを使用する場合は、以下のコマンドでコンテナを起動してください。
