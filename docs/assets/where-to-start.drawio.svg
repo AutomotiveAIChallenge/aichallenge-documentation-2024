@@ -1,189 +1,72 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="603px" height="339px" viewBox="-0.5 -0.5 603 339" content="&lt;mxfile&gt;&lt;diagram id=&quot;kVrs2PeeLt0rIF7s5DWG&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="737px" height="326px" viewBox="-0.5 -0.5 737 326" content="&lt;mxfile&gt;&lt;diagram id=&quot;kVrs2PeeLt0rIF7s5DWG&quot; name=&quot;Page-1&quot;&gt;5Vpbc6s2EP41mmkf4kGAuDyC45w+tNNM05n2PBKQbaYYuUJO7Pz6SkYyCMkJTkiatHMyJ9KyEtpvV3sjwJtv9t9otl3/QgpcAdcp9sC7Bq4LncDhvwTl0FJQCFvCipaFZOoId+UTVisldVcWuNEYGSEVK7c6MSd1jXOm0TJKyaPOtiSV/tZttsIG4S7PKpP6R1mwdUuNkNPRf8Llaq3eDB35ZJMpZklo1llBHnskbwG8OSWEtaPNfo4rAZ7CpV13c+bp6WAU12zMAq9d8JBVOymbPBc7KGH5EbdiyLgu8RMRK9MtpuUGM0z79NuOmD6uS4bvtlkuVj5yDk5bs03FZ5APl+UeK72KedMOI4ePTRGkVA+YMrzvkaRI3zDhr6UHziKfegpeaV+eMrjHTltI8ax7moqUkUgDWZ227jDkAwmjHdLwZUhXlOy24+U8GXJ2r3ZwnpffjzX5oZr35PdDi/xu7LwdAPcr2FR4BuuzmCKoQ+qZJnUyM82kJkAU/ScRPUGoooBrIOo674QotBjpIgTRDUgXYIFAPAdJJAepcxbt3aZKckYElkLukoeIn7N7XN2SpmQlqTnLPWGMbHoMSVWuxANGBnCTHavKGs9PQWsqnB0dZxVsNZxNmP0JYPZG+AK+gsdtLOxLoppXZFe8bJ4TQHMVacgEwSxEBjiR1VFOAI7tWgcVE0hss1pDKfh7J1KCNCeVsLaEP6Sr+x/4yfhrHPnL9aIfj7g4XHx2VeCc0EyY4ZWwq3bVri4wbadpty0frcTvpGTkkQN6S7OcGytW5+GitEdq2Z7R4fvrzEW6OUNLcIeu/z4GDeGn09mcbDa7umSHT6ksqCsrtujK5uM9NENv15Y/Ir09k4udk/TiXMyFSEPgCpru17MggPwJ5B/hfhkts3pVjTAHSlgmg9pVbI9NJ8DHp1W6ecziccEJxrNgCoAcAyDYsNffmKzZtqH7mDq9FSIJiuvPkN//F5oQxTONA3m2kGXneVMIs7nDTxTfIz1pV+XuRwR3/3Mj44bDEvHjoBnhlV8NzZLU7E7uY+mGXIyTF+gmFJiV9HvhBCMTpwUvUOYgjo+liQOiSFQtcQqShenYeT6hY9MwSv7i9cUxHbmuyTGhWJZVNSBlskLJOWy4X9uo0mVTFsXZiMHjKc9XhAwT1S/+IIfwTBXYCm9vgnQvtmgAgegaxD5YRCBJQHoDFjFIHBC35eKN+Pkqqri4sQZjT1eFZ8YiaMtmplCGTRuG36iLRDR4OwSLrFkfIYA2Daj2LZc55bDQw58SrOPku5jwRFROr/f9h9eHl3DFxaCNzDK6woonsiPdb1Ha0kJJo7jiydiDvr8NXfmGW1Ly03VuDeru33UG2UBDdjTHclWnI2Oj8KWNWpmNjY7KPok9Lm6Yydqk+n+lHsNPpcfInUiPw42m06Nvi2shSFKQBmDhgzQBUfx/8qonz6Zyscj0qu8V4aDtUrV9hEy8juLlkaq6DmvGxEe2RLzAvSlI3swoaWaErvgU1/y/9W4jSmP35vcdI7y4rJrZUUVG4+K3X+/4G9xe2yJ7j57FxeoI/EG+EVmaFqp5pzWY4MydoGsBLV+QZN6HvnDed7EeQjRwSUH0YdcCjYg1qjJZVngvg07aiz95lTVNmeuq6HKMLq343n/2bI5hBCILvv3Y5J9pTX1MbPIHjVp/2IAdG5tQoG8Ew8FGZ2IT10R26LFtBUNz/sDB4IOU7zjPnuv0CVU5Cv95fhQP+L0X+AcfbtzwBf4BTkqRZ/kH8rr6efigRfC1gR5ZAv0Ul2jsZfi3DB+6Exn+cKPTfPqkDNlK3fgYYjywCEQixms/Hn14dpYEZnzmyjh++Rz0Q0dHFIqb8kn21IXDk3eVb45SgK5PWh/dkNftAZ2ptuROzswN3GGf/m22oFjIctngt2onuKjP+romtQXZETdKucJY/5LK4QRmzmTeOHh5E5pPu7+ParHs/srMW/wD&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
-        <path d="M 171 338 L 201 275.5 L 461 275.5 L 491 338 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 306.47 218 L 300.13 210.57" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 296.73 206.57 L 303.93 209.63 L 300.13 210.57 L 298.61 214.17 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 201 275.5 L 231 218 L 431 218 L 461 275.5 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 231 218 L 261 155.5 L 401 155.5 L 431 218 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 261 156 L 291 98 L 371 98 L 401 156 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 216 321 L 296 240 L 656 240 L 736 321 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 296 239 L 376 159 L 576 159 L 656 239 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 375 161 L 455 81 L 495 81 L 575 161 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <ellipse cx="355" cy="105" rx="5" ry="5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
+        <path d="M 355 110 L 355 126.67 M 355 113.33 L 345 113.33 M 355 113.33 L 365 113.33 M 355 126.67 L 345 140 M 355 126.67 L 365 140" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 127px; margin-left: 262px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
-                                <span style="color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;">
-                                    %3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22group%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22230%22%20y%3D%22151%22%20width%3D%22390%22%20height%3D%22250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2230%22%20y%3D%22125.00000000000001%22%20width%3D%22260%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20y%3D%22187.5%22%20width%3D%22320%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%225%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2260%22%20y%3D%2262.50000000000001%22%20width%3D%22200%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%226%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2290%22%20width%3D%22140%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%227%22%20value%3D%22Autoware%20Practice%22%20style%3D%22ellipse%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2225%22%20y%3D%22194.25%22%20width%3D%22270%22%20height%3D%2249%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%228%22%20value%3D%22AI%20Challenge%22%20style%3D%22ellipse%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22100%22%20y%3D%226.75%22%20width%3D%22120%22%20height%3D%2249%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%229%22%20value%3D%22%E5%8F%82%E5%8A%A0%E8%80%85%22%20style%3D%22shape%3DumlActor%3BverticalLabelPosition%3Dbottom%3BverticalAlign%3Dtop%3Bhtml%3D1%3BoutlineConnect%3D0%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22148%22%20y%3D%2286%22%20width%3D%2220%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2210%22%20value%3D%22%EF%BC%95%E5%90%88%E7%9B%AE%22%20style%3D%22text%3Bhtml%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22290%22%20y%3D%22110%22%20width%3D%2260%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E
-                                </span>
-                                <span style="color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;">
-                                    %3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22group%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22230%22%20y%3D%22151%22%20width%3D%22390%22%20height%3D%22250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2230%22%20y%3D%22125.00000000000001%22%20width%3D%22260%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20y%3D%22187.5%22%20width%3D%22320%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%225%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2260%22%20y%3D%2262.50000000000001%22%20width%3D%22200%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%226%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2290%22%20width%3D%22140%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%227%22%20value%3D%22Autoware%20Practice%22%20style%3D%22ellipse%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2225%22%20y%3D%22194.25%22%20width%3D%22270%22%20height%3D%2249%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%228%22%20value%3D%22AI%20Challenge%22%20style%3D%22ellipse%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22100%22%20y%3D%226.75%22%20width%3D%22120%22%20height%3D%2249%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%229%22%20value%3D%22%E5%8F%82%E5%8A%A0%E8%80%85%22%20style%3D%22shape%3DumlActor%3BverticalLabelPosition%3Dbottom%3BverticalAlign%3Dtop%3Bhtml%3D1%3BoutlineConnect%3D0%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22148%22%20y%3D%2286%22%20width%3D%2220%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2210%22%20value%3D%22%EF%BC%95%E5%90%88%E7%9B%AE%22%20style%3D%22text%3Bhtml%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22290%22%20y%3D%22110%22%20width%3D%2260%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </foreignObject>
-                <text x="331" y="131" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    %3CmxGraphModel%3E%3Cro...
-                </text>
-            </switch>
-        </g>
-        <ellipse cx="286" cy="179" rx="5" ry="5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
-        <path d="M 286 184 L 286 200.67 M 286 187.33 L 276 187.33 M 286 187.33 L 296 187.33 M 286 200.67 L 276 214 M 286 200.67 L 296 214" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 221px; margin-left: 286px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 147px; margin-left: 355px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: nowrap;">
-                                参加者
+                                現在地
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="286" y="233" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    参加者
+                <text x="355" y="159" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    現在地
                 </text>
             </switch>
         </g>
+        <path d="M 257 103 C 241 103 237 110.25 249.8 111.7 C 237 114.89 251.4 121.85 261.8 118.95 C 269 124.75 293 124.75 301 118.95 C 317 118.95 317 113.15 307 110.25 C 317 104.45 301 98.65 287 101.55 C 277 97.2 261 97.2 257 103 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <ellipse cx="557" cy="209" rx="62" ry="20" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 205px; margin-left: 462px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 122px; height: 1px; padding-top: 209px; margin-left: 496px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
-                                ５合目
-                            </div>
-                        </div>
-                    </div>
-                </foreignObject>
-                <text x="491" y="209" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    ５合目
-                </text>
-            </switch>
-        </g>
-        <path d="M 181 146 C 165 146 161 153.25 173.8 154.7 C 161 157.89 175.4 164.85 185.8 161.95 C 193 167.75 217 167.75 225 161.95 C 241 161.95 241 156.15 231 153.25 C 241 147.45 225 141.65 211 144.55 C 201 140.2 185 140.2 181 146 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 461 117 C 445 117 441 124.25 453.8 125.7 C 441 128.89 455.4 135.85 465.8 132.95 C 473 138.75 497 138.75 505 132.95 C 521 132.95 521 127.15 511 124.25 C 521 118.45 505 112.65 491 115.55 C 481 111.2 465 111.2 461 117 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 327.75 222.55 L 335.64 214.88 L 382.8 263.36 L 390.68 255.69 L 392.8 281.53 L 367.03 278.7 L 374.91 271.03 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="none"/>
-        <ellipse cx="331" cy="124.88" rx="60" ry="19.875" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 125px; margin-left: 272px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
-                                AI Challenge
-                                <br/>
-                                Community
-                            </div>
-                        </div>
-                    </div>
-                </foreignObject>
-                <text x="331" y="128" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    AI Challenge...
-                </text>
-            </switch>
-        </g>
-        <ellipse cx="393.5" cy="306.75" rx="77.5" ry="24.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 153px; height: 1px; padding-top: 307px; margin-left: 317px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
-                                ROS 2
-                            </div>
-                        </div>
-                    </div>
-                </foreignObject>
-                <text x="394" y="310" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    ROS 2
-                </text>
-            </switch>
-        </g>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 128px; height: 1px; padding-top: 219px; margin-left: 1px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
-                                現在地　＝　協調領域
-                            </div>
-                        </div>
-                    </div>
-                </foreignObject>
-                <text x="65" y="223" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    現在地　＝　協調領域
-                </text>
-            </switch>
-        </g>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 83px; margin-left: 463px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
-                                ９合目
-                            </div>
-                        </div>
-                    </div>
-                </foreignObject>
-                <text x="492" y="87" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    ９合目
-                </text>
-            </switch>
-        </g>
-        <path d="M 291 98 L 301 77 L 361 77 L 371 98 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 88px; margin-left: 292px;">
-                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
-                                <span style="color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;">
-                                    %3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22group%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22230%22%20y%3D%22151%22%20width%3D%22390%22%20height%3D%22250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2230%22%20y%3D%22125.00000000000001%22%20width%3D%22260%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20y%3D%22187.5%22%20width%3D%22320%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%225%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2260%22%20y%3D%2262.50000000000001%22%20width%3D%22200%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%226%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2290%22%20width%3D%22140%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%227%22%20value%3D%22Autoware%20Practice%22%20style%3D%22ellipse%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2225%22%20y%3D%22194.25%22%20width%3D%22270%22%20height%3D%2249%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%228%22%20value%3D%22AI%20Challenge%22%20style%3D%22ellipse%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22100%22%20y%3D%226.75%22%20width%3D%22120%22%20height%3D%2249%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%229%22%20value%3D%22%E5%8F%82%E5%8A%A0%E8%80%85%22%20style%3D%22shape%3DumlActor%3BverticalLabelPosition%3Dbottom%3BverticalAlign%3Dtop%3Bhtml%3D1%3BoutlineConnect%3D0%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22148%22%20y%3D%2286%22%20width%3D%2220%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2210%22%20value%3D%22%EF%BC%95%E5%90%88%E7%9B%AE%22%20style%3D%22text%3Bhtml%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22290%22%20y%3D%22110%22%20width%3D%2260%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E
-                                </span>
-                                <span style="color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;">
-                                    %3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22group%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22230%22%20y%3D%22151%22%20width%3D%22390%22%20height%3D%22250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2230%22%20y%3D%22125.00000000000001%22%20width%3D%22260%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20y%3D%22187.5%22%20width%3D%22320%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%225%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2260%22%20y%3D%2262.50000000000001%22%20width%3D%22200%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%226%22%20value%3D%22%22%20style%3D%22shape%3Dtrapezoid%3Bperimeter%3DtrapezoidPerimeter%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3Bsize%3D30%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2290%22%20width%3D%22140%22%20height%3D%2262.50000000000001%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%227%22%20value%3D%22Autoware%20Practice%22%20style%3D%22ellipse%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%2225%22%20y%3D%22194.25%22%20width%3D%22270%22%20height%3D%2249%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%228%22%20value%3D%22AI%20Challenge%22%20style%3D%22ellipse%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22100%22%20y%3D%226.75%22%20width%3D%22120%22%20height%3D%2249%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%229%22%20value%3D%22%E5%8F%82%E5%8A%A0%E8%80%85%22%20style%3D%22shape%3DumlActor%3BverticalLabelPosition%3Dbottom%3BverticalAlign%3Dtop%3Bhtml%3D1%3BoutlineConnect%3D0%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22148%22%20y%3D%2286%22%20width%3D%2220%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%2210%22%20value%3D%22%EF%BC%95%E5%90%88%E7%9B%AE%22%20style%3D%22text%3Bhtml%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22290%22%20y%3D%22110%22%20width%3D%2260%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E
+                                <span style="color: rgb(0, 0, 238); text-decoration-line: underline;">
+                                    AitowarePractice
                                 </span>
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="331" y="91" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    %3CmxGraphMod...
+                <text x="557" y="213" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    AitowarePractice
                 </text>
             </switch>
         </g>
-        <path d="M 141 99 L 541 99" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="6 6" pointer-events="none"/>
-        <path d="M 141 219 L 541 219" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="6 6" pointer-events="none"/>
-        <path d="M 131 111.25 C 115 111.25 111 118.5 123.8 119.95 C 111 123.14 125.4 130.1 135.8 127.2 C 143 133 167 133 175 127.2 C 191 127.2 191 121.4 181 118.5 C 191 112.7 175 106.9 161 109.8 C 151 105.45 135 105.45 131 111.25 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 542 144.25 C 526 144.25 522 151.5 534.8 152.95 C 522 156.14 536.4 163.1 546.8 160.2 C 554 166 578 166 586 160.2 C 602 160.2 602 154.4 592 151.5 C 602 145.7 586 139.9 572 142.8 C 562 138.45 546 138.45 542 144.25 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 326.36 213.88 L 334.24 221.55 L 286.09 271.04 L 293.97 278.71 L 268.2 281.53 L 270.32 255.69 L 278.2 263.36 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 336.5 226 L 325.5 226 L 325.5 165.75 L 314.5 165.75 L 331 145.75 L 347.5 165.75 L 336.5 165.75 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="none"/>
-        <ellipse cx="267.5" cy="306.75" rx="77.5" ry="24.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
+        <ellipse cx="505" cy="136.75" rx="50" ry="17.75" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 153px; height: 1px; padding-top: 307px; margin-left: 191px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 137px; margin-left: 456px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
-                                Autoware Practice
+                                <span style="color: rgb(0, 0, 238); text-decoration-line: underline;">
+                                    Community
+                                </span>
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="268" y="310" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    Autoware Practice
+                <text x="505" y="140" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Community
                 </text>
             </switch>
         </g>
-        <path d="M 318 9.91 L 338 19.73 L 318 29.55 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" transform="rotate(-90,328,19.73)" pointer-events="none"/>
-        <ellipse cx="327.73" cy="39.27" rx="14.727272727272727" ry="14.727272727272727" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
+        <path d="M 465 27.91 L 485 37.73 L 465 47.55 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" transform="rotate(-90,475,37.73)" pointer-events="none"/>
+        <ellipse cx="474.73" cy="57.27" rx="14.727272727272727" ry="14.727272727272727" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 27px; height: 1px; padding-top: 39px; margin-left: 314px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 27px; height: 1px; padding-top: 57px; margin-left: 461px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
                                 1st
@@ -191,16 +74,52 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="328" y="43" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                <text x="475" y="61" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
                     1st
                 </text>
             </switch>
         </g>
-        <path d="M 336.5 102 L 325.5 102 L 325.5 82 L 314.5 82 L 331 62 L 347.5 82 L 336.5 82 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 346 59.25 C 330 59.25 326 66.5 338.8 67.95 C 326 71.14 340.4 78.1 350.8 75.2 C 358 81 382 81 390 75.2 C 406 75.2 406 69.4 396 66.5 C 406 60.7 390 54.9 376 57.8 C 366 53.45 350 53.45 346 59.25 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 544 50.25 C 528 50.25 524 57.5 536.8 58.95 C 524 62.14 538.4 69.1 548.8 66.2 C 556 72 580 72 588 66.2 C 604 66.2 604 60.4 594 57.5 C 604 51.7 588 45.9 574 48.8 C 564 44.45 548 44.45 544 50.25 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 626 105.25 C 610 105.25 606 112.5 618.8 113.95 C 606 117.14 620.4 124.1 630.8 121.2 C 638 127 662 127 670 121.2 C 686 121.2 686 115.4 676 112.5 C 686 106.7 670 100.9 656 103.8 C 646 99.45 630 99.45 626 105.25 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 98px; margin-left: 72px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 83px; margin-left: 656px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                ９合目
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="685" y="87" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ９合目
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 128px; height: 1px; padding-top: 232px; margin-left: 90px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                協調領域
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="154" y="236" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    協調領域
+                </text>
+            </switch>
+        </g>
+        <path d="M 215 83 L 655 83" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="6 6" pointer-events="none"/>
+        <path d="M 215 162 L 655 162.94" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="6 6" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 82px; margin-left: 126px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
                                 競争領域
@@ -208,11 +127,66 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="101" y="102" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                <text x="155" y="86" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
                     競争領域
                 </text>
             </switch>
         </g>
+        <ellipse cx="603.5" cy="280.63" rx="67.5" ry="20.625" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 133px; height: 1px; padding-top: 281px; margin-left: 537px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                <a href="https://docs.ros.org/en/humble/Tutorials.html">
+                                    ROS 2
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="604" y="284" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ROS 2
+                </text>
+            </switch>
+        </g>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 163px; margin-left: 656px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                ５合目
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="685" y="167" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ５合目
+                </text>
+            </switch>
+        </g>
+        <path d="M 347.57 324.77 L 345.4 315.01 L 508.48 278.77 L 385.09 232.5 Q 343.4 216.87 387.77 213.17 L 471.3 206.21 L 401.73 159.83 Q 384.72 148.49 404.12 142.02 L 444.72 128.49 L 428.99 118 Q 417.46 110.32 428.39 101.8 L 456.28 80.05 L 449.82 71.77 L 474.33 72.31 L 468.88 96.21 L 462.43 87.93 L 434.54 109.68 L 450.27 120.17 Q 467.28 131.51 447.88 137.98 L 407.28 151.51 L 476.84 197.89 Q 500.7 213.79 472.13 216.17 L 388.6 223.13 L 511.99 269.41 Q 543.52 281.23 510.65 288.53 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 456.28 80.05 L 449.82 71.77 L 474.33 72.31 L 468.88 96.21 L 462.43 87.93" fill="none" stroke="rgb(0, 0, 0)" stroke-linejoin="flat" stroke-miterlimit="4" pointer-events="none"/>
+        <path d="M 21 319.5 L 11 319.5 L 11 19.5 L 0.5 19.5 L 16 0.5 L 31.5 19.5 L 21 19.5 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-linejoin="round" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 119px; margin-left: 18px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                難易度
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="18" y="122" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    難易度
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="400.5" cy="148.5" rx="6.5" ry="6.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
     </g>
     <switch>
         <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
