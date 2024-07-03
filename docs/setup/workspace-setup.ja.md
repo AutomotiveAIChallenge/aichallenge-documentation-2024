@@ -17,3 +17,5 @@ sudo apt install -y git
 cd ~
 git clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
 ```
+
+## [Next Step: 仮想環境のインストール](./docker.ja.md)
