@@ -76,13 +76,9 @@ sudo apt install -y libvulkan1
 
 ## AWSIMのダウンロード
 
-1. [Google Drive](https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y) から最新の `AWSIM_GPU_**.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
+[Google Drive](https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y) から最新の `AWSIM_GPU_**.zip` をダウンロードし、`aichallenge-2024/aichallenge/simulator` に展開します。
 
     実行ファイルが`aichallenge-2024/aichallenge/simulator/AWSIM_GPU_**/AWSIM.x86_64`に存在していることを確認してください。
-
-2. パーミッションを図のように変更します。
-
-    ![パーミッション変更の様子](./images/awsim-permmision.png)
 
 ## AWSIMの起動確認
 
@@ -90,6 +86,7 @@ sudo apt install -y libvulkan1
 
 ```bash
 cd aichallenge-2024
+./docker_build.sh dev
 ./docker_run.sh dev gpu
 ```
 
@@ -127,3 +124,9 @@ AWSIM_DIRECTORY=/aichallenge/simulator/AWSIM_GPU_**
 以下のような画面が現れたら成功です。
 
 ![AWSIM-Autoware](./images/awsim-and-autoware.png)
+
+以上で環境構築は終了となります！
+
+## Next Step: 開発をしてみる
+
+[はじめ方](../getting-started.ja.md)から開発をしてみましょう！
