@@ -1,3 +1,9 @@
-# 移動しました
-
-このページの内容は[こちら](../../information/rules.ja.md)に移動しました。
+<!doctype html>
+<html>
+<head>
+<title>Redirect</title>
+<meta http-equiv="refresh" content="0;url=../../information/rules.html">
+</head>
+<body>
+</body>
+</html>
