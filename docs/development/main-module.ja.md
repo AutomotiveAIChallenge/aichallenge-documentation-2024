@@ -79,9 +79,21 @@ Autoware-Microを活用することにより、本大会での課題となる：
 
 ![racing-diagram](./images/architecture/racing_simple.png)
 
-昨年度の取り組みはこちらのアドベントカレンダーにまとめられていますので参考にしてみてください。
+## ワークスペースの構成
 
-[アドベントカレンダー](https://qiita.com/advent-calendar/2023/jidounten-ai)
+参考までに本大会で使用しているワークスペースの構成は以下となります。
+
+docker-dev
+
+![dev](./images/docker/dev.drawio.svg)
+
+docker-eval
+
+![eval](./images/docker/eval.drawio.svg)
+
+## 参加者有志の参考記事
+
+参加者有志が取り組んでくださった取り組みは[Advent Calendar](https://qiita.com/advent-calendar/2023/jidounten-ai)にまとめられていますので参考にしてみてください。
 
 どれから読もうか迷った方は2023年度コミュニティ貢献賞を受賞した田中新太さんが記載してくれた[こちらの記事](https://qiita.com/Arata-stu/items/4b03772348dca4f7ef89)から読み進めると良いと思います。
 

@@ -1,5 +1,7 @@
 # Japan Automotive AI Challenge 2024
 
+![top_image](./assets/top_image.jpg)
+
 ## コンセプト
 
 !!! info

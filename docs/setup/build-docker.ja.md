@@ -1,6 +1,4 @@
-# ワークスペース
-
-## 大会用リポジトリのビルド・実行
+# 大会用リポジトリのビルド・実行
 
 大会用リポジトリでは、実際の動作環境はすべてDocker内で完結して提供されています。リポジトリの利用は以下の流れで行います。
 
@@ -10,7 +8,9 @@
 
 ## 大会環境のDockerイメージのビルド
 
-大会用リポジトリに入ります。
+再度`Alt+Ctrl+T`でターミナルを立ち上げて下さい。以下に従ってコマンドを`Ctrl+Shift+P`で貼り付け`Enter`で実行します。
+
+まず大会用リポジトリに入ります。
 
 ```bash
 cd ~/aichallenge-2024
@@ -65,55 +65,5 @@ Autowareのビルド後、以下のコマンドを実行します。
 下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 ![autoware](./images/autoware.png)
 
-## Debug用にTerminalを3つ用意して開発したい場合 (参考)
-
-`Alt+Ctrl+T`で１つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
-
-```bash
-cd ~/aichallenge-2024
-./docker_run.sh dev cpu
-```
-
-```bash
-cd /aichallenge
-bash run_simulator.bash
-```
-
-`Alt+Ctrl+T`で2つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
-
-```bash
-cd ~/aichallenge-2024
-./docker_run.sh dev cpu
-```
-
-```bash
-cd /aichallenge
-bash run_autoware.bash
-```
-
-`Alt+Ctrl+T`で3つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
-
-```bash
-cd ~/aichallenge-2024
-./docker_run.sh dev cpu
-```
-
-```bash
-cd /aichallenge
-ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{data: true}' >/dev/null
-```
-
-下記の様な画面が表示されたら起動完了です。終了するには各ターミナル上でCTRL + Cを入力します。
-![autoware](./images/autoware.png)
-
-### ワークスペースの構成 (参考)
-
-参考までにこちらにワークスペースの構成を記載しておきます。
-
-docker-dev
-
-![dev](./images/docker/dev.drawio.svg)
-
-docker-eval
-
-![eval](./images/docker/eval.drawio.svg)
+## [Next Step: 開発をしてみる](../development/main-module.ja.md)
+以上で環境構築は終了です！次は実際に開発を行ってみましょう。
