@@ -20,7 +20,7 @@ git pull origin/main
 
 ## 描画ありAWSIMの導入
 
-AWSIMのシミュレーション画面を確認したい方は、[こちら](./setup/visible-simulation.ja.md)の手順に従って描画ありAWSIMの導入を行ってください。
+AWSIMのシミュレーション画面を確認したい方は、[こちら](../setup/visible-simulation.ja.md)の手順に従って描画ありAWSIMの導入を行ってください。
 
 ## Debug用にTerminalを3つ用意して開発したい場合 (参考)
 
@@ -62,6 +62,7 @@ ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{da
 
 下記の様な画面が表示されたら起動完了です。終了するには各ターミナル上でCTRL + Cを入力します。
 ![autoware](./images/autoware.png)
+
 ## TroubleShooting
 
 !!! warning
@@ -70,7 +71,7 @@ ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{da
 
 Q. `docker_run.sh: 行 35: rocker: コマンドが見つかりません`
 
-A. [rockerのインストール](./setup/docker.ja.md)をお願いします。
+A. [rockerのインストール](../setup/docker.ja.md)をお願いします。
 
 Q. `WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist`
 
