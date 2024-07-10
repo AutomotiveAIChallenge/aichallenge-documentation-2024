@@ -36,7 +36,7 @@ nav:
       - setup/visible-simulation.md
       - setup/build-docker.md
   - development:
-      - development/proceeding.md
+      - development/workspace-usage.md
       - development/main-module.md
       - development/reference.md
   - specifications:

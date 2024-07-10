@@ -65,6 +65,6 @@ Autowareのビルド後、以下のコマンドを実行します。
 下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
 ![autoware](./images/autoware.png)
 
-## [Next Step: 開発をしてみる](../development/main-module.ja.md)
+## [Next Step: 開発をしてみる](../development/workspace-usage.ja.md)
 
 以上で環境構築は終了です！次は実際に開発を行ってみましょう。

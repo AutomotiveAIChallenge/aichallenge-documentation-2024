@@ -39,7 +39,7 @@
 
     本大会ではUbuntu 22.04を搭載したPC一台のみで参加ができます。
 
-## [AIチャレンジでの開発の進め方](./development/proceeding.ja.md)
+## [AIチャレンジでの開発の進め方](./development/workspace-usage.ja.md)
 
 上記リンクより、実際に開発してみましょう！
 
