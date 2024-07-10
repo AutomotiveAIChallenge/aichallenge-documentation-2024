@@ -1,119 +1,17 @@
-# ワークスペース
+# AIチャレンジの進め方
 
-## 大会用リポジトリのビルド・実行
+![Where-to-start](./images/where-to-start.drawio.svg)
 
-大会用リポジトリでは、実際の動作環境はすべてDocker内で完結して提供されています。リポジトリの利用は以下の流れで行います。
+AIチャレンジではオープンソースソフトウェアを駆使しています。運営から提供されるコードとウェブプラットフォームを利用することで、初期開発フェーズをスキップし、競技のテーマに合わせた開発をすぐに開始できます。
+このアプローチには、「車輪の再発明」を避けることができるという大きな利点があります。さらに、誰でも気軽に大会に参加でき、一貫した評価基準で大会を運営できるというメリットもあります。
 
-1. 大会環境のDockerイメージのビルド
-2. Dockerコンテナ上でのAutowareのビルド
-3. Dockerコンテナ上でのAutowareとシミュレータの同時起動
+初めて参加される方々は、先人たちが築き上げた基盤の上に立ち、自動運転に必要な機能がほとんど揃っている状態からスタートします。これからは、コミュニティによる「取り組みの公開」を通じて、競技領域での独自の開発を深めるチャンスです。
+さらに、自動運転の理解を深めるために、運営が用意した「[Autoware Practice](../course/index.ja.md)」やROS 2のコミュニティが提供する「[ROS 2](https://docs.ros.org/en/humble/Tutorials.html)」の学習プログラムを活用することをお勧めします。
 
-## 大会環境のDockerイメージのビルド
+既にチャレンジに参加された方々には、ご自身の経験を公開し、コミュニティに貢献して大会の発展に寄与していただければと思います。皆さんの積極的な参加が、大会をさらに充実させることに繋がります。
 
-大会用リポジトリに入ります。
+※AIチャレンジで開発する上でベースとなるソースコードは[大会用リポジトリ](https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit)内で提供されています。
 
-```bash
-cd ~/aichallenge-2024
-```
+参加者の皆様にはこちらのコードやパラメータをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは[入門講座](../course/index.ja.md)を一通りやっていただくことをお勧めします。
 
-Dockerイメージのビルドを行います。
-
-```bash
-./docker_build.sh dev
-```
-
-```bash
-docker images
-```
-
-で以下のイメージが生成されていることを確認しましょう。
-
-```txt
-aichallenge-2024-dev   latest   df2e83a20349   33 minutes ago   8.9GB
-```
-
-## Dockerコンテナ上でのAutowareのビルド
-
-以下を実行してDockerコンテナを立ち上げます。
-
-```bash
-cd ~/aichallenge-2024
-./docker_run.sh dev cpu
-```
-
-特に何も変わっていないように見えますが、上記のコマンドを実行すると環境がDockerコンテナ内部に移行します。今の環境がDockerコンテナ内かどうかは以下のコマンドで何も表示されていないかを確認するのがわかりやすいです。
-
-```bash
-ls ~
-```
-
-Dockerコンテナ内で以下を実行してAutowareをビルドします。
-
-```bash
-cd /aichallenge
-./build_autoware.bash
-```
-
-## Dockerコンテナ上でのAutowareとSimulatorの実行
-
-Autowareのビルド後、以下のコマンドを実行します。
-
-```bash
-./run_evaluation.bash
-```
-
-下記の様な画面が表示されたら起動完了です。終了するにはターミナル上でCTRL + Cを入力します。
-![autoware](./images/autoware.png)
-
-## Debug用にTerminalを3つ用意して開発したい場合 (参考)
-
-`Alt+Ctrl+T`で１つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
-
-```bash
-cd ~/aichallenge-2024
-./docker_run.sh dev cpu
-```
-
-```bash
-cd /aichallenge
-bash run_simulator.bash
-```
-
-`Alt+Ctrl+T`で2つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
-
-```bash
-cd ~/aichallenge-2024
-./docker_run.sh dev cpu
-```
-
-```bash
-cd /aichallenge
-bash run_autoware.bash
-```
-
-`Alt+Ctrl+T`で3つ目のターミナルを立ち上げてから、以下のコマンド`Ctrl+Shift+P`で貼り付けた後に`Enter`で実行します。
-
-```bash
-cd ~/aichallenge-2024
-./docker_run.sh dev cpu
-```
-
-```bash
-cd /aichallenge
-ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{data: true}' >/dev/null
-```
-
-下記の様な画面が表示されたら起動完了です。終了するには各ターミナル上でCTRL + Cを入力します。
-![autoware](./images/autoware.png)
-
-### ワークスペースの構成 (参考)
-
-参考までにこちらにワークスペースの構成を記載しておきます。
-
-docker-dev
-
-![dev](./images/docker/dev.drawio.svg)
-
-docker-eval
-
-![eval](./images/docker/eval.drawio.svg)
+※リポジトリ内のコードを使わず独自に開発する方など、各種仕様について知りたい方は[インターフェース仕様](../specifications/interface.ja.md)、[シミュレータ仕様](../specifications/simulator.ja.md)のページを参照してください。

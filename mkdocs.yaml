@@ -34,9 +34,11 @@ nav:
       - setup/docker.md
       - setup/headless-simulation.md
       - setup/visible-simulation.md
+      - setup/build-docker.md
   - development:
       - development/workspace-usage.md
       - development/main-module.md
+      - development/reference.md
   - specifications:
       - specifications/interface.md
       - specifications/hardware.md
@@ -69,10 +71,10 @@ plugins:
             index: トップページ
             information: 大会情報
             preliminaries: 予選
-            setup: 導入
+            setup: 環境構築
             development: 開発
             specifications: 仕様
-            course: 講座
+            course: 入門講座
         - locale: en
           name: English
           build: true
