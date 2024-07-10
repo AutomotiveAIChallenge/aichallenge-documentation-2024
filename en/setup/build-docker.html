@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/course/avoidance.html">
+        <link rel="canonical" href="https://automotiveaichallenge.github.io/aichallenge-documentation-2024/en/setup/build-docker.html">
       
       
-        <link rel="prev" href="velocity_planning.html">
+        <link rel="prev" href="visible-simulation.html">
       
       
-        <link rel="next" href="../faq.html">
+        <link rel="next" href="../development/workspace-usage.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>03. 障害物回避 - AI Challenge 2024</title>
+        <title>Build docker - AI Challenge 2024</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#03" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -127,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03. 障害物回避
+              Build docker
             
           </span>
         </div>
@@ -148,13 +143,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../course/avoidance.html" hreflang="ja" class="md-select__link">
+            <a href="../../setup/build-docker.html" hreflang="ja" class="md-select__link">
               日本語
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="avoidance.html" hreflang="en" class="md-select__link">
+            <a href="build-docker.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -296,11 +291,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../setup/requirements.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="requirements.html" class="md-tabs__link">
           
   
   Setup
@@ -350,13 +347,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../course/index.html" class="md-tabs__link">
           
   
   Course
@@ -670,23 +665,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -697,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Setup
@@ -711,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/requirements.html" class="md-nav__link">
+      <a href="requirements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/workspace-setup.html" class="md-nav__link">
+      <a href="workspace-setup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/docker.html" class="md-nav__link">
+      <a href="docker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/headless-simulation.html" class="md-nav__link">
+      <a href="headless-simulation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -795,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/visible-simulation.html" class="md-nav__link">
+      <a href="visible-simulation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -813,10 +813,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../setup/build-docker.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="build-docker.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -825,6 +832,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1057,28 +1065,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1089,7 +1092,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Course
@@ -1103,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../course/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1124,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vehicle.html" class="md-nav__link">
+      <a href="../course/vehicle.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1145,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="velocity_planning.html" class="md-nav__link">
+      <a href="../course/velocity_planning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1163,30 +1166,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    03. 障害物回避
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="avoidance.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../course/avoidance.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1195,44 +1178,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#03-01-lidar" class="md-nav__link">
-    <span class="md-ellipsis">
-      03-01. lidarから点群を取得し障害物検知をする
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#03-02" class="md-nav__link">
-    <span class="md-ellipsis">
-      03-02. 点群情報に基づいて経路・軌道計画し車両を追従させる
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1302,34 +1247,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#03-01-lidar" class="md-nav__link">
-    <span class="md-ellipsis">
-      03-01. lidarから点群を取得し障害物検知をする
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#03-02" class="md-nav__link">
-    <span class="md-ellipsis">
-      03-02. 点群情報に基づいて経路・軌道計画し車両を追従させる
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1347,58 +1264,9 @@
   
 
 
-<h1 id="03">03. 障害物回避</h1>
-<p>安全な自動運転を行うために、障害物を認識し必要に応じて回避する必要があります。ここでは図のように、障害物を認識して回避しながら目標地点に到達することを目指します。</p>
-<p><img alt="avoidance_planning" src="../../course/images/3-1/avoidance_planning.png" /></p>
-<h2 id="03-01-lidar">03-01. lidarから点群を取得し障害物検知をする</h2>
-<p>自動運転車両では、障害物を認識するために様々なセンサーが使用されます。代表的なセンサーには以下のものがあります：</p>
-<ol>
-<li><strong>LiDAR（Light Detection and Ranging）</strong>:<ul>
-<li>レーザー光を発射し、物体に当たって戻ってくるまでの時間を測定することで距離を計測します。</li>
-<li>高精度な3D点群データを生成し、周囲の環境を詳細に把握できます。</li>
-</ul>
-</li>
-<li><strong>カメラ</strong>:<ul>
-<li>光学センサーを使用して画像を取得します。</li>
-<li>画像を用いて物体認識、車線検出、交通標識認識などを行います。</li>
-</ul>
-</li>
-<li><strong>レーダー（Radio Detection and Ranging）</strong>:<ul>
-<li>電波を発射し、反射して戻ってくるまでの時間を測定します。</li>
-<li>長距離の障害物検出に優れ、悪天候でも安定した性能を発揮します。</li>
-</ul>
-</li>
-<li><strong>超音波センサー</strong>:<ul>
-<li>超音波を発射し、反射して戻ってくるまでの時間を測定します。</li>
-<li>近距離の障害物検出に適しており、駐車支援システムなどに利用されます。</li>
-</ul>
-</li>
-</ol>
-<p>今回、lidarを用いた障害物検知を扱うために簡易lidarシミュレータを作成しました。</p>
-<p>実際のlidarは観測物体の裏側まで見ることはできませんが、
-この簡易lidarシミュレータは物体の輪郭を点群化し、車両の一定範囲内の点群を取得します。</p>
-<p><code>src/autoware_practice_lidar_simulator/config/object_centers.csv</code>で座標を指定することで自由に障害物を設定することができます。
-3つの障害物を配置するために、以下のようにobejct_centers.csvを編集します。</p>
-<pre><code class="language-diff">+  x_center,y_center
-+  7.0,0.0
-+  10.0,5.0
-+  5.0,-3.0
-</code></pre>
-<p>以下のコマンドでシミュレータを起動し、一定範囲内にある障害物の点群が表示されるか確認しましょう。</p>
-<pre><code class="language-bash">ros2 launch autoware_practice_launch practice.launch.xml
-</code></pre>
-<p><img alt="simple_lidar_sim1" src="../../course/images/3-1/simple_lidar_sim1.png" /></p>
-<p>以下のコマンドを別々のターミナルで実行して、車両の位置が変化するのに伴って取得できる点群が変化するのを確認しましょう。</p>
-<pre><code class="language-bash">ros2 run autoware_practice_course trajectory_loader --ros-args -p path_file:=src/autoware_practice_course/config/trajectory_zigzag.csv
-</code></pre>
-<pre><code class="language-bash">ros2 run autoware_practice_course trajectory_follower --ros-args -p kp:=5.0 -p lookahead_distance:=5.0
-</code></pre>
-<p><img alt="imple_lidar_sim2" src="../../course/images/3-1/simple_lidar_sim2.png" /></p>
-<h2 id="03-02">03-02. 点群情報に基づいて経路・軌道計画し車両を追従させる</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>作成中</p>
-</div>
+  <h1>Build docker</h1>
+
+
 
 
 
