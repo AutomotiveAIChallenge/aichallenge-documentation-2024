@@ -62,21 +62,3 @@ ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{da
 
 下記の様な画面が表示されたら起動完了です。終了するには各ターミナル上でCTRL + Cを入力します。
 ![autoware](./images/autoware.png)
-
-## TroubleShooting
-
-!!! warning
-
-    基本的には、ChatGPTやGoogle検索で解決できる項目は多いです。それでも解決しない質問については、エラーのログの抜粋と添付をお願いします。
-
-Q. `docker_run.sh: 行 35: rocker: コマンドが見つかりません`
-
-A. [rockerのインストール](../setup/docker.ja.md)をお願いします。
-
-Q. `WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist`
-
-A. Dockerイメージのビルドをお願いします。
-
-Q. Dockerがpullできません。
-
-A. `newgrp docker`か`sudo service docker restart`でdockerの再起動またはUbuntuの再起動をお願いします。
