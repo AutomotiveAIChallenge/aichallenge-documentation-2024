@@ -1307,6 +1307,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#docker_runsh-35-rocker" class="md-nav__link">
+    <span class="md-ellipsis">
+      docker_run.sh: 行 35: rocker: コマンドが見つかりませんが出ます。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning-unable-to-detect-os-for-base-image-aichallenge-2024-dev-maybe-the-base-image-does-not-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not existが出ます。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerpull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerがpullできません
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1613,6 +1640,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#docker_runsh-35-rocker" class="md-nav__link">
+    <span class="md-ellipsis">
+      docker_run.sh: 行 35: rocker: コマンドが見つかりませんが出ます。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning-unable-to-detect-os-for-base-image-aichallenge-2024-dev-maybe-the-base-image-does-not-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not existが出ます。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerpull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerがpullできません
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1811,6 +1865,10 @@
 
 
 <h1 id="faq">FAQ</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>基本的には、ChatGPTやGoogle検索で解決できる項目は多いです。それでも解決しない質問については、エラーのログの抜粋と添付をお願いします。</p>
+</div>
 <h2 id="_1">環境構築</h2>
 <h3 id="awsim-and-autoware"><u>AWSIM and Autoware間の通信が安定しません。</u></h3>
 <p>local でテストする際、すべての terminal で<code>ROS_LOCALHOST_ONLY=1</code>に設定すると通信速度が向上します。
@@ -1865,6 +1923,15 @@ if [ ! -e /tmp/cycloneDDS_configured ]; then
 <h3 id="awsawsimrviz"><u>AWSで環境構築したところ、AWSIMは表示されたが、Rvizがブラックスクリーンとなりました。</u></h3>
 <p><code>sudo apt upgrade</code>で治ったという事例がありますので、内容を確認の上、お試しください。
 また、<a href="https://github.com/ros2/rviz/issues/948">過去Issue</a>にてご質問内容と似た質問がありましたので、こちらも合わせてご確認ください。</p>
+<hr />
+<h3 id="docker_runsh-35-rocker"><u><code>docker_run.sh: 行 35: rocker: コマンドが見つかりません</code>が出ます。</u></h3>
+<p><a href="../docs/setup/docker.ja.md">rockerのインストール</a>をお願いします。</p>
+<hr />
+<h3 id="warning-unable-to-detect-os-for-base-image-aichallenge-2024-dev-maybe-the-base-image-does-not-exist"><u><code>WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist</code>が出ます。</u></h3>
+<p>Dockerイメージのビルドをお願いします。</p>
+<hr />
+<h3 id="dockerpull"><u>Dockerがpullできません</u></h3>
+<p><code>newgrp docker</code>か<code>sudo service docker restart</code>でdockerの再起動またはUbuntuの再起動をお願いします。</p>
 <hr />
 <hr />
 <h2 id="_2">操作</h2>

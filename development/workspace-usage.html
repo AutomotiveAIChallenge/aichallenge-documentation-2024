@@ -896,6 +896,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AIチャレンジの進め方
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="workspace-usage.html" class="md-nav__link md-nav__link--active">
         
   
@@ -905,6 +916,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参加者有志の参考記事を読んでみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      パラメータを変更してみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      新規パッケージを作成してみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      [任意]Mapの編集をしてみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      提出してみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Step:メインモジュールについて知る
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1257,6 +1341,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参加者有志の参考記事を読んでみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      パラメータを変更してみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      新規パッケージを作成してみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      [任意]Mapの編集をしてみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      提出してみる
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Step:メインモジュールについて知る
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1283,6 +1429,45 @@
 <p>※AIチャレンジで開発する上でベースとなるソースコードは<a href="https://github.com/AutomotiveAIChallenge/aichallenge-2024/tree/main/aichallenge/workspace/src/aichallenge_submit">大会用リポジトリ</a>内で提供されています。</p>
 <p>参加者の皆様にはこちらのコードやパラメータをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは<a href="../course/index.html">入門講座</a>を一通りやっていただくことをお勧めします。</p>
 <p>※リポジトリ内のコードを使わず独自に開発する方など、各種仕様について知りたい方は<a href="../specifications/interface.html">インターフェース仕様</a>、<a href="../specifications/simulator.html">シミュレータ仕様</a>のページを参照してください。</p>
+<h2 id="_1">参加者有志の参考記事を読んでみる</h2>
+<p>参加者有志が取り組んでくださった取り組みは<a href="https://qiita.com/advent-calendar/2023/jidounten-ai">Advent Calendar</a>にまとめられていますので参考にしてみてください。</p>
+<p>どれから読もうか迷った方は2023年度コミュニティ貢献賞を受賞した田中新太さんが記載してくれた<a href="https://qiita.com/Arata-stu/items/4b03772348dca4f7ef89">こちらの記事</a>から読み進めると良いと思います。</p>
+<h2 id="_2">パラメータを変更してみる</h2>
+<p>環境構築後何をして良いのかわからない方向けに、まずパラメータを調整してみましょう。
+今回は制御モジュールのsimple_pure_pursuitのパラメータを変更してみることにします。</p>
+<p><code>$HOME/aichallenge-2024/aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/launch/reference.launch.xml</code>内の以下の<code>value</code>値を調整してみましょう。</p>
+<pre><code class="language-xml">&lt;node pkg=&quot;simple_pure_pursuit&quot; exec=&quot;simple_pure_pursuit&quot; name=&quot;simple_pure_pursuit_node&quot; output=&quot;screen&quot;&gt;
+    &lt;param name=&quot;use_external_target_vel&quot; value=&quot;true&quot;/&gt;
+    &lt;param name=&quot;external_target_vel&quot; value=&quot;8.0&quot;/&gt;
+    &lt;param name=&quot;lookahead_gain&quot; value=&quot;0.4&quot;/&gt;
+    &lt;param name=&quot;lookahead_min_distance&quot; value=&quot;5.0&quot;/&gt;
+    &lt;param name=&quot;speed_proportional_gain&quot; value=&quot;1.0&quot;/&gt;
+</code></pre>
+<p>調整が終わったら再び<a href="../setup/build-docker.html">ビルド・実行</a>してみましょう。挙動が変わったことが確認できたかと思います。</p>
+<h2 id="_3">新規パッケージを作成してみる</h2>
+<p>新たに自作パッケージを作成してみましょう。まずはオープンソースのパッケージや<a href="https://github.com/AutomotiveAIChallenge/autoware-practice">autoware practice</a>をコピーしてみましょう。
+以下のように進めると良いと思います。</p>
+<ol>
+<li>元のパッケージをコピーして、下記を変更<ul>
+<li>パッケージ名</li>
+<li>フォルダ名</li>
+<li>コード</li>
+<li>package.xml</li>
+<li>CMakeLists.txt</li>
+</ul>
+</li>
+<li>aichallenge_submitの中に配置</li>
+<li>aichallenge_submit_launch内のlaunchファイル(reference.launch.xml)を変更</li>
+</ol>
+<p>※コピー元のパッケージのライセンスを違反しないよう各自確認お願いいたします。</p>
+<h2 id="map">[任意]Mapの編集をしてみる</h2>
+<p>2024年度のAIチャレンジでは<a href="https://tools.tier4.jp/feature/vector_map_builder_ll2/">VectorMapBuilder</a>などのツールを使ってpoint cloud map , lanelet2 mapなどの地図の編集を推奨しています。</p>
+<p><a href="https://drive.google.com/drive/folders/1nsYIg_3rwIjg0x6BC__aWVmnv-25nZkn">Mapのファイル置き場</a>からpointcloud map lanelet2 mapなどをダウンロードして編集してみましょう！</p>
+<p><a href="https://www.youtube.com/watch?v=GvZr707TmuM">VectorMapBuilderの使い方動画</a>にステップバイステップのインストラクションなどがあるので参考にしてみてください。</p>
+<p>作成したlanelet2 mapは<code>aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/map</code>に格納してください。</p>
+<h2 id="_4">提出してみる</h2>
+<p>ワークスペースのカスタマイズを行ったら<a href="../preliminaries/submission.html">ここ</a>を参考に提出をしてみましょう。</p>
+<h2 id="next-step"><a href="main-module.html">Next Step:メインモジュールについて知る</a></h2>
 
 
 

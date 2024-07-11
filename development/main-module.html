@@ -954,15 +954,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    <span class="md-ellipsis">
-      [任意]Mapの編集
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#autoware" class="md-nav__link">
     <span class="md-ellipsis">
       Autowareのカスタマイズ
@@ -1023,18 +1014,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#nextstep" class="md-nav__link">
     <span class="md-ellipsis">
-      参加者有志の参考記事
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      独自実装の作成例
+      NextStep:参考
     </span>
   </a>
   
@@ -1381,15 +1363,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    <span class="md-ellipsis">
-      [任意]Mapの編集
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#autoware" class="md-nav__link">
     <span class="md-ellipsis">
       Autowareのカスタマイズ
@@ -1450,18 +1423,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#nextstep" class="md-nav__link">
     <span class="md-ellipsis">
-      参加者有志の参考記事
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      独自実装の作成例
+      NextStep:参考
     </span>
   </a>
   
@@ -1486,11 +1450,6 @@
 
 
 <h1 id="_1">メインモジュール</h1>
-<h2 id="map">[任意]Mapの編集</h2>
-<p>2024年度のAIチャレンジでは<a href="https://tools.tier4.jp/feature/vector_map_builder_ll2/">VectorMapBuilder</a>などのツールを使ってpoint cloud map , lanelet2 mapなどの地図の編集を推奨しています。</p>
-<p><a href="https://drive.google.com/drive/folders/1nsYIg_3rwIjg0x6BC__aWVmnv-25nZkn">Mapのファイル置き場</a>からpointcloud map lanelet2 mapなどをダウンロードして編集してみましょう！</p>
-<p><a href="https://www.youtube.com/watch?v=GvZr707TmuM">VectorMapBuilderの使い方動画</a>にステップバイステップのインストラクションなどがあるので参考にしてみてください。</p>
-<p>作成したlanelet2 mapは<code>aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/map</code>に格納しましょう！</p>
 <h2 id="autoware">Autowareのカスタマイズ</h2>
 <p>本大会では、自動運転ソフトウェアAutowareをベースとした実装を用意しております．
 本ページでは、その背景と説明に加えて、どのように本実装を活用できるかの紹介を行います．</p>
@@ -1544,27 +1503,7 @@
 <p><img alt="dev" src="images/docker/dev.drawio.svg" /></p>
 <p>docker-eval</p>
 <p><img alt="eval" src="images/docker/eval.drawio.svg" /></p>
-<h2 id="_3">参加者有志の参考記事</h2>
-<p>参加者有志が取り組んでくださった取り組みは<a href="https://qiita.com/advent-calendar/2023/jidounten-ai">Advent Calendar</a>にまとめられていますので参考にしてみてください。</p>
-<p>どれから読もうか迷った方は2023年度コミュニティ貢献賞を受賞した田中新太さんが記載してくれた<a href="https://qiita.com/Arata-stu/items/4b03772348dca4f7ef89">こちらの記事</a>から読み進めると良いと思います。</p>
-<h2 id="_4">独自実装の作成例</h2>
-<p>とりあえず新たに自作パッケージを作成してみたい方は既存のパッケージをコピーしたり、<a href="https://github.com/AutomotiveAIChallenge/autoware-practice">autoware practice</a>をコピーする形で以下のように進めると良いと思います。</p>
-<ol>
-<li>元のパッケージをコピーして、下記を変更<ul>
-<li>パッケージ名</li>
-<li>フォルダ名</li>
-<li>コード</li>
-<li>package.xml</li>
-<li>CMakeLists.txt</li>
-</ul>
-</li>
-<li>aichallenge_submitの中に配置</li>
-<li>autoware_micro_awsim_launchから呼び出されるlaunchファイルを変更<ul>
-<li>参考例：pose_initializer_custom（ autoware_universe_launch/tier4_localization_launch/launch/util/util.launch.xmlから呼び出しております）</li>
-</ul>
-</li>
-</ol>
-<p>※コピー元のパッケージのライセンスを違反しないよう各自確認お願いいたします。</p>
+<h2 id="nextstep"><a href="reference.html">NextStep:参考</a></h2>
 
 
 

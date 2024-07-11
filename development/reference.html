@@ -1001,15 +1001,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      TroubleShooting
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1356,15 +1347,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      TroubleShooting
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1420,17 +1402,6 @@ ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{da
 </code></pre>
 <p>下記の様な画面が表示されたら起動完了です。終了するには各ターミナル上でCTRL + Cを入力します。
 <img alt="autoware" src="images/autoware.png" /></p>
-<h2 id="troubleshooting">TroubleShooting</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>基本的には、ChatGPTやGoogle検索で解決できる項目は多いです。それでも解決しない質問については、エラーのログの抜粋と添付をお願いします。</p>
-</div>
-<p>Q. <code>docker_run.sh: 行 35: rocker: コマンドが見つかりません</code></p>
-<p>A. <a href="../setup/docker.html">rockerのインストール</a>をお願いします。</p>
-<p>Q. <code>WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist</code></p>
-<p>A. Dockerイメージのビルドをお願いします。</p>
-<p>Q. Dockerがpullできません。</p>
-<p>A. <code>newgrp docker</code>か<code>sudo service docker restart</code>でdockerの再起動またはUbuntuの再起動をお願いします。</p>
 
 
 
