@@ -15,3 +15,59 @@ AIチャレンジではオープンソースソフトウェアを駆使してい
 参加者の皆様にはこちらのコードやパラメータをカスタマイズすることで開発を進めていただきますが、Autowareに不慣れな方はまずは[入門講座](../course/index.ja.md)を一通りやっていただくことをお勧めします。
 
 ※リポジトリ内のコードを使わず独自に開発する方など、各種仕様について知りたい方は[インターフェース仕様](../specifications/interface.ja.md)、[シミュレータ仕様](../specifications/simulator.ja.md)のページを参照してください。
+
+## 参加者有志の参考記事を読んでみる
+
+参加者有志が取り組んでくださった取り組みは[Advent Calendar](https://qiita.com/advent-calendar/2023/jidounten-ai)にまとめられていますので参考にしてみてください。
+
+どれから読もうか迷った方は2023年度コミュニティ貢献賞を受賞した田中新太さんが記載してくれた[こちらの記事](https://qiita.com/Arata-stu/items/4b03772348dca4f7ef89)から読み進めると良いと思います。
+
+## パラメータを変更してみる
+
+環境構築後何をして良いのかわからない方向けに、まずパラメータを調整してみましょう。
+今回は制御モジュールのsimple_pure_pursuitのパラメータを変更してみることにします。
+
+`$HOME/aichallenge-2024/aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/launch/reference.launch.xml`内の以下の`value`値を調整してみましょう。
+
+```xml
+<node pkg="simple_pure_pursuit" exec="simple_pure_pursuit" name="simple_pure_pursuit_node" output="screen">
+    <param name="use_external_target_vel" value="true"/>
+    <param name="external_target_vel" value="8.0"/>
+    <param name="lookahead_gain" value="0.4"/>
+    <param name="lookahead_min_distance" value="5.0"/>
+    <param name="speed_proportional_gain" value="1.0"/>
+```
+
+調整が終わったら再び[ビルド・実行](../setup/build-docker.ja.md)してみましょう。挙動が変わったことが確認できたかと思います。
+
+## 新規パッケージを作成してみる
+
+新たに自作パッケージを作成してみましょう。まずはオープンソースのパッケージや[autoware practice](https://github.com/AutomotiveAIChallenge/autoware-practice)をコピーしてみましょう。
+以下のように進めると良いと思います。
+
+1. 元のパッケージをコピーして、下記を変更
+    - パッケージ名
+    - フォルダ名
+    - コード
+    - package.xml
+    - CMakeLists.txt
+2. aichallenge_submitの中に配置
+3. aichallenge_submit_launch内のlaunchファイル(reference.launch.xml)を変更
+
+※コピー元のパッケージのライセンスを違反しないよう各自確認お願いいたします。
+
+## [任意]Mapの編集をしてみる
+
+2024年度のAIチャレンジでは[VectorMapBuilder](https://tools.tier4.jp/feature/vector_map_builder_ll2/)などのツールを使ってpoint cloud map , lanelet2 mapなどの地図の編集を推奨しています。
+
+[Mapのファイル置き場](https://drive.google.com/drive/folders/1nsYIg_3rwIjg0x6BC__aWVmnv-25nZkn)からpointcloud map lanelet2 mapなどをダウンロードして編集してみましょう！
+
+[VectorMapBuilderの使い方動画](https://www.youtube.com/watch?v=GvZr707TmuM)にステップバイステップのインストラクションなどがあるので参考にしてみてください。
+
+作成したlanelet2 mapは`aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/map`に格納してください。
+
+## 提出してみる
+
+ワークスペースのカスタマイズを行ったら[ここ](../preliminaries/submission.ja.md)を参考に提出をしてみましょう。
+
+## [Next Step:メインモジュールについて知る](./main-module.ja.md)
