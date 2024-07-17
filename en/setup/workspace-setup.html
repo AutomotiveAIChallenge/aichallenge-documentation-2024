@@ -18,15 +18,15 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
-        <title>Clone Workspace - AI Challenge 2024</title>
+        <title>Cloning the Workspace - AI Challenge 2024</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#clone-workspace" class="md-skip">
+        <a href="#cloning-the-workspace" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Clone Workspace
+              Cloning the Workspace
             
           </span>
         </div>
@@ -541,7 +541,7 @@
         
   
   <span class="md-ellipsis">
-    Information
+    Competition Information
   </span>
   
 
@@ -649,7 +649,7 @@
         
   
   <span class="md-ellipsis">
-    Check Results
+    Checking Results
   </span>
   
 
@@ -720,7 +720,7 @@
         
   
   <span class="md-ellipsis">
-    Requirements
+    Recommended Environment
   </span>
   
 
@@ -746,15 +746,72 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cloning the Workspace
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="workspace-setup.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Clone Workspace
+    Cloning the Workspace
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-the-competition-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloning the Competition Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step-installing-the-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Step: Installing the Virtual Environment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -772,7 +829,7 @@
         
   
   <span class="md-ellipsis">
-    Install Virtual Environment
+    Installing the Virtual Environment
   </span>
   
 
@@ -793,7 +850,7 @@
         
   
   <span class="md-ellipsis">
-    Download Headless AWSIM
+    Downloading Headless AWSIM
   </span>
   
 
@@ -814,7 +871,7 @@
         
   
   <span class="md-ellipsis">
-    Download Visible AWSIM (optional)
+    Downloading AWSIM with Visualization (Reference)
   </span>
   
 
@@ -835,7 +892,7 @@
         
   
   <span class="md-ellipsis">
-    Build docker
+    Building and Running the Competition Repository
   </span>
   
 
@@ -901,7 +958,7 @@
         
   
   <span class="md-ellipsis">
-    Workspace
+    How to Proceed with the AI Challenge
   </span>
   
 
@@ -1257,6 +1314,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-the-competition-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloning the Competition Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step-installing-the-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Step: Installing the Virtual Environment
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1273,7 +1365,18 @@
   
 
 
-<h1 id="clone-workspace">Clone Workspace</h1>
+<h1 id="cloning-the-workspace">Cloning the Workspace</h1>
+<h2 id="installing-dependencies">Installing Dependencies</h2>
+<p>Open a terminal with <code>Alt+Ctrl+T</code>, then paste the following commands using <code>Ctrl+Shift+P</code> and press <code>Enter</code>. First, install the necessary libraries.</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install -y git
+</code></pre>
+<h2 id="cloning-the-competition-repository">Cloning the Competition Repository</h2>
+<p>Clone the workspace repository. Here, we specify the home directory, but you can place it in any directory of your choice.</p>
+<pre><code class="language-bash">cd ~
+git clone https://github.com/AutomotiveAIChallenge/aichallenge-2024.git
+</code></pre>
+<h2 id="next-step-installing-the-virtual-environment"><a href="docker.html">Next Step: Installing the Virtual Environment</a></h2>
 
 
 

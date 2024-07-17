@@ -18,15 +18,15 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
-        <title>Requirements - AI Challenge 2024</title>
+        <title>Recommended Environment - AI Challenge 2024</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements" class="md-skip">
+        <a href="#recommended-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Requirements
+              Recommended Environment
             
           </span>
         </div>
@@ -541,7 +541,7 @@
         
   
   <span class="md-ellipsis">
-    Information
+    Competition Information
   </span>
   
 
@@ -649,7 +649,7 @@
         
   
   <span class="md-ellipsis">
-    Check Results
+    Checking Results
   </span>
   
 
@@ -725,15 +725,72 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Recommended Environment
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="requirements.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Requirements
+    Recommended Environment
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-headless-awsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Headless AWSIM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-awsim-with-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using AWSIM with Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step-clone-the-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Step: Clone the Workspace
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -751,7 +808,7 @@
         
   
   <span class="md-ellipsis">
-    Clone Workspace
+    Cloning the Workspace
   </span>
   
 
@@ -772,7 +829,7 @@
         
   
   <span class="md-ellipsis">
-    Install Virtual Environment
+    Installing the Virtual Environment
   </span>
   
 
@@ -793,7 +850,7 @@
         
   
   <span class="md-ellipsis">
-    Download Headless AWSIM
+    Downloading Headless AWSIM
   </span>
   
 
@@ -814,7 +871,7 @@
         
   
   <span class="md-ellipsis">
-    Download Visible AWSIM (optional)
+    Downloading AWSIM with Visualization (Reference)
   </span>
   
 
@@ -835,7 +892,7 @@
         
   
   <span class="md-ellipsis">
-    Build docker
+    Building and Running the Competition Repository
   </span>
   
 
@@ -901,7 +958,7 @@
         
   
   <span class="md-ellipsis">
-    Workspace
+    How to Proceed with the AI Challenge
   </span>
   
 
@@ -1257,6 +1314,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-headless-awsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Headless AWSIM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-awsim-with-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using AWSIM with Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step-clone-the-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Step: Clone the Workspace
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1273,7 +1365,34 @@
   
 
 
-<h1 id="requirements">Requirements</h1>
+<h1 id="recommended-environment">Recommended Environment</h1>
+<p>For the PC used in this competition, we recommend the following specifications. While it is possible to run with lower specifications, it may result in unstable execution speeds on the ROS 2 side, causing significant variations in behavior during simulations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you only have a Windows environment, please install Ubuntu 22.04. While it is possible to install Ubuntu on the same disk as your Windows environment, if you are not familiar with the process, you may accidentally damage your Windows environment. Therefore, we strongly recommend purchasing a new external or internal SSD and installing Ubuntu there.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For guidance on installing Ubuntu, <a href="https://qiita.com/kiwsdiv/items/1fa6cf451225492b33d8">this article</a> may be helpful.</p>
+</div>
+<h2 id="using-headless-awsim">Using Headless AWSIM</h2>
+<ul>
+<li>OS: Ubuntu 22.04</li>
+<li>CPU: Intel Core i5 (4 cores) or higher (recommended)</li>
+<li>Memory:</li>
+<li>Minimum: 8 GB</li>
+<li>Recommended: 16 GB or more</li>
+<li>SSD: 60 GB or more</li>
+</ul>
+<h2 id="using-awsim-with-visualization">Using AWSIM with Visualization</h2>
+<ul>
+<li>OS: Ubuntu 22.04</li>
+<li>CPU: Intel Core i7 (8 cores) or higher</li>
+<li>GPU: NVIDIA GeForce with 8 GB VRAM</li>
+<li>Memory: 16 GB or more</li>
+<li>Storage: SSD 60 GB or more</li>
+</ul>
+<h2 id="next-step-clone-the-workspace"><a href="workspace-setup.html">Next Step: Clone the Workspace</a></h2>
 
 
 

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -72,6 +72,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#reference" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -536,7 +541,7 @@
         
   
   <span class="md-ellipsis">
-    Information
+    Competition Information
   </span>
   
 
@@ -644,7 +649,7 @@
         
   
   <span class="md-ellipsis">
-    Check Results
+    Checking Results
   </span>
   
 
@@ -710,7 +715,7 @@
         
   
   <span class="md-ellipsis">
-    Requirements
+    Recommended Environment
   </span>
   
 
@@ -731,7 +736,7 @@
         
   
   <span class="md-ellipsis">
-    Clone Workspace
+    Cloning the Workspace
   </span>
   
 
@@ -752,7 +757,7 @@
         
   
   <span class="md-ellipsis">
-    Install Virtual Environment
+    Installing the Virtual Environment
   </span>
   
 
@@ -773,7 +778,7 @@
         
   
   <span class="md-ellipsis">
-    Download Headless AWSIM
+    Downloading Headless AWSIM
   </span>
   
 
@@ -794,7 +799,7 @@
         
   
   <span class="md-ellipsis">
-    Download Visible AWSIM (optional)
+    Downloading AWSIM with Visualization (Reference)
   </span>
   
 
@@ -815,7 +820,7 @@
         
   
   <span class="md-ellipsis">
-    Build docker
+    Building and Running the Competition Repository
   </span>
   
 
@@ -886,7 +891,7 @@
         
   
   <span class="md-ellipsis">
-    Workspace
+    How to Proceed with the AI Challenge
   </span>
   
 
@@ -930,6 +935,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="reference.html" class="md-nav__link md-nav__link--active">
         
@@ -940,6 +958,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#incorporating-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incorporating Changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-awsim-with-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing AWSIM with Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-three-terminals-for-debugging-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up Three Terminals for Debugging (Reference)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1247,6 +1311,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#incorporating-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incorporating Changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-awsim-with-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing AWSIM with Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-three-terminals-for-debugging-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up Three Terminals for Debugging (Reference)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1264,9 +1365,42 @@
   
 
 
-  <h1>Reference</h1>
-
-
+<h1 id="reference">Reference</h1>
+<h2 id="incorporating-changes">Incorporating Changes</h2>
+<p>When there are significant updates to the competition environment, announcements will be made accordingly. For reference, the following instructions are provided.</p>
+<p>Update Docker</p>
+<pre><code class="language-bash">docker pull ghcr.io/automotiveaichallenge/autoware-universe:humble-latest
+</code></pre>
+<p>Update Repository</p>
+<pre><code class="language-sh">cd aichallenge2024 # path to aichallenge2024
+git pull origin/main
+</code></pre>
+<h2 id="installing-awsim-with-visualization">Installing AWSIM with Visualization</h2>
+<p>If you want to check the simulation screen of AWSIM, follow the steps in <a href="../setup/visible-simulation.html">this guide</a> to install AWSIM with visualization.</p>
+<h2 id="setting-up-three-terminals-for-debugging-reference">Setting up Three Terminals for Debugging (Reference)</h2>
+<p>To develop with three terminals for debugging, open the first terminal using <code>Alt+Ctrl+T</code> and then execute the following commands by pasting them with <code>Ctrl+Shift+P</code> and pressing <code>Enter</code>.</p>
+<pre><code class="language-bash">cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+</code></pre>
+<pre><code class="language-bash">cd /aichallenge
+bash run_simulator.bash
+</code></pre>
+<p>Open the second terminal using <code>Alt+Ctrl+T</code> and then execute the following commands by pasting them with <code>Ctrl+Shift+P</code> and pressing <code>Enter</code>.</p>
+<pre><code class="language-bash">cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+</code></pre>
+<pre><code class="language-bash">cd /aichallenge
+bash run_autoware.bash
+</code></pre>
+<p>Open the third terminal using <code>Alt+Ctrl+T</code> and then execute the following commands by pasting them with <code>Ctrl+Shift+P</code> and pressing <code>Enter</code>.</p>
+<pre><code class="language-bash">cd ~/aichallenge-2024
+./docker_run.sh dev cpu
+</code></pre>
+<pre><code class="language-bash">cd /aichallenge
+ros2 topic pub --once /control/control_mode_request_topic std_msgs/msg/Bool '{data: true}' &gt;/dev/null
+</code></pre>
+<p>When the screen below appears, the startup is complete. To terminate, press CTRL + C in each terminal.
+<img alt="autoware" src="../../development/images/autoware.png" /></p>
 
 
 
