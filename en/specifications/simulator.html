@@ -1092,6 +1092,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#commandline-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commandline Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Operation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topic-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topic Operation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#vehicle-racing-kart" class="md-nav__link">
     <span class="md-ellipsis">
       Vehicle (Racing Kart)
@@ -1167,6 +1194,30 @@
       Sensor Configuration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Sensor Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnss" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imu" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMU
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1396,6 +1447,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#commandline-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commandline Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Operation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topic-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topic Operation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#vehicle-racing-kart" class="md-nav__link">
     <span class="md-ellipsis">
       Vehicle (Racing Kart)
@@ -1472,6 +1550,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sensor Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnss" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imu" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMU
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1501,6 +1603,146 @@
 <h2 id="overview">Overview</h2>
 <p>This page describes the specifications of the simulator used in the AI Challenge.</p>
 <p>The simulator is based on the open-source autonomous driving simulator "<a href="https://github.com/tier4/AWSIM">AWSIM</a>" developed for Autoware.</p>
+<h2 id="commandline-options">Commandline Options</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--timeout</td>
+<td>float</td>
+<td>420.0</td>
+<td>Set session timeout seconds.</td>
+</tr>
+<tr>
+<td>--endless</td>
+<td>bool</td>
+<td>false</td>
+<td>Enable/disable session timeout.</td>
+</tr>
+<tr>
+<td>--pit-stop</td>
+<td>bool</td>
+<td>true</td>
+<td>Enable/disable features related to pit-stop.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="keyboard-operation">Keyboard Operation</h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quit</td>
+<td>Esc</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>Space</td>
+</tr>
+<tr>
+<td>Switch camera</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Accel</td>
+<td>Arrow Up</td>
+</tr>
+<tr>
+<td>Brake</td>
+<td>Arrow Down</td>
+</tr>
+<tr>
+<td>Steering</td>
+<td>Arrow Left, Right</td>
+</tr>
+<tr>
+<td>Gear (D)</td>
+<td>D</td>
+</tr>
+<tr>
+<td>Gear (R)</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Gear (N)</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Gear (P)</td>
+<td>P</td>
+</tr>
+</tbody>
+</table>
+<h2 id="topic-operation">Topic Operation</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/aichallenge/awsim/status</td>
+<td>std_msgs.msg.Float32MultiArray</td>
+<td>Get status of the simulation.</td>
+</tr>
+<tr>
+<td>/aichallenge/awsim/change_time_scale</td>
+<td>std_msgs.msg.Float32</td>
+<td>Set the timescale for the simulation.</td>
+</tr>
+<tr>
+<td>/aichallenge/awsim/reset</td>
+<td>std_msgs.msg.Empty</td>
+<td>Reset the simulation.</td>
+</tr>
+</tbody>
+</table>
+<p>The above <code>/aichallenge/awsim/status</code> has the following structure.</p>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>session timeout</td>
+</tr>
+<tr>
+<td>1</td>
+<td>lap count</td>
+</tr>
+<tr>
+<td>2</td>
+<td>lap time</td>
+</tr>
+<tr>
+<td>3</td>
+<td>section</td>
+</tr>
+<tr>
+<td>4</td>
+<td>timescale</td>
+</tr>
+</tbody>
+</table>
 <h2 id="vehicle-racing-kart">Vehicle (Racing Kart)</h2>
 <p>The vehicle conforms to the specifications of the <a href="https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/">EGO Vehicle</a> in AWSIM and is designed with specifications close to an actual racing kart.</p>
 <p><img alt="vehicle-appearance" src="../../specifications/images/vehicle-appearance.png" /></p>
@@ -1686,7 +1928,78 @@
 </tbody>
 </table>
 <h3 id="sensor-configuration">Sensor Configuration</h3>
-<p>TODO</p>
+<h4 id="gnss">GNSS</h4>
+<p>The GNSS is mounted at the following position relative to the vehicle base link.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>0.0 m</td>
+</tr>
+<tr>
+<td>y</td>
+<td>0.0 m</td>
+</tr>
+<tr>
+<td>z</td>
+<td>0.0 m</td>
+</tr>
+<tr>
+<td>roll</td>
+<td>0.0 rad</td>
+</tr>
+<tr>
+<td>pitch</td>
+<td>0.0 rad</td>
+</tr>
+<tr>
+<td>yaw</td>
+<td>0.0 rad</td>
+</tr>
+</tbody>
+</table>
+<h4 id="imu">IMU</h4>
+<p>The IMU is mounted at the following position relative to the vehicle base link.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>0.0 m</td>
+</tr>
+<tr>
+<td>y</td>
+<td>0.0 m</td>
+</tr>
+<tr>
+<td>z</td>
+<td>0.0 m</td>
+</tr>
+<tr>
+<td>roll</td>
+<td>0.0 rad</td>
+</tr>
+<tr>
+<td>pitch</td>
+<td>0.0 rad</td>
+</tr>
+<tr>
+<td>yaw</td>
+<td>0.0 rad</td>
+</tr>
+</tbody>
+</table>
 
 
 
