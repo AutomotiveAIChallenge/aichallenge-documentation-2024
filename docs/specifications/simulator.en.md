@@ -6,6 +6,47 @@ This page describes the specifications of the simulator used in the AI Challenge
 
 The simulator is based on the open-source autonomous driving simulator "[AWSIM](https://github.com/tier4/AWSIM)" developed for Autoware.
 
+## Commandline Options
+
+| Option     | Type  | Default    | Description                                  |
+| ---------- | ----- | ---------- | -------------------------------------------- |
+| --timeout  | float | 420.0      | Set session timeout seconds.                 |
+| --endless  | bool  | false      | Enable/disable session timeout.              |
+| --pit-stop | bool  | true       | Enable/disable features related to pit-stop. |
+
+## Keyboard Operation
+
+| Operation          | Key               |
+| ------------------ | ----------------- |
+| Quit               | Esc               |
+| Reset              | Space             |
+| Switch camera      | C                 |
+| Accel              | Arrow Up          |
+| Brake              | Arrow Down        |
+| Steering           | Arrow Left, Right |
+| Gear (D)           | D                 |
+| Gear (R)           | R                 |
+| Gear (N)           | N                 |
+| Gear (P)           | P                 |
+
+## Topic Operation
+
+| Topic                                | Type                           | Description                           |
+| ------------------------------------ | ------------------------------ | ------------------------------------- |
+| /aichallenge/awsim/status            | std_msgs.msg.Float32MultiArray | Get status of the simulation.         |
+| /aichallenge/awsim/change_time_scale | std_msgs.msg.Float32           | Set the timescale for the simulation. |
+| /aichallenge/awsim/reset             | std_msgs.msg.Empty             | Reset the simulation.                 |
+
+The above `/aichallenge/awsim/status` has the following structure.
+
+| Index | Value           |
+| ----- | --------------- |
+| 0     | session timeout |
+| 1     | lap count       |
+| 2     | lap time        |
+| 3     | section         |
+| 4     | timescale       |
+
 ## Vehicle (Racing Kart)
 
 The vehicle conforms to the specifications of the [EGO Vehicle](https://tier4.github.io/AWSIM/Components/Vehicle/EgoVehicle/) in AWSIM and is designed with specifications close to an actual racing kart.
@@ -91,4 +132,28 @@ The Wheel Collider is set as follows. For more details on wheel colliders, pleas
 
 ### Sensor Configuration
 
-TODO
+#### GNSS
+
+The GNSS is mounted at the following position relative to the vehicle base link.
+
+| **Item** | **Value** |
+| -------- | --------- |
+| x        | 0.0 m     |
+| y        | 0.0 m     |
+| z        | 0.0 m     |
+| roll     | 0.0 rad   |
+| pitch    | 0.0 rad   |
+| yaw      | 0.0 rad   |
+
+#### IMU
+
+The IMU is mounted at the following position relative to the vehicle base link.
+
+| **Item** | **Value** |
+| -------- | --------- |
+| x        | 0.0 m     |
+| y        | 0.0 m     |
+| z        | 0.0 m     |
+| roll     | 0.0 rad   |
+| pitch    | 0.0 rad   |
+| yaw      | 0.0 rad   |
