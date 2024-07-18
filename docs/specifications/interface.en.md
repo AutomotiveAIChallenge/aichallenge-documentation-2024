@@ -14,6 +14,9 @@
 | Publisher    | `/sensing/gnss/pose_with_covariance` | `geometry_msgs/msg/PoseWithCovarianceStamped`            |
 | Publisher    | `/sensing/imu/imu_raw`               | `sensor_msgs/msg/Imu`                                    |
 | Publisher    | `/aichallenge/objects`               | `sstd_msgs/msg/Float64MultiArray`                        |
+| Publisher    | `/aichallenge/pitstop/area`          | `std_msgs.msg.Float64MultiArray`                         |
+| Publisher    | `/aichallenge/pitstop/condition`     | `std_msgs.msg.Int32`                                     |
+| Publisher    | `/aichallenge/pitstop/status`        | `std_msgs.msg.Float32`                                   |
 
 <!--
 | Subscription | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationCommandStamped`          |
@@ -92,3 +95,29 @@
 | data[N * 4 + 1] | Y coordinate of Nth object |
 | data[N * 4 + 2] | Z coordinate of Nth object |
 | data[N * 4 + 3] | Radius of Nth object      |
+
+### `/aichallenge/pitstop/area`
+
+| Name    | Description                                   |
+| ------- | --------------------------------------------- |
+| data[0] | X position of Pit Stop Area                   |
+| data[1] | Y position of Pit Stop Area                   |
+| data[2] | Z position of Pit Stop Area                   |
+| data[3] | X quaternion of Pit Stop Area                 |
+| data[4] | Y quaternion of Pit Stop Area                 |
+| data[5] | Z quaternion of Pit Stop Area                 |
+| data[6] | W quaternion of Pit Stop Area                 |
+| data[7] | X size of of Pit Stop Area                    |
+| data[8] | Y size of of Pit Stop Area                    |
+
+### `/aichallenge/pitstop/condition`
+
+| Name | Description             |
+| ---- | ----------------------- |
+| data | Current condition value |
+
+### `/aichallenge/pitstop/status`
+
+| Name | Description                           |
+| ---- | ------------------------------------- |
+| data | Number of seconds a pit stop is valid |
