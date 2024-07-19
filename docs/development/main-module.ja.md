@@ -1,15 +1,5 @@
 # メインモジュール
 
-## [任意]Mapの編集
-
-2024年度のAIチャレンジでは[VectorMapBuilder](https://tools.tier4.jp/feature/vector_map_builder_ll2/)などのツールを使ってpoint cloud map , lanelet2 mapなどの地図の編集を推奨しています。
-
-[Mapのファイル置き場](https://drive.google.com/drive/folders/1nsYIg_3rwIjg0x6BC__aWVmnv-25nZkn)からpointcloud map lanelet2 mapなどをダウンロードして編集してみましょう！
-
-[VectorMapBuilderの使い方動画](https://www.youtube.com/watch?v=GvZr707TmuM)にステップバイステップのインストラクションなどがあるので参考にしてみてください。
-
-作成したlanelet2 mapは`aichallenge/workspace/src/aichallenge_submit/aichallenge_submit_launch/map`に格納しましょう！
-
 ## Autowareのカスタマイズ
 
 本大会では、自動運転ソフトウェアAutowareをベースとした実装を用意しております．
@@ -79,24 +69,16 @@ Autoware-Microを活用することにより、本大会での課題となる：
 
 ![racing-diagram](./images/architecture/racing_simple.png)
 
-昨年度の取り組みはこちらのアドベントカレンダーにまとめられていますので参考にしてみてください。
+## ワークスペースの構成
 
-[アドベントカレンダー](https://qiita.com/advent-calendar/2023/jidounten-ai)
+参考までに本大会で使用しているワークスペースの構成は以下となります。
 
-どれから読もうか迷った方は2023年度コミュニティ貢献賞を受賞した田中新太さんが記載してくれた[こちらの記事](https://qiita.com/Arata-stu/items/4b03772348dca4f7ef89)から読み進めると良いと思います。
+docker-dev
 
-## 独自実装の作成例
+![dev](./images/docker/dev.drawio.svg)
 
-とりあえず新たに自作パッケージを作成してみたい方は既存のパッケージをコピーしたり、[autoware practice](https://github.com/AutomotiveAIChallenge/autoware-practice)をコピーする形で以下のように進めると良いと思います。
+docker-eval
 
-1. 元のパッケージをコピーして、下記を変更
-    - パッケージ名
-    - フォルダ名
-    - コード
-    - package.xml
-    - CMakeLists.txt
-2. aichallenge_submitの中に配置
-3. autoware_micro_awsim_launchから呼び出されるlaunchファイルを変更
-    - 参考例：pose_initializer_custom（ autoware_universe_launch/tier4_localization_launch/launch/util/util.launch.xmlから呼び出しております）
+![eval](./images/docker/eval.drawio.svg)
 
-※コピー元のパッケージのライセンスを違反しないよう各自確認お願いいたします。
+## [NextStep:参考](./reference.ja.md)

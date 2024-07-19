@@ -1,3 +1,11 @@
-# 移動しました
+# Redirect
 
-このページの内容は[こちら](../../setup/requirements.ja.md)に移動しました。
+<!doctype html>
+<html>
+<head>
+<title>Redirect</title>
+<meta http-equiv="refresh" content="0;url=../../setup/requirements.html">
+</head>
+<body>
+</body>
+</html>

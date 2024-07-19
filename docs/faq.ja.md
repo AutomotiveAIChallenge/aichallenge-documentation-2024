@@ -1,5 +1,9 @@
 # FAQ
 
+!!! warning
+
+    基本的には、ChatGPTやGoogle検索で解決できる項目は多いです。それでも解決しない質問については、エラーのログの抜粋と添付をお願いします。
+
 ## 環境構築
 
 ### <u>AWSIM and Autoware間の通信が安定しません。</u>
@@ -77,6 +81,24 @@ AWSIMを起動した直後にcoredumpで終了する場合、GPUのメモリが�
 
 `sudo apt upgrade`で治ったという事例がありますので、内容を確認の上、お試しください。
 また、[過去Issue](https://github.com/ros2/rviz/issues/948)にてご質問内容と似た質問がありましたので、こちらも合わせてご確認ください。
+
+---
+
+### <u>`docker_run.sh: 行 35: rocker: コマンドが見つかりません`が出ます。</u>
+
+[rockerのインストール](../docs/setup/docker.ja.md)をお願いします。
+
+---
+
+### <u>`WARNING unable to detect os for base image 'aichallenge-2024-dev', maybe the base image does not exist`が出ます。</u>
+
+Dockerイメージのビルドをお願いします。
+
+---
+
+### <u>Dockerがpullできません</u>
+
+`newgrp docker`か`sudo service docker restart`でdockerの再起動またはUbuntuの再起動をお願いします。
 
 ---
 

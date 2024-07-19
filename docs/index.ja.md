@@ -1,5 +1,7 @@
 # Japan Automotive AI Challenge 2024
 
+![top_image](./assets/top_image.jpg)
+
 ## コンセプト
 
 !!! info
@@ -30,13 +32,15 @@
 
 オンラインのシミュレーションで実施します。予選の競技はデジタルツイン指向のAWSIMを用いてコースをより速く走行することを目指します。参加者は、Autoware※の構造を学ぶだけでなく、実際に行動、判断の部分についてパラメータ調整を行い、また必要に応じて新しいアルゴリズムの開発も行います。
 
+<iframe width="960" height="540" src="https://www.youtube.com/embed/cM3Up6fgpWI?si=S6N3wzBEgXVpl54x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### 決勝
 
 競技車両であるEVレーシングカートを使用した大会を行います。シミュレーションで得た知見を実車両に活かしつつ、AWSIMでは再現できない実車ならではの課題にもチャレンジします。
 
 例えば参加者には実車両に適用するため、パラメータ調整にも挑戦してもらいます。また、シミュレーションでは再現できないノイズ処理、遅延対策のアルゴリズム開発も行います。
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/GsuCUoNrMDM?si=zoh1mL_U0yRnB2fj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="960" height="540" src="https://www.youtube.com/embed/GsuCUoNrMDM?si=zoh1mL_U0yRnB2fj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 表彰
 
@@ -45,7 +49,7 @@
 
 ## 走行コース
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/K-N-2nLXXF8?si=pZ2NovtO_IGwsa_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="960" height="540" src="https://www.youtube.com/embed/K-N-2nLXXF8?si=pZ2NovtO_IGwsa_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 使用車両
 
