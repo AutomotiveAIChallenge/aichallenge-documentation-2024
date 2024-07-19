@@ -123,7 +123,7 @@ State lattice plannerとは、車両の現在の状態と目標状態の間に�
 
 ![alt text](images/3-2/nodemap.jpg)
 
-まず`src/autoware_practice_lidar_simulator/config/object_centers.csv`を修正して障害物の位置を変更します。
+`src/autoware_practice_lidar_simulator/config/object_centers.csv`を修正して障害物の位置を変更します。
 
 ```diff
 x_center,y_center
@@ -135,21 +135,14 @@ x_center,y_center
 +  15.0,-1.0
 ```
 
-次に`src/autoware_practice_course/src/velocity_planning/trajectory_loader.cpp`を修正してtrajectory_loaderがpublishするトピックを変更します。
-
-```diff
-- pub_trajectory_ = create_publisher<Trajectory>("/planning/scenario_planning/trajectory", rclcpp::QoS(1));
-+ pub_trajectory_ = create_publisher<Trajectory>("/planning/trajectory_loader/trajectory", rclcpp::QoS(1));
-```
-
-最後に以下のコマンドを別々のターミナルで実行して画像のように障害物を適切に回避できるか確かめましょう。
+以下のコマンドを別々のターミナルで実行して画像のように障害物を適切に回避できるか確かめましょう。
 
 ```bash
 ros2 launch autoware_practice_launch practice.launch.xml
 ```
 
 ```bash
-ros2 run autoware_practice_course trajectory_loader --ros-args -p path_file:=src/autoware_practice_course/config/trajectory.csv
+ros2 run autoware_practice_course trajectory_loader --ros-args -p path_file:=src/autoware_practice_course/config/trajectory.csv --remap /planning/scenario_planning/trajectory:=/planning/trajectory_loader/trajectory
 ```
 
 ```bash
