@@ -13,7 +13,10 @@
 | Publisher    | `/vehicle/status/gear_status`        | `autoware_auto_vehicle_msgs/msg/GearReport`              |
 | Publisher    | `/sensing/gnss/pose_with_covariance` | `geometry_msgs/msg/PoseWithCovarianceStamped`            |
 | Publisher    | `/sensing/imu/imu_raw`               | `sensor_msgs/msg/Imu`                                    |
-| Publisher    | `/aichallenge/objects`               | `sstd_msgs.msg.Float64MultiArray`                        |
+| Publisher    | `/aichallenge/objects`               | `std_msgs.msg.Float64MultiArray`                         |
+| Publisher    | `/aichallenge/pitstop/area`          | `std_msgs.msg.Float64MultiArray`                         |
+| Publisher    | `/aichallenge/pitstop/condition`     | `std_msgs.msg.Int32`                                     |
+| Publisher    | `/aichallenge/pitstop/status`        | `std_msgs.msg.Float32`                                   |
 
 <!--
 | Subscription | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationCommandStamped`          |
@@ -92,3 +95,29 @@
 | data[N * 4 + 1] | N番目の仮想障害物のY座標 |
 | data[N * 4 + 2] | N番目の仮想障害物のZ座標 |
 | data[N * 4 + 3] | N番目の仮想障害物の半径  |
+
+### `/aichallenge/pitstop/area`
+
+| Name    | Description                                   |
+| ------- | --------------------------------------------- |
+| data[0] | ピットストップエリア中心のX座標               |
+| data[1] | ピットストップエリア中心のY座標               |
+| data[2] | ピットストップエリア中心のZ座標               |
+| data[3] | ピットストップエリアの方向のクオータニオンX値 |
+| data[4] | ピットストップエリアの方向のクオータニオンY値 |
+| data[5] | ピットストップエリアの方向のクオータニオンZ値 |
+| data[6] | ピットストップエリアの方向のクオータニオンW値 |
+| data[7] | ピットストップエリアのX方向のサイズ           |
+| data[8] | ピットストップエリアのY方向のサイズ           |
+
+### `/aichallenge/pitstop/condition`
+
+| Name | Description            |
+| ---- | ---------------------- |
+| data | 車両のコンディション値 |
+
+### `/aichallenge/pitstop/status`
+
+| Name | Description                            |
+| ---- | -------------------------------------- |
+| data | ピットストップの判定が成立している秒数 |
