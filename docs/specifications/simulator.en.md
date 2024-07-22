@@ -8,11 +8,14 @@ The simulator is based on the open-source autonomous driving simulator "[AWSIM](
 
 ## Commandline Options
 
-| Option     | Type  | Default    | Description                                  |
-| ---------- | ----- | ---------- | -------------------------------------------- |
-| --timeout  | float | 420.0      | Set session timeout seconds.                 |
-| --endless  | bool  | false      | Enable/disable session timeout.              |
-| --pit-stop | bool  | true       | Enable/disable features related to pit-stop. |
+| Option     | Type   | Default    | Description                                           |
+| ---------- | ------ | ---------- | ----------------------------------------------------- |
+| --timeout  | float  | 420.0      | Set session timeout seconds.                          |
+| --endless  | bool   | false      | Enable/disable session timeout.                       |
+| --pit-stop | bool   | true       | Enable/disable features related to pit-stop.          |
+| --replay0  | string |            | Load driving logs and replay as a different vehicle.  |
+
+Use `result-details.json` for the driving log for replay. Also, replay supports 10 vehicles from `--replay0` to `--replay9`.
 
 ## Keyboard Operation
 
