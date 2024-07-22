@@ -1122,6 +1122,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#aichallengepitstoparea" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aichallengepitstopcondition" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aichallengepitstopstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/status
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1462,6 +1489,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#aichallengepitstoparea" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aichallengepitstopcondition" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aichallengepitstopstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/status
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1545,6 +1599,21 @@
 <td>Publisher</td>
 <td><code>/aichallenge/objects</code></td>
 <td><code>sstd_msgs/msg/Float64MultiArray</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td><code>/aichallenge/pitstop/area</code></td>
+<td><code>std_msgs.msg.Float64MultiArray</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td><code>/aichallenge/pitstop/condition</code></td>
+<td><code>std_msgs.msg.Int32</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td><code>/aichallenge/pitstop/status</code></td>
+<td><code>std_msgs.msg.Float32</code></td>
 </tr>
 </tbody>
 </table>
@@ -1770,6 +1839,83 @@
 <tr>
 <td>data[N * 4 + 3]</td>
 <td>Radius of Nth object</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aichallengepitstoparea"><code>/aichallenge/pitstop/area</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data[0]</td>
+<td>X position of Pit Stop Area</td>
+</tr>
+<tr>
+<td>data[1]</td>
+<td>Y position of Pit Stop Area</td>
+</tr>
+<tr>
+<td>data[2]</td>
+<td>Z position of Pit Stop Area</td>
+</tr>
+<tr>
+<td>data[3]</td>
+<td>X quaternion of Pit Stop Area</td>
+</tr>
+<tr>
+<td>data[4]</td>
+<td>Y quaternion of Pit Stop Area</td>
+</tr>
+<tr>
+<td>data[5]</td>
+<td>Z quaternion of Pit Stop Area</td>
+</tr>
+<tr>
+<td>data[6]</td>
+<td>W quaternion of Pit Stop Area</td>
+</tr>
+<tr>
+<td>data[7]</td>
+<td>X size of of Pit Stop Area</td>
+</tr>
+<tr>
+<td>data[8]</td>
+<td>Y size of of Pit Stop Area</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aichallengepitstopcondition"><code>/aichallenge/pitstop/condition</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>Current condition value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aichallengepitstopstatus"><code>/aichallenge/pitstop/status</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>Number of seconds a pit stop is valid</td>
 </tr>
 </tbody>
 </table>

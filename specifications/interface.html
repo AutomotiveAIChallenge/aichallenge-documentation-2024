@@ -1122,6 +1122,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#aichallengepitstoparea" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aichallengepitstopcondition" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aichallengepitstopstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/status
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1462,6 +1489,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#aichallengepitstoparea" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/area
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aichallengepitstopcondition" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aichallengepitstopstatus" class="md-nav__link">
+    <span class="md-ellipsis">
+      /aichallenge/pitstop/status
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1544,7 +1598,22 @@
 <tr>
 <td>Publisher</td>
 <td><code>/aichallenge/objects</code></td>
-<td><code>sstd_msgs.msg.Float64MultiArray</code></td>
+<td><code>std_msgs.msg.Float64MultiArray</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td><code>/aichallenge/pitstop/area</code></td>
+<td><code>std_msgs.msg.Float64MultiArray</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td><code>/aichallenge/pitstop/condition</code></td>
+<td><code>std_msgs.msg.Int32</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td><code>/aichallenge/pitstop/status</code></td>
+<td><code>std_msgs.msg.Float32</code></td>
 </tr>
 </tbody>
 </table>
@@ -1770,6 +1839,83 @@
 <tr>
 <td>data[N * 4 + 3]</td>
 <td>N番目の仮想障害物の半径</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aichallengepitstoparea"><code>/aichallenge/pitstop/area</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data[0]</td>
+<td>ピットストップエリア中心のX座標</td>
+</tr>
+<tr>
+<td>data[1]</td>
+<td>ピットストップエリア中心のY座標</td>
+</tr>
+<tr>
+<td>data[2]</td>
+<td>ピットストップエリア中心のZ座標</td>
+</tr>
+<tr>
+<td>data[3]</td>
+<td>ピットストップエリアの方向のクオータニオンX値</td>
+</tr>
+<tr>
+<td>data[4]</td>
+<td>ピットストップエリアの方向のクオータニオンY値</td>
+</tr>
+<tr>
+<td>data[5]</td>
+<td>ピットストップエリアの方向のクオータニオンZ値</td>
+</tr>
+<tr>
+<td>data[6]</td>
+<td>ピットストップエリアの方向のクオータニオンW値</td>
+</tr>
+<tr>
+<td>data[7]</td>
+<td>ピットストップエリアのX方向のサイズ</td>
+</tr>
+<tr>
+<td>data[8]</td>
+<td>ピットストップエリアのY方向のサイズ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aichallengepitstopcondition"><code>/aichallenge/pitstop/condition</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>車両のコンディション値</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aichallengepitstopstatus"><code>/aichallenge/pitstop/status</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>ピットストップの判定が成立している秒数</td>
 </tr>
 </tbody>
 </table>
