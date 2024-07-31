@@ -145,7 +145,6 @@ The center point detects cars, trucks, and pedestrians, but not untagged objects
 
 Although Autoware mini is the ideal perception configuration, understanding these issues and selectively implementing nodes is challenging. Ensuring the center point functions correctly may be important. [Reference](https://autowarefoundation.github.io/autoware.universe/main/perception/autoware_lidar_centerpoint/)
 
-
 ---
 
 ### AWSIM
