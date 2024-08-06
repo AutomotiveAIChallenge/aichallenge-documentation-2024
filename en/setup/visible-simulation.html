@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
@@ -1483,8 +1483,19 @@ sudo docker run --rm --runtime=nvidia --gpus all nvidia/cuda:11.6.2-base-ubuntu2
 sudo apt install -y libvulkan1
 </code></pre>
 <h2 id="downloading-awsim">Downloading AWSIM</h2>
-<p>Download the latest <code>AWSIM_GPU_**.zip</code> from <a href="https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y">Google Drive</a> and extract it to <code>aichallenge-2024/aichallenge/simulator</code>.</p>
-<p>Verify that the executable file exists at <code>aichallenge-2024/aichallenge/simulator/AWSIM_GPU_**/AWSIM.x86_64</code>.</p>
+<ol>
+<li>
+<p>Download the latest <code>AWSIM_GPU_**.zip</code> file from <a href="https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y">Google Drive</a> and extract it to <code>aichallenge-2024/aichallenge/simulator</code>.</p>
+</li>
+<li>
+<p>Confirm that the executable file exists at <code>aichallenge-2024/aichallenge/simulator/AWSIM/AWSIM.x86_64</code>.</p>
+</li>
+<li>
+<p>Change the permissions as shown in the diagram.</p>
+</li>
+</ol>
+<p><img alt="Permission change example" src="../../setup/images/awsim-permmision.png" /></p>
+<p>With this, the environment setup is complete!</p>
 <h2 id="verifying-awsim-startup">Verifying AWSIM Startup</h2>
 <p>If you are using AWSIM with visualization, start the container with the following commands:</p>
 <pre><code class="language-bash">cd aichallenge-2024
