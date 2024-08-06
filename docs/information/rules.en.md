@@ -52,8 +52,8 @@ The ranking will be determined based on the following criteria:
 
 - If the specified number of laps is completed, the team with the shortest driving time.
 - If the specified number of laps is not completed:
-  - The team with the most laps.
-  - If the lap count is the same, the team with the shortest time to the last lap.
+    - The team with the most laps.
+    - If the lap count is the same, the team with the shortest time to the last lap.
 
 ## Pit Stop
 
