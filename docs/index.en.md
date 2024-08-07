@@ -55,3 +55,5 @@ The total prize money is over 1 million yen. For details, please refer to the [2
 ![TOM'S Racing Kart](./assets/racing-kart.jpeg)
 
 ## Challenges
+
+The racing kart will drive around a circuit course and compete for the time it takes to complete a set number of laps. Although the cars will be driving alone this time, in the future they will be driving together with others. Therefore, there is a challenge to avoid virtual objects placed on the course.
