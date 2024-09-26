@@ -7,21 +7,18 @@
 | Service      | `/control/control_mode_request`      | `autoware_auto_vehicle_msgs/srv/ControlModeCommand`      |
 | Publisher    | `/vehicle/status/control_mode`       | `autoware_auto_vehicle_msgs/msg/ControlModeReport`       |
 | Subscription | `/control/command/control_cmd`       | `autoware_auto_control_msgs/msg/AckermannControlCommand` |
+| Subscription | `/control/command/actuation_cmd`     | `tier4_vehicle_msgs/msg/ActuationCommandStamped`         |
+| Publisher    | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
 | Publisher    | `/vehicle/status/velocity_status`    | `autoware_auto_vehicle_msgs/msg/VelocityReport`          |
 | Publisher    | `/vehicle/status/steering_status`    | `autoware_auto_vehicle_msgs/msg/SteeringReport`          |
 | Subscription | `/control/command/gear_cmd`          | `autoware_auto_vehicle_msgs/msg/GearCommand`             |
 | Publisher    | `/vehicle/status/gear_status`        | `autoware_auto_vehicle_msgs/msg/GearReport`              |
 | Publisher    | `/sensing/gnss/pose_with_covariance` | `geometry_msgs/msg/PoseWithCovarianceStamped`            |
 | Publisher    | `/sensing/imu/imu_raw`               | `sensor_msgs/msg/Imu`                                    |
-| Publisher    | `/aichallenge/objects`               | `sstd_msgs/msg/Float64MultiArray`                        |
+| Publisher    | `/aichallenge/objects`               | `std_msgs.msg.Float64MultiArray`                         |
 | Publisher    | `/aichallenge/pitstop/area`          | `std_msgs.msg.Float64MultiArray`                         |
 | Publisher    | `/aichallenge/pitstop/condition`     | `std_msgs.msg.Int32`                                     |
 | Publisher    | `/aichallenge/pitstop/status`        | `std_msgs.msg.Float32`                                   |
-
-<!--
-| Subscription | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationCommandStamped`          |
-| Publisher | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
--->
 
 ### `/control/command/control_cmd`
 
@@ -35,6 +32,26 @@
 | longitudinal.speed                  | Unused                |
 | longitudinal.acceleration           | Target acceleration   |
 | longitudinal.jerk                   | Unused                |
+
+### `/control/command/actuation_cmd`
+
+| Name                  | Description                      |
+| --------------------- | -------------------------------- |
+| header.stamp          | Message timestamp                |
+| header.frame_id       | Unused                           |
+| actuation.accel_cmd   | Accel command value (0.0 to 1.0) |
+| actuation.brake_cmd   | Brake command value (0.0 to 1.0) |
+| actuation.steer_cmd   | Tire angle command value (rad)   |
+
+### `/vehicle/status/actuation_status`
+
+| Name                  | Description                      |
+| --------------------- | -------------------------------- |
+| header.stamp          | Data acquisition time            |
+| header.frame_id       | Unused                           |
+| status.accel_status   | Accel current value (0.0 〜 1.0) |
+| status.brake_status   | Brake current value (0.0 〜 1.0) |
+| status.steer_status   | Tire angle current value (rad)   |
 
 ### `/vehicle/status/velocity_status`
 
