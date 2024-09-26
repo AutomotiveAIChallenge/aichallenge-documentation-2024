@@ -6,9 +6,9 @@
 
 まずオンライン採点環境の利用を行い、その後環境構築・開発と進んでいきます。
 
-## 自動運転AIチャレンジ2024への[参加登録](https://docs.google.com/forms/d/e/1FAIpQLSc0xFCrNS_J5Bl2g2RIZ694B5p9vOhlav9hrwgumtBrQuQ0RQ/viewform)
+## 自動運転AIチャレンジ2024への参加登録
 
-参加登録が済んでいない方は上記リンクから登録をお願いします。
+今年度の大会の参加登録は締め切っています．
 
 ## [オンライン採点環境](https://aichallenge-board.jsae.or.jp/live)へのアクセスと提出
 
