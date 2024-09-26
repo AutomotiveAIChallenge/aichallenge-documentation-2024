@@ -49,8 +49,8 @@
 | --------------------- | -------------------------------- |
 | header.stamp          | Data acquisition time            |
 | header.frame_id       | Unused                           |
-| status.accel_status   | Accel current value (0.0 〜 1.0) |
-| status.brake_status   | Brake current value (0.0 〜 1.0) |
+| status.accel_status   | Accel current value (0.0 to 1.0) |
+| status.brake_status   | Brake current value (0.0 to 1.0) |
 | status.steer_status   | Tire angle current value (rad)   |
 
 ### `/vehicle/status/velocity_status`
