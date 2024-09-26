@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
     
     
       
@@ -1043,6 +1043,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#controlcommandactuation_cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      /control/command/actuation_cmd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vehiclestatusactuation_status" class="md-nav__link">
+    <span class="md-ellipsis">
+      /vehicle/status/actuation_status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vehiclestatusvelocity_status" class="md-nav__link">
     <span class="md-ellipsis">
       /vehicle/status/velocity_status
@@ -1410,6 +1428,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#controlcommandactuation_cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      /control/command/actuation_cmd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vehiclestatusactuation_status" class="md-nav__link">
+    <span class="md-ellipsis">
+      /vehicle/status/actuation_status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vehiclestatusvelocity_status" class="md-nav__link">
     <span class="md-ellipsis">
       /vehicle/status/velocity_status
@@ -1549,6 +1585,16 @@
 <td><code>autoware_auto_control_msgs/msg/AckermannControlCommand</code></td>
 </tr>
 <tr>
+<td>Subscription</td>
+<td><code>/control/command/actuation_cmd</code></td>
+<td><code>tier4_vehicle_msgs/msg/ActuationCommandStamped</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td><code>/vehicle/status/actuation_status</code></td>
+<td><code>tier4_vehicle_msgs/msg/ActuationStatusStamped</code></td>
+</tr>
+<tr>
 <td>Publisher</td>
 <td><code>/vehicle/status/velocity_status</code></td>
 <td><code>autoware_auto_vehicle_msgs/msg/VelocityReport</code></td>
@@ -1581,30 +1627,25 @@
 <tr>
 <td>Publisher</td>
 <td><code>/aichallenge/objects</code></td>
-<td><code>std_msgs.msg.Float64MultiArray</code></td>
+<td><code>std_msgs/msg/Float64MultiArray</code></td>
 </tr>
 <tr>
 <td>Publisher</td>
 <td><code>/aichallenge/pitstop/area</code></td>
-<td><code>std_msgs.msg.Float64MultiArray</code></td>
+<td><code>std_msgs/msg/Float64MultiArray</code></td>
 </tr>
 <tr>
 <td>Publisher</td>
 <td><code>/aichallenge/pitstop/condition</code></td>
-<td><code>std_msgs.msg.Int32</code></td>
+<td><code>std_msgs/msg/Int32</code></td>
 </tr>
 <tr>
 <td>Publisher</td>
 <td><code>/aichallenge/pitstop/status</code></td>
-<td><code>std_msgs.msg.Float32</code></td>
+<td><code>std_msgs/msg/Float32</code></td>
 </tr>
 </tbody>
 </table>
-<!--
-| Subscription | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationCommandStamped`          |
-| Publisher | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
--->
-
 <h3 id="controlcommandcontrol_cmd"><code>/control/command/control_cmd</code></h3>
 <table>
 <thead>
@@ -1645,6 +1686,68 @@
 <tr>
 <td>longitudinal.jerk</td>
 <td>未使用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="controlcommandactuation_cmd"><code>/control/command/actuation_cmd</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header.stamp</td>
+<td>メッセージの送信時刻</td>
+</tr>
+<tr>
+<td>header.frame_id</td>
+<td>未使用</td>
+</tr>
+<tr>
+<td>actuation.accel_cmd</td>
+<td>アクセル指示値 (0.0 〜 1.0)</td>
+</tr>
+<tr>
+<td>actuation.brake_cmd</td>
+<td>ブレーキ指示値 (0.0 〜 1.0)</td>
+</tr>
+<tr>
+<td>actuation.steer_cmd</td>
+<td>タイヤ角指示値 (rad)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehiclestatusactuation_status"><code>/vehicle/status/actuation_status</code></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header.stamp</td>
+<td>データの取得時刻</td>
+</tr>
+<tr>
+<td>header.frame_id</td>
+<td>未使用</td>
+</tr>
+<tr>
+<td>status.accel_status</td>
+<td>アクセル現在値 (0.0 〜 1.0)</td>
+</tr>
+<tr>
+<td>status.brake_status</td>
+<td>ブレーキ現在値 (0.0 〜 1.0)</td>
+</tr>
+<tr>
+<td>status.steer_status</td>
+<td>タイヤ角現在値 (rad)</td>
 </tr>
 </tbody>
 </table>
