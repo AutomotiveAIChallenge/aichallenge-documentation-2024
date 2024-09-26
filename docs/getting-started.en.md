@@ -6,9 +6,9 @@ You can participate in this competition with a single PC running Ubuntu 22.04.
 
 First, use the online scoring environment, then proceed with environment setup and development.
 
-## [Register for the Autonomous Driving AI Challenge 2024](https://docs.google.com/forms/d/e/1FAIpQLSc0xFCrNS_J5Bl2g2RIZ694B5p9vOhlav9hrwgumtBrQuQ0RQ/viewform)
+## Register for the Autonomous Driving AI Challenge 2024
 
-If you haven't registered yet, please do so using the link above.
+Registration for the 2024 competitions have already been closed.
 
 ## Accessing and Submitting to the [Online Scoring Environment](https://aichallenge-board.jsae.or.jp/live)
 
