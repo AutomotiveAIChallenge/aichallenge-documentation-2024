@@ -15,10 +15,10 @@
 | Publisher    | `/vehicle/status/gear_status`        | `autoware_auto_vehicle_msgs/msg/GearReport`              |
 | Publisher    | `/sensing/gnss/pose_with_covariance` | `geometry_msgs/msg/PoseWithCovarianceStamped`            |
 | Publisher    | `/sensing/imu/imu_raw`               | `sensor_msgs/msg/Imu`                                    |
-| Publisher    | `/aichallenge/objects`               | `std_msgs.msg.Float64MultiArray`                         |
-| Publisher    | `/aichallenge/pitstop/area`          | `std_msgs.msg.Float64MultiArray`                         |
-| Publisher    | `/aichallenge/pitstop/condition`     | `std_msgs.msg.Int32`                                     |
-| Publisher    | `/aichallenge/pitstop/status`        | `std_msgs.msg.Float32`                                   |
+| Publisher    | `/aichallenge/objects`               | `std_msgs/msg/Float64MultiArray`                         |
+| Publisher    | `/aichallenge/pitstop/area`          | `std_msgs/msg/Float64MultiArray`                         |
+| Publisher    | `/aichallenge/pitstop/condition`     | `std_msgs/msg/Int32`                                     |
+| Publisher    | `/aichallenge/pitstop/status`        | `std_msgs/msg/Float32`                                   |
 
 ### `/control/command/control_cmd`
 
