@@ -7,21 +7,18 @@
 | Service      | `/control/control_mode_request`      | `autoware_auto_vehicle_msgs/srv/ControlModeCommand`      |
 | Publisher    | `/vehicle/status/control_mode`       | `autoware_auto_vehicle_msgs/msg/ControlModeReport`       |
 | Subscription | `/control/command/control_cmd`       | `autoware_auto_control_msgs/msg/AckermannControlCommand` |
+| Subscription | `/control/command/actuation_cmd`     | `tier4_vehicle_msgs/msg/ActuationCommandStamped`         |
+| Publisher    | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
 | Publisher    | `/vehicle/status/velocity_status`    | `autoware_auto_vehicle_msgs/msg/VelocityReport`          |
 | Publisher    | `/vehicle/status/steering_status`    | `autoware_auto_vehicle_msgs/msg/SteeringReport`          |
 | Subscription | `/control/command/gear_cmd`          | `autoware_auto_vehicle_msgs/msg/GearCommand`             |
 | Publisher    | `/vehicle/status/gear_status`        | `autoware_auto_vehicle_msgs/msg/GearReport`              |
 | Publisher    | `/sensing/gnss/pose_with_covariance` | `geometry_msgs/msg/PoseWithCovarianceStamped`            |
 | Publisher    | `/sensing/imu/imu_raw`               | `sensor_msgs/msg/Imu`                                    |
-| Publisher    | `/aichallenge/objects`               | `std_msgs.msg.Float64MultiArray`                         |
-| Publisher    | `/aichallenge/pitstop/area`          | `std_msgs.msg.Float64MultiArray`                         |
-| Publisher    | `/aichallenge/pitstop/condition`     | `std_msgs.msg.Int32`                                     |
-| Publisher    | `/aichallenge/pitstop/status`        | `std_msgs.msg.Float32`                                   |
-
-<!--
-| Subscription | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationCommandStamped`          |
-| Publisher | `/vehicle/status/actuation_status`   | `tier4_vehicle_msgs/msg/ActuationStatusStamped`          |
--->
+| Publisher    | `/aichallenge/objects`               | `std_msgs/msg/Float64MultiArray`                         |
+| Publisher    | `/aichallenge/pitstop/area`          | `std_msgs/msg/Float64MultiArray`                         |
+| Publisher    | `/aichallenge/pitstop/condition`     | `std_msgs/msg/Int32`                                     |
+| Publisher    | `/aichallenge/pitstop/status`        | `std_msgs/msg/Float32`                                   |
 
 ### `/control/command/control_cmd`
 
@@ -35,6 +32,26 @@
 | longitudinal.speed                  | 未使用               |
 | longitudinal.acceleration           | 目標加速度           |
 | longitudinal.jerk                   | 未使用               |
+
+### `/control/command/actuation_cmd`
+
+| Name                  | Description                 |
+| --------------------- | --------------------------- |
+| header.stamp          | メッセージの送信時刻        |
+| header.frame_id       | 未使用                      |
+| actuation.accel_cmd   | アクセル指示値 (0.0 〜 1.0) |
+| actuation.brake_cmd   | ブレーキ指示値 (0.0 〜 1.0) |
+| actuation.steer_cmd   | タイヤ角指示値 (rad)        |
+
+### `/vehicle/status/actuation_status`
+
+| Name                  | Description                 |
+| --------------------- | --------------------------- |
+| header.stamp          | データの取得時刻            |
+| header.frame_id       | 未使用                      |
+| status.accel_status   | アクセル現在値 (0.0 〜 1.0) |
+| status.brake_status   | ブレーキ現在値 (0.0 〜 1.0) |
+| status.steer_status   | タイヤ角現在値 (rad)        |
 
 ### `/vehicle/status/velocity_status`
 
