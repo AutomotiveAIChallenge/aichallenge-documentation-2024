@@ -4,5 +4,5 @@
 | ---- | -------------------- |
 | CPU  | Intel Core i9-11900H |
 | Mem  | 16 GB                |
-| GNSS | u-blox ZED-F9P       |
+| GNSS | u-blox ZED-F9R       |
 | IMU  | ICM-20948            |
