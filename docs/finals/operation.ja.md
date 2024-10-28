@@ -16,8 +16,8 @@
 - スクリプトがパスに依存しているため、ホーム直下の `aichallenge-2024` は名前を変更しないようお願いします。
 - ROSBAGが自動で記録されないため、走行時に記録コマンドの実行をお願いします。
 - Zenoh で通信はデフォルトで topic の受信しかできない設定になっています。走行中の設定変更などを行いたい場合は以下のどちらかで対応をお願いします。
-- Zenoh Bridge を使わず ssh で接続して ECU 内から直接実行する
-- ECU の aichallenge-2024 内にある設定ファイル (`vehicle/zenoh.json5`) の `allow` 部分をコメントアウトする (55-62行目)
+    - Zenoh Bridge を使わず ssh で接続して ECU 内から直接実行する
+    - ECU の `aichallenge-2024` 内にある設定ファイル (`vehicle/zenoh.json5`) の `allow` 部分をコメントアウトする (55-62行目)
 - 車両番号を指定して接続するには arp-scan というソフトのインストールが必要ですので以下のコマンドでインストールしてください
     - `sudo apt install arp-scan`
 
