@@ -18,3 +18,4 @@
 ### 場所
 
 [シティサーキット東京ベイ](https://city-circuit.com/)
+<iframe width="704" height="396" src="https://www.youtube.com/embed/GsuCUoNrMDM?si=zoh1mL_U0yRnB2fj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
