@@ -43,16 +43,18 @@ bash run_vehicle_tmux.sh
 ```
 以下のように端末が分割されコマンドが実行されます．
 
-- 左側: ./docker_run dev cpu が起動し aichallenge-2024 のコンテナ内に入る
-- 右側1段目： ./docker_run dev cpu が起動し aichallenge-2024 のコンテナ内に入る
-- 右側2段目：車両のドライバソフトが起動する
-- 右側3段目：Zenohのブリッジが起動する
-- 右側4段目：特になし
+![tmux-image](./images/tmux.png)
+
+- 左側①: ./docker_run dev cpu が起動し aichallenge-2024 のコンテナ内に入る
+- 右側②： ./docker_run dev cpu が起動し aichallenge-2024 のコンテナ内に入る
+- 右側③：車両のドライバソフトが起動する
+- 右側④：Zenohのブリッジが起動する
+- 右側⑤：特になし
  
 
 ### 2. Autowareの起動
 
-Dockerコンテナ内で行います．デフォルトでは左側か右上のコンテナの端末です．
+Dockerコンテナ内で行います．デフォルトでは左側②か右上③のコンテナの端末です．
 
 ```
 cd /aichallenge
@@ -62,7 +64,7 @@ cd /aichallenge
 
 ### 3. ROSBAGの記録
 
-Dockerコンテナ内で行います．デフォルトでは左側か右上のコンテナの端末です．
+Dockerコンテナ内で行います．デフォルトでは左側②か右上③のコンテナの端末です．
 
 ```
 cd /aichallenge
@@ -71,16 +73,51 @@ ros2 bag record -a
 
 # 動作上問題はありませんが、警告が出るのが嫌な方は代わりに以下のコマンドを実行してください
 ros2 bag record -a -x "(/racing_kart/.*|/to_can_bus|/from_can_bus)"
+
+#こちらのコマンドでも記録が可能です
+cd /aichallenge
+./record_rosbag.bash
 ```
 
 ## 手元のPCとECUでROS通信したい場合
 
-- SSHした車両のECU内で `ip a` を実行し、車両のIPアドレスを確認してください（もしくは運営スタッフに問い合わせください）
-- 手元のPCで `docker pull eclipse/zenoh-bridge-ros2dds` をしておく（最初の１回でOKです）
-- 手元のPCで `aichallenge-2024/vehicle/run_zenoh.bash` の最終行を次のように書き換えます
-    - 変更前: `eclipse/zenoh-bridge-ros2dds:latest -c /vehicle/zenoh.json5`
-    - 変更後: `eclipse/zenoh-bridge-ros2dds:latest -e "tcp/<車両のIPアドレス>:7447"`
-- 書き換えたら `run_zenoh.bash` を起動します
-- 終了時は手元のPCで別の端末を起動し
-    - `docker ps` で`コンテナID`を調べ
-    - `docker stop <コンテナID>` で終了します（少し時間が掛かります）
+- 手元のPCで以下を実行します
+```
+# 最初の1回でOKです
+./docker_build.sh dev
+
+# Dockerコンテナに入る
+./docker_run.sh dev cpu
+
+# temrinator(tmuxのGUI版)を起動し、画面を右クリックで分割します
+# terminatorの片方のターミナルでZenohで車両と接続します
+cd /remote
+./connect_zenoh.bash <車両番号>
+
+# terminatorのもう片方のターミナルでECUと通信ができます
+# (例：Rvizの起動)
+cd /aichallenge
+./run_rviz.bash
+```
+
+- Zenohを起動しているターミナルでCTRL+Cを押下することで、通信を終了できます。
+
+
+## FAQ：トラブルシューティング
+
+### Q. 手元PCとECUでROS通信ができない
+A. 手元PCとECU両方でZenohを再起動します
+#### ECUのZenoh再起動
+ECU側は⑤のターミナルで以下を実行し、Zenohを停止させます
+```
+cd vehicle
+./kill_zenoh.bash
+```
+その後④のターミナルでZenohを再度起動します
+```
+./run_zenoh.bash
+```
+#### 手元PCのZenoh再起動
+Zenohが起動しているターミナルでCTRL+Cを押下し、Zenohを停止させる
+
+その後`./connect_zenoh.bash <車両番号>`を実行し、再度起動します
