@@ -10,7 +10,6 @@
 | 車両ECU用ユーザー名       | 車両ECUにログイン・SSH接続するためのユーザー名         |
 | 車両ECU用パスワード             | 車両ECUにログイン・SSH接続するためのパスワード         |
 
-
 ## 注意事項
 
 - スクリプトがパスに依存しているため、ホーム直下の `aichallenge-2024` は名前を変更しないようお願いします。
@@ -36,11 +35,12 @@
 
 ### 1. 各種ドライバやDockerコンテナの起動
 
-```
+```bash
 cd aichallenge-2024
 ./docker_build.sh dev (最初に1回実行すればOKです)
-bash run_vehicle_tmux.sh 
+bash run_vehicle_tmux.sh
 ```
+
 以下のように端末が分割されコマンドが実行されます．
 
 ![tmux-image](./images/tmux.png)
@@ -50,13 +50,12 @@ bash run_vehicle_tmux.sh
 - 右側③：車両のドライバソフトが起動する
 - 右側④：Zenohのブリッジが起動する
 - 右側⑤：特になし
- 
 
 ### 2. Autowareの起動
 
 Dockerコンテナ内で行います．デフォルトでは左側②か右上③のコンテナの端末です．
 
-```
+```bash
 cd /aichallenge
 ./build_autoware.bash (最初に1回実行後は、ビルドが必要な変更を行った際に実行してください)
 ./run_autoware.bash vehicle (autowareが起動し準備完了)
@@ -66,7 +65,7 @@ cd /aichallenge
 
 Dockerコンテナ内で行います．デフォルトでは左側②か右上③のコンテナの端末です．
 
-```
+```bash
 cd /aichallenge
 source workspace/install/setup.bash
 ros2 bag record -a
@@ -82,7 +81,8 @@ cd /aichallenge
 ## 手元のPCとECUでROS通信したい場合
 
 - 手元のPCで以下を実行します
-```
+
+```bash
 # 最初の1回でOKです
 ./docker_build.sh dev
 
@@ -102,22 +102,29 @@ cd /aichallenge
 
 - Zenohを起動しているターミナルでCTRL+Cを押下することで、通信を終了できます。
 
-
 ## FAQ：トラブルシューティング
 
 ### Q. 手元PCとECUでROS通信ができない
+
 A. 手元PCとECU両方でZenohを再起動します
+
 #### ECUのZenoh再起動
+
 ECU側は⑤のターミナルで以下を実行し、Zenohを停止させます
-```
+
+```bash
 cd vehicle
 ./kill_zenoh.bash
 ```
+
 その後④のターミナルでZenohを再度起動します
-```
+
+```bash
 ./run_zenoh.bash
 ```
+
 #### 手元PCのZenoh再起動
+
 Zenohが起動しているターミナルでCTRL+Cを押下し、Zenohを停止させる
 
 その後`./connect_zenoh.bash <車両番号>`を実行し、再度起動します

@@ -3,7 +3,6 @@
 準決勝と決勝大会の最新情報は以下の自動車技術会のホームページをご覧ください．
 [https://www.jsae.or.jp/jaaic/2024ver/](https://www.jsae.or.jp/jaaic/2024ver/)
 
-
 ## 開催概要
 
 ### 日時
