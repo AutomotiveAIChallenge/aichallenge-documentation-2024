@@ -104,7 +104,7 @@ cd /aichallenge
 
 ## FAQ：トラブルシューティング
 
-### Q. 手元PCとECUでROS通信ができない
+### Q. 手元PCとECUでROS通信ができない・トピックが重複する
 
 A. 手元PCとECU両方でZenohを再起動します
 
@@ -128,3 +128,9 @@ cd vehicle
 Zenohが起動しているターミナルでCTRL+Cを押下し、Zenohを停止させる
 
 その後`./connect_zenoh.bash <車両番号>`を実行し、再度起動します
+
+### Q. 手元PCとECUでZenoh通信時にROSの配信周期が低い
+
+A. 通信の安定化のために`./vehicle/zenoh.json5`のconfigファイルを設定しており、デフォルト10Hzとなっています。
+
+必要であれば`pub_max_frequencies: ["/*=10"],`を変更することで配信周期を上げることができます。
