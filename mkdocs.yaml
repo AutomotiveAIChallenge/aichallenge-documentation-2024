@@ -26,6 +26,9 @@ nav:
   - preliminaries:
       - preliminaries/submission.md
       - preliminaries/check-results.md
+  - finals:
+      - finals/index.md
+      - finals/operation.md
   - setup:
       - setup/requirements.md
       - setup/workspace-setup.md
@@ -69,6 +72,7 @@ plugins:
             index: トップページ
             information: 大会情報
             preliminaries: 予選
+            finals: 決勝
             setup: 環境構築
             development: 開発
             specifications: 仕様
