@@ -137,8 +137,19 @@ Zenohが起動しているターミナルでCTRL+Cを押下し、Zenohを停止�
 
 その後`./connect_zenoh.bash <車両番号>`を実行し、再度起動します
 
-### Q. 手元PCとECUでZenoh通信時にROSの配信周期が低い
+### Q. 手元PCとECUでZenoh通信時にROS Topicの配信周期が低い
 
 A. 通信の安定化のために`./vehicle/zenoh.json5`のconfigファイルを設定しており、デフォルト10Hzとなっています。
 
 必要であれば`pub_max_frequencies: ["/*=10"],`を変更することで配信周期を上げることができます。
+
+### Q. 手元PCでROS Topicが遅れる・来ない
+A. 通信状況によりTopicが遅れたり・ロスすることがあります。
+
+手元PCで表示するTopic数を減らしたりしてみてください。また配信周期の調整も一手です。
+
+`./vehicle/zenoh.json5`のconfigファイル内 `pub_priorities: ["/racing_kart/joy=1:express"],`でTopicの優先度を設定することも可能です
+
+### Q. aichallenge-2024コンテナに入れているかわからない
+
+A. 簡易的ですがそのターミナル内でdockerコマンドを実行し`bash: docker: command not found`と出ればDocker内に入れています。
