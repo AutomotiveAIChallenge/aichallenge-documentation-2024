@@ -20,6 +20,7 @@ The following information will be shared with each team before the event.
     - `sudo apt install arp-scan`
 
 ## How to Connect to Vehicle ECU
+
 Connect to the ECU via SSH from your local PC using the `CCTB_office_01` Wi-Fi network.
 
 - Install arp-scan on your local PC: `sudo apt update && sudo apt install arp-scan`
