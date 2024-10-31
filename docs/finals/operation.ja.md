@@ -22,14 +22,21 @@
 
 ## 車両 ECU への接続方法
 
+手元PCから`CCTB_office_01`のWi-Fi経由でSSHでECUに接続します。
+
+- 手元PCにarp-scanをインストールする。`sudo apt update && sudo apt install arp-scan`
 - 手元のPCを `CCTB_office_01` というWi-Fiに接続する(車両 ECU と同じネットワーク)。
 - 手元のPCで `cd aichallege-2024/remote` を実行して作業ディレクトリを移動する
 - 手元のPCで `bash connect_ssh.bash <車両名> <ユーザー名>` を実行する (例 `bash connect_ssh.bash A9 aic-team`)
 - 手元のPCのパスワードを聞かれた場合は入力する
 - 車両 ECU のパスワードを聞かれるので入力する
-- 上記のコマンドが使えない場合
-    - 運営スタッフに車両の `<IPアドレス>` を問い合わせください
-    - 手元のPCで `ssh <ユーザー名>@<IPアドレス>` を実行する
+
+以上で車両ECUにアクセスできるはずです。
+
+上記のコマンドが使えない場合、以下をお試しください。
+
+- 運営スタッフに車両の `<IPアドレス>` を問い合わせください
+- 手元のPCで `ssh <ユーザー名>@<IPアドレス>` を実行する
 
 ## 車両ECUへのAutoware転送方法
 
@@ -59,6 +66,8 @@ bash run_vehicle_tmux.sh
 - 右側④：Zenohのブリッジが起動する
 - 右側⑤：特になし
 
+右側③の車両ドライバ・右側④のZenohブリッジは自動で起動します。
+
 ### 2. Autowareの起動
 
 Dockerコンテナ内で行います．デフォルトでは左側①か右側②のコンテナの端末です．
@@ -84,6 +93,14 @@ ros2 bag record -a -x "(/racing_kart/.*|/to_can_bus|/from_can_bus)"
 #こちらのコマンドでも記録が可能です
 cd /aichallenge
 ./record_rosbag.bash
+```
+
+### 4.走行終了時
+
+右側⑤の端末で以下を実行し、コンテナ・tmuxを終了します。
+
+```bash
+./stop_vehicle_tmux.sh
 ```
 
 ## 手元のPCとECUでROS通信したい場合
@@ -137,8 +154,22 @@ Zenohが起動しているターミナルでCTRL+Cを押下し、Zenohを停止�
 
 その後`./connect_zenoh.bash <車両番号>`を実行し、再度起動します
 
-### Q. 手元PCとECUでZenoh通信時にROSの配信周期が低い
+### Q. 手元PCとECUでZenoh通信時にROS Topicの配信周期が低い
 
 A. 通信の安定化のために`./vehicle/zenoh.json5`のconfigファイルを設定しており、デフォルト10Hzとなっています。
 
 必要であれば`pub_max_frequencies: ["/*=10"],`を変更することで配信周期を上げることができます。
+
+### Q. 手元PCでROS Topicが遅れる・来ない
+
+A. 通信状況によりTopicが遅れたり・ロスすることがあります。
+
+- 手元PCで表示するTopic数を減らしたりしてみてください。また配信周期の調整も一手です。
+
+- `./vehicle/zenoh.json5`のconfigファイル内 `pub_priorities: ["/racing_kart/joy=1:express"],`でTopicの優先度を設定することも可能です
+
+- `./remote/network_setting.bash`の実行も試してみてください。
+
+### Q. aichallenge-2024コンテナに入れているかわからない
+
+A. 簡易的ですがそのターミナル内でdockerコマンドを実行し`bash: docker: command not found`と出ればDocker内に入れています。
