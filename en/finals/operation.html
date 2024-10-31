@@ -1767,13 +1767,13 @@ bash run_vehicle_tmux.sh
 <li>右側⑤：特になし</li>
 </ul>
 <h3 id="2-autoware">2. Autowareの起動</h3>
-<p>Dockerコンテナ内で行います．デフォルトでは左側②か右上③のコンテナの端末です．</p>
+<p>Dockerコンテナ内で行います．デフォルトでは左側①か右側②のコンテナの端末です．</p>
 <pre><code class="language-bash">cd /aichallenge
 ./build_autoware.bash (最初に1回実行後は、ビルドが必要な変更を行った際に実行してください)
 ./run_autoware.bash vehicle (autowareが起動し準備完了)
 </code></pre>
 <h3 id="3-rosbag">3. ROSBAGの記録</h3>
-<p>Dockerコンテナ内で行います．デフォルトでは左側②か右上③のコンテナの端末です．</p>
+<p>Dockerコンテナ内で行います．デフォルトでは左側①か右側②のコンテナの端末です．</p>
 <pre><code class="language-bash">cd /aichallenge
 source workspace/install/setup.bash
 ros2 bag record -a
