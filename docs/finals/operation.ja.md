@@ -61,7 +61,7 @@ bash run_vehicle_tmux.sh
 
 ### 2. Autowareの起動
 
-Dockerコンテナ内で行います．デフォルトでは左側②か右上③のコンテナの端末です．
+Dockerコンテナ内で行います．デフォルトでは左側①か右側②のコンテナの端末です．
 
 ```bash
 cd /aichallenge
@@ -71,7 +71,7 @@ cd /aichallenge
 
 ### 3. ROSBAGの記録
 
-Dockerコンテナ内で行います．デフォルトでは左側②か右上③のコンテナの端末です．
+Dockerコンテナ内で行います．デフォルトでは左側①か右側②のコンテナの端末です．
 
 ```bash
 cd /aichallenge
