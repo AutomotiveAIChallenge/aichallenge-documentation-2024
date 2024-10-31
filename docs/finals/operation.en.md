@@ -20,15 +20,21 @@ The following information will be shared with each team before the event.
     - `sudo apt install arp-scan`
 
 ## How to Connect to Vehicle ECU
+Connect to the ECU via SSH from your local PC using the `CCTB_office_01` Wi-Fi network.
 
-- Connect your PC to the Wi-Fi network `CCTB_office_01` (same network as vehicle ECU)
-- On your PC, execute `cd aichallege-2024/remote` to change working directory
+- Install arp-scan on your local PC: `sudo apt update && sudo apt install arp-scan`
+- Connect your PC to the `CCTB_office_01` Wi-Fi network (same network as the vehicle ECU).
+- On your PC, execute `cd aichallege-2024/remote` to change to the working directory
 - Execute `bash connect_ssh.bash <vehicle_name> <username>` on your PC (e.g., `bash connect_ssh.bash A9 aic-team`)
 - Enter your PC password if prompted
 - Enter the vehicle ECU password when prompted
-- If the above command doesn't work:
-    - Ask staff for the vehicle's `<IP address>`
-    - Execute `ssh <username>@<IP address>` on your PC
+
+You should now have access to the vehicle ECU.
+
+If the above commands don't work, please try the following:
+
+- Ask the event staff for the vehicle's `<IP address>`
+- Execute `ssh <username>@<IP address>` on your PC
 
 ## How to Transfer Autoware to Vehicle ECU
 

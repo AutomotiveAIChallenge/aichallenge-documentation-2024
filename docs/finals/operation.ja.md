@@ -21,15 +21,21 @@
     - `sudo apt install arp-scan`
 
 ## 車両 ECU への接続方法
+手元PCから`CCTB_office_01`のWi-Fi経由でSSHでECUに接続します。
 
+- 手元PCにarp-scanをインストールする。`sudo apt update && sudo apt install arp-scan`
 - 手元のPCを `CCTB_office_01` というWi-Fiに接続する(車両 ECU と同じネットワーク)。
 - 手元のPCで `cd aichallege-2024/remote` を実行して作業ディレクトリを移動する
 - 手元のPCで `bash connect_ssh.bash <車両名> <ユーザー名>` を実行する (例 `bash connect_ssh.bash A9 aic-team`)
 - 手元のPCのパスワードを聞かれた場合は入力する
 - 車両 ECU のパスワードを聞かれるので入力する
-- 上記のコマンドが使えない場合
-    - 運営スタッフに車両の `<IPアドレス>` を問い合わせください
-    - 手元のPCで `ssh <ユーザー名>@<IPアドレス>` を実行する
+
+以上で車両ECUにアクセスできるはずです。
+
+上記のコマンドが使えない場合、以下をお試しください。
+
+- 運営スタッフに車両の `<IPアドレス>` を問い合わせください
+- 手元のPCで `ssh <ユーザー名>@<IPアドレス>` を実行する
 
 ## 車両ECUへのAutoware転送方法
 
