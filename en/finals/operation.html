@@ -18,11 +18,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>車両の動かし方 - AI Challenge 2024</title>
+        <title>How to Operate the Vehicle - AI Challenge 2024</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#how-to-operate-the-vehicle" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              車両の動かし方
+              How to Operate the Vehicle
             
           </span>
         </div>
@@ -721,7 +721,7 @@
         
   
   <span class="md-ellipsis">
-    決勝大会の概要
+    Finals Overview
   </span>
   
 
@@ -751,7 +751,7 @@
           
   
   <span class="md-ellipsis">
-    車両の動かし方
+    How to Operate the Vehicle
   </span>
   
 
@@ -762,7 +762,7 @@
         
   
   <span class="md-ellipsis">
-    車両の動かし方
+    How to Operate the Vehicle
   </span>
   
 
@@ -784,73 +784,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#information-provided-to-each-team" class="md-nav__link">
     <span class="md-ellipsis">
-      各チームに提供される情報
+      Information Provided to Each Team
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      注意事項
+      Important Notes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ecu" class="md-nav__link">
+  <a href="#how-to-connect-to-vehicle-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      車両 ECU への接続方法
+      How to Connect to Vehicle ECU
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ecuautoware" class="md-nav__link">
+  <a href="#how-to-transfer-autoware-to-vehicle-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      車両ECUへのAutoware転送方法
+      How to Transfer Autoware to Vehicle ECU
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ecu_1" class="md-nav__link">
+  <a href="#operations-after-connecting-to-vehicle-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      車両ECU接続後の操作
+      Operations After Connecting to Vehicle ECU
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="車両ECU接続後の操作">
+    <nav class="md-nav" aria-label="Operations After Connecting to Vehicle ECU">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-docker" class="md-nav__link">
+  <a href="#1-starting-drivers-and-docker-containers" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 各種ドライバやDockerコンテナの起動
+      1. Starting Drivers and Docker Containers
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-autoware" class="md-nav__link">
+  <a href="#2-starting-autoware" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Autowareの起動
+      2. Starting Autoware
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-rosbag" class="md-nav__link">
+  <a href="#3-recording-rosbag" class="md-nav__link">
     <span class="md-ellipsis">
-      3. ROSBAGの記録
+      3. Recording ROSBAG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-when-finishing-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. When Finishing Operation
     </span>
   </a>
   
@@ -862,47 +871,47 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pcecuros" class="md-nav__link">
+  <a href="#for-ros-communication-between-local-pc-and-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      手元のPCとECUでROS通信したい場合
+      For ROS Communication Between Local PC and ECU
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
+  <a href="#faq-troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
-      FAQ：トラブルシューティング
+      FAQ: Troubleshooting
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="FAQ：トラブルシューティング">
+    <nav class="md-nav" aria-label="FAQ: Troubleshooting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#q-pcecuros" class="md-nav__link">
+  <a href="#q-ros-communication-not-working-between-local-pc-and-ecu-topic-duplication" class="md-nav__link">
     <span class="md-ellipsis">
-      Q. 手元PCとECUでROS通信ができない・トピックが重複する
+      Q. ROS communication not working between local PC and ECU / Topic duplication
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Q. 手元PCとECUでROS通信ができない・トピックが重複する">
+    <nav class="md-nav" aria-label="Q. ROS communication not working between local PC and ECU / Topic duplication">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ecuzenoh" class="md-nav__link">
+  <a href="#restarting-zenoh-on-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      ECUのZenoh再起動
+      Restarting Zenoh on ECU
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pczenoh" class="md-nav__link">
+  <a href="#restarting-zenoh-on-local-pc" class="md-nav__link">
     <span class="md-ellipsis">
-      手元PCのZenoh再起動
+      Restarting Zenoh on Local PC
     </span>
   </a>
   
@@ -914,9 +923,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-pcecuzenohros" class="md-nav__link">
+  <a href="#q-low-ros-topic-publishing-frequency-during-zenoh-communication" class="md-nav__link">
     <span class="md-ellipsis">
-      Q. 手元PCとECUでZenoh通信時にROSの配信周期が低い
+      Q. Low ROS Topic publishing frequency during Zenoh communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-ros-topics-delayed-or-missing-on-local-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q. ROS Topics delayed or missing on local PC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-unsure-if-inside-aichallenge-2024-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q. Unsure if inside aichallenge-2024 container
     </span>
   </a>
   
@@ -1526,73 +1553,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#information-provided-to-each-team" class="md-nav__link">
     <span class="md-ellipsis">
-      各チームに提供される情報
+      Information Provided to Each Team
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      注意事項
+      Important Notes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ecu" class="md-nav__link">
+  <a href="#how-to-connect-to-vehicle-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      車両 ECU への接続方法
+      How to Connect to Vehicle ECU
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ecuautoware" class="md-nav__link">
+  <a href="#how-to-transfer-autoware-to-vehicle-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      車両ECUへのAutoware転送方法
+      How to Transfer Autoware to Vehicle ECU
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ecu_1" class="md-nav__link">
+  <a href="#operations-after-connecting-to-vehicle-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      車両ECU接続後の操作
+      Operations After Connecting to Vehicle ECU
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="車両ECU接続後の操作">
+    <nav class="md-nav" aria-label="Operations After Connecting to Vehicle ECU">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-docker" class="md-nav__link">
+  <a href="#1-starting-drivers-and-docker-containers" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 各種ドライバやDockerコンテナの起動
+      1. Starting Drivers and Docker Containers
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-autoware" class="md-nav__link">
+  <a href="#2-starting-autoware" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Autowareの起動
+      2. Starting Autoware
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-rosbag" class="md-nav__link">
+  <a href="#3-recording-rosbag" class="md-nav__link">
     <span class="md-ellipsis">
-      3. ROSBAGの記録
+      3. Recording ROSBAG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-when-finishing-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. When Finishing Operation
     </span>
   </a>
   
@@ -1604,47 +1640,47 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pcecuros" class="md-nav__link">
+  <a href="#for-ros-communication-between-local-pc-and-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      手元のPCとECUでROS通信したい場合
+      For ROS Communication Between Local PC and ECU
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
+  <a href="#faq-troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
-      FAQ：トラブルシューティング
+      FAQ: Troubleshooting
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="FAQ：トラブルシューティング">
+    <nav class="md-nav" aria-label="FAQ: Troubleshooting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#q-pcecuros" class="md-nav__link">
+  <a href="#q-ros-communication-not-working-between-local-pc-and-ecu-topic-duplication" class="md-nav__link">
     <span class="md-ellipsis">
-      Q. 手元PCとECUでROS通信ができない・トピックが重複する
+      Q. ROS communication not working between local PC and ECU / Topic duplication
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Q. 手元PCとECUでROS通信ができない・トピックが重複する">
+    <nav class="md-nav" aria-label="Q. ROS communication not working between local PC and ECU / Topic duplication">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ecuzenoh" class="md-nav__link">
+  <a href="#restarting-zenoh-on-ecu" class="md-nav__link">
     <span class="md-ellipsis">
-      ECUのZenoh再起動
+      Restarting Zenoh on ECU
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pczenoh" class="md-nav__link">
+  <a href="#restarting-zenoh-on-local-pc" class="md-nav__link">
     <span class="md-ellipsis">
-      手元PCのZenoh再起動
+      Restarting Zenoh on Local PC
     </span>
   </a>
   
@@ -1656,9 +1692,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-pcecuzenohros" class="md-nav__link">
+  <a href="#q-low-ros-topic-publishing-frequency-during-zenoh-communication" class="md-nav__link">
     <span class="md-ellipsis">
-      Q. 手元PCとECUでZenoh通信時にROSの配信周期が低い
+      Q. Low ROS Topic publishing frequency during Zenoh communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-ros-topics-delayed-or-missing-on-local-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q. ROS Topics delayed or missing on local PC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-unsure-if-inside-aichallenge-2024-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q. Unsure if inside aichallenge-2024 container
     </span>
   </a>
   
@@ -1687,144 +1741,137 @@
   
 
 
-<h1 id="_1">車両の動かし方</h1>
-<h2 id="_2">各チームに提供される情報</h2>
-<p>当日までに以下の情報が各チームに共有されます．</p>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>車両番号　(A1-A8)</td>
-<td>各チームに割り当てられている車両を識別する番号</td>
-</tr>
-<tr>
-<td>車両ECU用ユーザー名</td>
-<td>車両ECUにログイン・SSH接続するためのユーザー名</td>
-</tr>
-<tr>
-<td>車両ECU用パスワード</td>
-<td>車両ECUにログイン・SSH接続するためのパスワード</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_3">注意事項</h2>
+<h1 id="how-to-operate-the-vehicle">How to Operate the Vehicle</h1>
+<h2 id="information-provided-to-each-team">Information Provided to Each Team</h2>
+<p>The following information will be shared with each team before the event.
+| Item | Purpose |
+| ---- | ------- |
+| Vehicle Number (A1-A8) | Identification number assigned to each team's vehicle |
+| Vehicle ECU Username | Username for logging in and SSH connection to the vehicle ECU |
+| Vehicle ECU Password | Password for logging in and SSH connection to the vehicle ECU |</p>
+<h2 id="important-notes">Important Notes</h2>
 <ul>
-<li>スクリプトがパスに依存しているため、ホーム直下の <code>aichallenge-2024</code> は名前を変更しないようお願いします。</li>
-<li>ROSBAGが自動で記録されないため、走行時に記録コマンドの実行をお願いします。</li>
-<li>Zenoh で通信はデフォルトで topic の受信しかできない設定になっています。走行中の設定変更などを行いたい場合は以下のどちらかで対応をお願いします。<ul>
-<li>Zenoh Bridge を使わず ssh で接続して ECU 内から直接実行する</li>
-<li>ECU の <code>aichallenge-2024</code> 内にある設定ファイル (<code>vehicle/zenoh.json5</code>) の <code>allow</code> 部分をコメントアウトする (55-62行目)</li>
+<li>Please do not rename the <code>aichallenge-2024</code> directory under home as scripts are path-dependent.</li>
+<li>ROSBAG recording is not automatic, so please execute the recording command during operation.</li>
+<li>By default, Zenoh communication is set to only receive topics. If you need to change settings during operation, please use either of the following methods:<ul>
+<li>Connect via SSH and execute directly from within the ECU without using Zenoh Bridge</li>
+<li>Comment out the <code>allow</code> section (lines 55-62) in the configuration file (<code>vehicle/zenoh.json5</code>) inside <code>aichallenge-2024</code> on the ECU</li>
 </ul>
 </li>
-<li>車両番号を指定して接続するには arp-scan というソフトのインストールが必要ですので以下のコマンドでインストールしてください<ul>
+<li>To connect using a vehicle number, you need to install arp-scan software using the following command:<ul>
 <li><code>sudo apt install arp-scan</code></li>
 </ul>
 </li>
 </ul>
-<h2 id="ecu">車両 ECU への接続方法</h2>
+<h2 id="how-to-connect-to-vehicle-ecu">How to Connect to Vehicle ECU</h2>
+<p>Connect to the ECU via SSH from your local PC using the <code>CCTB_office_01</code> Wi-Fi network.</p>
 <ul>
-<li>手元のPCを <code>CCTB_office_01</code> というWi-Fiに接続する(車両 ECU と同じネットワーク)。</li>
-<li>手元のPCで <code>cd aichallege-2024/remote</code> を実行して作業ディレクトリを移動する</li>
-<li>手元のPCで <code>bash connect_ssh.bash &lt;車両名&gt; &lt;ユーザー名&gt;</code> を実行する (例 <code>bash connect_ssh.bash A9 aic-team</code>)</li>
-<li>手元のPCのパスワードを聞かれた場合は入力する</li>
-<li>車両 ECU のパスワードを聞かれるので入力する</li>
-<li>上記のコマンドが使えない場合<ul>
-<li>運営スタッフに車両の <code>&lt;IPアドレス&gt;</code> を問い合わせください</li>
-<li>手元のPCで <code>ssh &lt;ユーザー名&gt;@&lt;IPアドレス&gt;</code> を実行する</li>
+<li>Install arp-scan on your local PC: <code>sudo apt update &amp;&amp; sudo apt install arp-scan</code></li>
+<li>Connect your PC to the <code>CCTB_office_01</code> Wi-Fi network (same network as the vehicle ECU).</li>
+<li>On your PC, execute <code>cd aichallege-2024/remote</code> to change to the working directory</li>
+<li>Execute <code>bash connect_ssh.bash &lt;vehicle_name&gt; &lt;username&gt;</code> on your PC (e.g., <code>bash connect_ssh.bash A9 aic-team</code>)</li>
+<li>Enter your PC password if prompted</li>
+<li>Enter the vehicle ECU password when prompted</li>
 </ul>
-</li>
+<p>You should now have access to the vehicle ECU.</p>
+<p>If the above commands don't work, please try the following:</p>
+<ul>
+<li>Ask the event staff for the vehicle's <code>&lt;IP address&gt;</code></li>
+<li>Execute <code>ssh &lt;username&gt;@&lt;IP address&gt;</code> on your PC</li>
 </ul>
-<h2 id="ecuautoware">車両ECUへのAutoware転送方法</h2>
+<h2 id="how-to-transfer-autoware-to-vehicle-ecu">How to Transfer Autoware to Vehicle ECU</h2>
 <ul>
 <li>
-<p>スクリプトのパスに依存しているため、フォルダ名は<code>aichallenge-2024</code>から変更しないようお願いします。</p>
+<p>Please keep the folder name as <code>aichallenge-2024</code> due to script path dependencies.</p>
 </li>
 <li>
-<p>ECUの<code>/home</code>直下に<code>aichallenge-2024</code>フォルダが配置されており、そちらのsubmitフォルダ内を編集する。</p>
+<p>An <code>aichallenge-2024</code> folder is located under <code>/home</code> on the ECU; edit the submit folder within.</p>
 </li>
-<li>
-<p>SCPやVSCodeのRemote SSH等で手元PCからaichallenge-2024を転送する</p>
-</li>
+<li>Transfer aichallenge-2024 from your PC using SCP or VSCode Remote SSH</li>
 </ul>
-<h2 id="ecu_1">車両ECU接続後の操作</h2>
-<h3 id="1-docker">1. 各種ドライバやDockerコンテナの起動</h3>
+<h2 id="operations-after-connecting-to-vehicle-ecu">Operations After Connecting to Vehicle ECU</h2>
+<h3 id="1-starting-drivers-and-docker-containers">1. Starting Drivers and Docker Containers</h3>
 <pre><code class="language-bash">cd aichallenge-2024
-./docker_build.sh dev (最初に1回実行すればOKです)
+./docker_build.sh dev (only needs to be executed once initially)
 bash run_vehicle_tmux.sh
 </code></pre>
-<p>以下のように端末が分割されコマンドが実行されます．</p>
-<p><img alt="tmux-image" src="../../finals/images/tmux.png" /></p>
+<p>The terminal will be split as shown below:
+<img alt="tmux-image" src="../../finals/images/tmux.png" /></p>
 <ul>
-<li>左側①: ./docker_run dev cpu が起動し aichallenge-2024 のコンテナ内に入る</li>
-<li>右側②： ./docker_run dev cpu が起動し aichallenge-2024 のコンテナ内に入る</li>
-<li>右側③：車両のドライバソフトが起動する</li>
-<li>右側④：Zenohのブリッジが起動する</li>
-<li>右側⑤：特になし</li>
+<li>Left ①: Starts ./docker_run dev cpu and enters aichallenge-2024 container</li>
+<li>Right ②: Starts ./docker_run dev cpu and enters aichallenge-2024 container</li>
+<li>Right ③: Vehicle driver software starts</li>
+<li>Right ④: Zenoh bridge starts</li>
+<li>Right ⑤: Nothing specific</li>
 </ul>
-<h3 id="2-autoware">2. Autowareの起動</h3>
-<p>Dockerコンテナ内で行います．デフォルトでは左側①か右側②のコンテナの端末です．</p>
+<p>The vehicle driver (right ③) and Zenoh bridge (right ④) will start automatically.</p>
+<h3 id="2-starting-autoware">2. Starting Autoware</h3>
+<p>Execute within Docker container. By default, use terminal ① on the left or ② on the right.</p>
 <pre><code class="language-bash">cd /aichallenge
-./build_autoware.bash (最初に1回実行後は、ビルドが必要な変更を行った際に実行してください)
-./run_autoware.bash vehicle (autowareが起動し準備完了)
+./build_autoware.bash (execute only once initially, then as needed when making changes that require rebuilding)
+./run_autoware.bash vehicle (autoware starts and is ready)
 </code></pre>
-<h3 id="3-rosbag">3. ROSBAGの記録</h3>
-<p>Dockerコンテナ内で行います．デフォルトでは左側①か右側②のコンテナの端末です．</p>
+<h3 id="3-recording-rosbag">3. Recording ROSBAG</h3>
+<p>Execute within Docker container. By default, use terminal ① on the left or ② on the right.</p>
 <pre><code class="language-bash">cd /aichallenge
 source workspace/install/setup.bash
 ros2 bag record -a
-
-# 動作上問題はありませんが、警告が出るのが嫌な方は代わりに以下のコマンドを実行してください
+# If you want to avoid warnings (though they don't affect operation), use this alternative command:
 ros2 bag record -a -x &quot;(/racing_kart/.*|/to_can_bus|/from_can_bus)&quot;
-
-#こちらのコマンドでも記録が可能です
+# You can also record using this command:
 cd /aichallenge
 ./record_rosbag.bash
 </code></pre>
-<h2 id="pcecuros">手元のPCとECUでROS通信したい場合</h2>
+<h3 id="4-when-finishing-operation">4. When Finishing Operation</h3>
+<p>Execute the following in terminal ⑤ on the right to stop the container and tmux:</p>
+<pre><code class="language-bash">./stop_vehicle_tmux.sh
+</code></pre>
+<h2 id="for-ros-communication-between-local-pc-and-ecu">For ROS Communication Between Local PC and ECU</h2>
 <ul>
-<li>手元のPCで以下を実行します</li>
+<li>Execute the following on your local PC:</li>
 </ul>
-<pre><code class="language-bash"># 最初の1回でOKです
+<pre><code class="language-bash"># Only needed once initially
 ./docker_build.sh dev
-
-# Dockerコンテナに入る
+# Enter Docker container
 ./docker_run.sh dev cpu
-
-# temrinator(tmuxのGUI版)を起動し、画面を右クリックで分割します
-# terminatorの片方のターミナルでZenohで車両と接続します
+# Launch terminator (GUI version of tmux) and split screen by right-clicking
+# In one terminator terminal, connect to vehicle via Zenoh
 cd /remote
-./connect_zenoh.bash &lt;車両番号&gt;
-
-# terminatorのもう片方のターミナルでECUと通信ができます
-# (例：Rvizの起動)
+./connect_zenoh.bash &lt;vehicle_number&gt;
+# In the other terminator terminal, you can communicate with ECU
+# (Example: Launch Rviz)
 cd /aichallenge
 ./run_rviz.bash
 </code></pre>
 <ul>
-<li>Zenohを起動しているターミナルでCTRL+Cを押下することで、通信を終了できます。</li>
+<li>Press CTRL+C in the Zenoh terminal to end communication.</li>
 </ul>
-<h2 id="faq">FAQ：トラブルシューティング</h2>
-<h3 id="q-pcecuros">Q. 手元PCとECUでROS通信ができない・トピックが重複する</h3>
-<p>A. 手元PCとECU両方でZenohを再起動します</p>
-<h4 id="ecuzenoh">ECUのZenoh再起動</h4>
-<p>ECU側は⑤のターミナルで以下を実行し、Zenohを停止させます</p>
+<h2 id="faq-troubleshooting">FAQ: Troubleshooting</h2>
+<h3 id="q-ros-communication-not-working-between-local-pc-and-ecu-topic-duplication">Q. ROS communication not working between local PC and ECU / Topic duplication</h3>
+<p>A. Restart Zenoh on both local PC and ECU</p>
+<h4 id="restarting-zenoh-on-ecu">Restarting Zenoh on ECU</h4>
+<p>Stop Zenoh in terminal ⑤ by executing:</p>
 <pre><code class="language-bash">cd vehicle
 ./kill_zenoh.bash
 </code></pre>
-<p>その後④のターミナルでZenohを再度起動します</p>
+<p>Then restart Zenoh in terminal ④:</p>
 <pre><code class="language-bash">./run_zenoh.bash
 </code></pre>
-<h4 id="pczenoh">手元PCのZenoh再起動</h4>
-<p>Zenohが起動しているターミナルでCTRL+Cを押下し、Zenohを停止させる</p>
-<p>その後<code>./connect_zenoh.bash &lt;車両番号&gt;</code>を実行し、再度起動します</p>
-<h3 id="q-pcecuzenohros">Q. 手元PCとECUでZenoh通信時にROSの配信周期が低い</h3>
-<p>A. 通信の安定化のために<code>./vehicle/zenoh.json5</code>のconfigファイルを設定しており、デフォルト10Hzとなっています。</p>
-<p>必要であれば<code>pub_max_frequencies: ["/*=10"],</code>を変更することで配信周期を上げることができます。</p>
+<h4 id="restarting-zenoh-on-local-pc">Restarting Zenoh on Local PC</h4>
+<p>Press CTRL+C in the Zenoh terminal to stop it
+Then execute <code>./connect_zenoh.bash &lt;vehicle_number&gt;</code> to restart</p>
+<h3 id="q-low-ros-topic-publishing-frequency-during-zenoh-communication">Q. Low ROS Topic publishing frequency during Zenoh communication</h3>
+<p>A. The config file <code>./vehicle/zenoh.json5</code> is set for stable communication, default 10Hz.
+If needed, you can adjust the publishing frequency by modifying <code>pub_max_frequencies: ["/*=10"]</code>.</p>
+<h3 id="q-ros-topics-delayed-or-missing-on-local-pc">Q. ROS Topics delayed or missing on local PC</h3>
+<p>A. Topics may be delayed or lost due to communication conditions.</p>
+<ul>
+<li>Try reducing the number of topics displayed on local PC or adjusting publishing frequency</li>
+<li>You can set topic priorities in <code>./vehicle/zenoh.json5</code> config file using <code>pub_priorities: ["/racing_kart/joy=1:express"]</code></li>
+<li>Try executing <code>./remote/network_setting.bash</code></li>
+</ul>
+<h3 id="q-unsure-if-inside-aichallenge-2024-container">Q. Unsure if inside aichallenge-2024 container</h3>
+<p>A. A simple check: execute the docker command in the terminal - if you get <code>bash: docker: command not found</code>, you're inside Docker.</p>
 
 
 
