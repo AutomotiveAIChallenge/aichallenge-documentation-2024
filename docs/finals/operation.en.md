@@ -149,7 +149,6 @@ Then execute `./connect_zenoh.bash <vehicle_number>` to restart
 
 A. The config file `./vehicle/zenoh.json5` is set for stable communication, default 10Hz.
 If needed, you can adjust the publishing frequency by modifying `pub_max_frequencies: ["/*=10"]`.
-- After modifying `./vehicle/zenoh.json5`, please run `./docker_build.sh` dev to apply the configuration changes.
 
 ### Q. ROS Topics delayed or missing on local PC
 

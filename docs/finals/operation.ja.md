@@ -159,7 +159,6 @@ Zenohが起動しているターミナルでCTRL+Cを押下し、Zenohを停止�
 A. 通信の安定化のために`./vehicle/zenoh.json5`のconfigファイルを設定しており、デフォルト10Hzとなっています。
 
 必要であれば`pub_max_frequencies: ["/*=10"],`を変更することで配信周期を上げることができます。
-- `./vehicle/zenoh.json5`の変更後は設定反映のために`./docker_build.sh dev`をお願いします。
 
 ### Q. 手元PCでROS Topicが遅れる・来ない
 
