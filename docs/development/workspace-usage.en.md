@@ -60,7 +60,7 @@ It would be best if you proceed as follows.
 
 For the 2024 AI Challenge, we recommend editing maps such as point cloud maps and lanelet2 maps using tools like [VectorMapBuilder](https://tools.tier4.jp/feature/vector_map_builder_ll2/) .
 
-Download and edit the point cloud map, lanelet2 map, etc., from the [Map file storage](https://drive.google.com/drive/folders/1nsYIg_3rwIjg0x6BC__aWVmnv-25nZkn) !
+Download and edit the point cloud map, lanelet2 map, etc., from the Map file storage! (The map distribution has ended.)
 
 Refer to the [VectorMapBuilder usage video](https://www.youtube.com/watch?v=GvZr707TmuM) for step-by-step instructions.
 
