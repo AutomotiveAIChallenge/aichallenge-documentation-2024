@@ -74,9 +74,9 @@ sudo apt update
 sudo apt install -y libvulkan1
 ```
 
-## Downloading AWSIM
+## Downloading AWSIM (The simulator distribution has ended.)
 
-1. Download the latest `AWSIM_GPU_**.zip` file from [Google Drive](https://drive.google.com/drive/folders/1ftIoamNGAet90sXeG48lKa89dkpVy45y) and extract it to `aichallenge-2024/aichallenge/simulator`.
+1. Download the latest `AWSIM_GPU_**.zip` file from Google Drive and extract it to `aichallenge-2024/aichallenge/simulator`.
 
 2. Confirm that the executable file exists at `aichallenge-2024/aichallenge/simulator/AWSIM/AWSIM.x86_64`.
 
