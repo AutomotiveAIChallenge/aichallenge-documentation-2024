@@ -26,6 +26,7 @@ nav:
   - preliminaries:
       - preliminaries/submission.md
       - preliminaries/check-results.md
+      - preliminaries/results.md
   - finals:
       - finals/index.md
       - finals/operation.md
