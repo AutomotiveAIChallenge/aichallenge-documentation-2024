@@ -2,6 +2,12 @@
 
 ![top_image](./assets/top_image.jpg)
 
+!!! success "2024年の大会は終了しました"
+
+    2024年の自動運転AIチャレンジは終了しました。
+
+    オンライン開催の予選大会の結果は、[こちらの予選大会の結果](preliminaries/results.ja.md)からご覧いただけます。
+
 ## コンセプト
 
 !!! info

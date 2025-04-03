@@ -2,6 +2,12 @@
 
 ![top_image](./assets/top_image.jpg)
 
+!!! success "2024 Competition was a success!"
+
+    The 2024 Japan Automotive AI Challenge was a success!
+
+    The results of the online preliminary competition are available [here](preliminaries/results.en.md).
+
 ## Concept
 
 !!! info

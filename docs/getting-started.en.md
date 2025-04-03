@@ -27,7 +27,7 @@ Let's try using the online scoring environment with these four steps!
 
 4. Upload the file directly through the "UPLOAD" button in the online scoring environment to submit it.
 
-[Download the sample code compressed file](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN){ .md-button .md-button--primary .banner-button }
+<!-- [Download the sample code compressed file](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN){ .md-button .md-button--primary .banner-button } -->
 
 ![submit](./preliminaries/images/submit.png)
 

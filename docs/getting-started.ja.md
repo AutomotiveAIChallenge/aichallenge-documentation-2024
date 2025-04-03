@@ -28,7 +28,7 @@
 
 4. オンライン採点環境の「UPLOAD」ボタンからそのままアップロードすることで提出ができます。
 
-[サンプルコードの圧縮ファイルのダウンロード](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN){ .md-button .md-button--primary .banner-button }
+<!-- [サンプルコードの圧縮ファイルのダウンロード](https://drive.google.com/file/d/19LU70cgeg48R6stEXjvwDp1pTT25OjeN){ .md-button .md-button--primary .banner-button } -->
 
 ![submit](./preliminaries/images/submit.png)
 
